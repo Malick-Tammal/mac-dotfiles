@@ -1,0 +1,63 @@
+## MAKE YOUR LIFE EASY
+
+# YAY (arch)
+alias i="yay -S"
+alias s="yay -Ss"
+alias r="yay -R"
+alias update="yay -Syu"
+alias list="yay -Q"
+
+# Brew (macos / linux)
+alias bi="brew install"
+alias ic="brew install --cask"
+alias br="brew uninstall"
+alias bu="brew update"
+alias bs="brew search"
+alias bl="brew list"
+alias bfu="brew update; brew upgrade --cask --greedy ; brew upgrade $(brew outdated | awk '{ print $1 }') ; brew cleanup"
+
+# ZSH / BASH
+alias szsh="source ~/.zshrc"
+alias vzsh="vim ~/.zshrc"
+alias vbsh="vim ~/.bashrc"
+alias nvzsh="nvim ~/.zshrc"
+alias nvbsh="nvim ~/.bashrc"
+
+# EDIT ALIASES
+alias vals="vim ~/.aliases"
+alias bals="bat ~/.aliases"
+alias cals="code ~/.aliases"
+alias nvals="nv ~/.aliases"
+
+# HYPRLAND
+alias vhypr="vim ~/.config/hypr/hyprland.conf"
+alias chypr="code ~/.config/hypr/hyprland.conf"
+
+# TERMINAL
+alias neo="neofetch"
+alias clr="clear"
+alias ls="lsd"
+alias lsa="lsd -a"
+alias lsla="la -la"
+
+# Zoxide
+alias c="z"
+
+# Nvim
+alias nv="nvim"
+
+# Mac borders
+alias cbor="code ~/.config/borders/bordersrc"
+alias rbor="brew services restart borders"
+
+# Node
+alias n="npm"
+alias ni="npm i"
+alias nig="npm i -g"
+alias nisd="npm i --save-dev"
+alias nr="npm remove"
+alias ns="npm start"
+alias nrd="npm run dev"
+alias nrp="npm run preview"
+alias nrb="npm run build"
+alias nrde="npm run deploy"

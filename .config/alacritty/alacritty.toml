@@ -1,0 +1,30 @@
+[general]
+# ------------------- Theme -----------------------
+import = [
+  "~/.config/alacritty/themes/hypr.toml",
+]
+# -------------------------------------------------
+live_config_reload = true
+
+# ------------------- Window -----------------------
+
+[window]
+decorations = "Transparent"
+padding = { x = 10, y = 35 }
+title = "Terminal"
+opacity = 0.8
+blur = true
+decorations_theme_variant = "None"
+
+# ------------------- Font -----------------------
+
+[font]
+normal = { family = "MesloLGL Nerd Font" }
+size = 15
+
+# ------------------- Bindings -----------------------
+
+[keyboard]
+bindings = [
+  { key = "O", mods = "Command", command = { program = "bash", args = [ "-c", "open ." ] } },
+]
