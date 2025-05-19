@@ -61,3 +61,6 @@ alias nrd="npm run dev"
 alias nrp="npm run preview"
 alias nrb="npm run build"
 alias nrde="npm run deploy"
+
+# Git
+alias gcmm="git commit -m"
