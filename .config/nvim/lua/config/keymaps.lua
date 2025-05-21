@@ -41,10 +41,10 @@ vim.keymap.set("n", "<leader>bx", ":bdelete!<CR>", opts) -- close buffer
 vim.keymap.set("n", "<leader>bb", "<cmd> enew <CR>", opts) -- new buffer
 
 -- Window management
-vim.keymap.set("n", "<leader>v", "<C-w>v", opts) -- split window vertically
-vim.keymap.set("n", "<leader>h", "<C-w>s", opts) -- split window horizontally
+vim.keymap.set("n", "<leader>sv", "<C-w>v", opts) -- split window vertically
+vim.keymap.set("n", "<leader>sh", "<C-w>s", opts) -- split window horizontally
 vim.keymap.set("n", "<leader>se", "<C-w>=", opts) -- make split windows equal width & height
-vim.keymap.set("n", "<leader>xs", ":close<CR>", opts) -- close current split window
+vim.keymap.set("n", "<leader>sx", ":close<CR>", opts) -- close current split window
 
 -- Navigate between splits
 vim.keymap.set("n", "<C-k>", ":wincmd k<CR>", opts)
@@ -92,14 +92,15 @@ vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live gr
 vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
 
--- Full exit
-vim.keymap.set("n", "<leader>q", "<Cmd>qa!<CR>", { desc = "Full exit" })
+-- Exit
+vim.keymap.set("n", "<leader>qq", "<Cmd>qa!<CR>") -- Exit without saving!
+vim.keymap.set("n", "<leader>qw", "<Cmd>qa!<CR>") -- Exit and save
 
 -- Lazy
-vim.keymap.set("n", "<leader>l", "<Cmd>Lazy<CR>", { desc = "Lazy" })
+vim.keymap.set("n", "<leader>l", "<Cmd>Lazy<CR>", { desc = "Lazy" }) -- Call Lazy
 
 -- Mason
-vim.keymap.set("n", "<leader>m", "<Cmd>Mason<CR>", { desc = "Mason" })
+vim.keymap.set("n", "<leader>m", "<Cmd>Mason<CR>") -- Call Mason
 
--- Delete (black hole)
-vim.keymap.set("n", "<leader>d", '"_d', { desc = "Delete (black hole)" })
+-- Delete
+vim.keymap.set("n", "<leader>d", '"_d') -- Black hole "Delete without copy it"
