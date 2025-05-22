@@ -87,7 +87,9 @@ require("lazy").setup({
 			end,
 		},
 
-		-- require("plugins.lsp"),
+		require("plugins.lsp_config"),
+
+		require("plugins.cmp"),
 
 		-- Auto update plugins
 		checker = { enabled = false },

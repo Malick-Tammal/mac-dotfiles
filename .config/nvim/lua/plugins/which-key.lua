@@ -48,6 +48,8 @@ return {
 
 			-- Tabs
 			{ "<leader>t", desc = "Tabs", icon = { icon = "󱃢", color = "red" } },
+
+			{ "<leader>e", desc = "Diagnostics", icon = { icon = "󱉶", color = "red" } },
 		})
 		wk.setup({
 			preset = "helix",

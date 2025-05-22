@@ -69,10 +69,10 @@ vim.keymap.set("v", ">", ">gv", opts)
 vim.keymap.set("v", "p", '"_dP', opts)
 
 -- Diagnostic keymaps
-vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous diagnostic message" })
-vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next diagnostic message" })
-vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
-vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
+vim.keymap.set("n", "<leader>ep", vim.diagnostic.goto_prev, { desc = "Go to previous diagnostic message" })
+vim.keymap.set("n", "<leader>en", vim.diagnostic.goto_next, { desc = "Go to next diagnostic message" })
+vim.keymap.set("n", "<leader>ef", vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
+vim.keymap.set("n", "<leader>el", vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
 
 -- Neotree
 vim.keymap.set("n", "<leader>n", "<Cmd>Neotree toggle position=left<CR>", { desc = "Explorer NeoTree (Toggle)" })
@@ -81,8 +81,13 @@ vim.keymap.set("n", "<leader>n", "<Cmd>Neotree toggle position=left<CR>", { desc
 vim.keymap.set("n", "<C-c>", "<Cmd>noh<CR>", opts)
 
 -- Format
-vim.keymap.set("n", "<leader>fo", function()
-	require("conform").format()
+vim.keymap.set({ "n", "v" }, "<leader>cf", function()
+	require("conform").format({
+		lsp_fallback = true,
+		async = true,
+		timeout_ms = 500,
+	})
+	vim.cmd("echo 'Code formatted!'")
 end, { desc = "Format current file" })
 
 -- Telescope

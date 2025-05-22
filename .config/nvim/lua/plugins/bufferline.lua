@@ -4,7 +4,6 @@ return {
 	dependencies = "nvim-tree/nvim-web-devicons",
 	config = function()
 		vim.opt.termguicolors = true
-		local devicons = require("nvim-web-devicons")
 		require("bufferline").setup({
 			options = {
 				offsets = {

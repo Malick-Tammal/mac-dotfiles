@@ -1,7 +1,9 @@
 return {
 	"stevearc/conform.nvim",
 	config = function()
-		require("conform").setup({
+		local conform = require("conform")
+
+		conform.setup({
 			formatters_by_ft = {
 				-- Web
 				html = { "prettier" },
@@ -20,20 +22,12 @@ return {
 
 			format_on_save = {
 				timeout_ms = 500,
-			},
-
-			format_after_save = {
-				command = "echo fallback",
+				lsp_fallback = true,
+				async = false,
 			},
 
 			notify_on_error = true,
 			notify_no_formatters = true,
-
-			formatters = {
-				my_formatters = {
-					command = "echo malick",
-				},
-			},
 		})
 	end,
 }
