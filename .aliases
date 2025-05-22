@@ -36,9 +36,16 @@ alias nvals="nv ~/.aliases"
 # TERMINAL
 alias neo="neofetch"
 alias c="clear"
-alias ls="lsd"
-alias lsa="lsd -a"
-alias lsla="lsd -la"
+
+# Eza
+alias ls="eza --color=always --icons=always"
+alias lsa="eza --color=always --icons=always -a"
+alias lsla="-eza --color=always --icons=always -la"
+
+# Lsd
+# alias ls="lsd"
+# alias lsa="lsd -a"
+# alias lsla="lsd -la"
 
 # Nvim
 alias nv="nvim"

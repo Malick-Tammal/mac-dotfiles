@@ -36,6 +36,9 @@ zinit light Aloxaf/fzf-tab
 # You Should use
 zinit light MichaelAquilina/zsh-you-should-use
 
+# Evalcache
+zinit light mroth/evalcache
+
 ## Oh-My-Zsh Plugins
 # Git (aliases)
 zinit snippet OMZP::git
@@ -92,8 +95,7 @@ alias nvm="unalias nvm; [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"; nvm $@"
 
 ## Shell integrations
 # FZF
-eval "$(fzf --zsh)"
+_evalcache fzf --zsh
 
 # Zoxide
-eval "$(zoxide init --cmd cd zsh)"
-
+_evalcache zoxide init --cmd cd zsh
