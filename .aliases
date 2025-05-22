@@ -33,10 +33,10 @@ alias nvals="nv ~/.aliases"
 # alias vhypr="vim ~/.config/hypr/hyprland.conf"
 # alias chypr="code ~/.config/hypr/hyprland.conf"
 
-# TERMINAL
+## TERMINAL
 alias neo="neofetch"
 alias c="clear"
-
+alias rmrf="rm -rf"
 # Eza
 alias ls="eza --color=always --icons=always"
 alias lsa="eza --color=always --icons=always -a"
