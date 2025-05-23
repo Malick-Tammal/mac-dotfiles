@@ -1,0 +1,33 @@
+# Font 
+font-family = "MesloLGL Nerd Font"
+font-size = 15
+
+# Theme + Styling
+theme = gruvbox-material
+palette = 8=#7e7d7d
+background = #181818
+background-opacity = 0.8
+background-blur = 35
+
+# Cursor 
+shell-integration-features = no-cursor
+cursor-style = block 
+cursor-style-blink = false
+cursor-opacity = 0.8 
+
+## keybind
+# Reload config
+keybind = cmd+shift+r=reload_config 
+
+# Window
+title = "malick.dev"
+macos-titlebar-proxy-icon = hidden
+window-decoration = client 
+window-subtitle = false
+
+# Padding
+window-padding-x = 10,0
+window-padding-y = 10,0
+
+# Shaders
+custom-shader = "./shaders/bloom025.glsl"

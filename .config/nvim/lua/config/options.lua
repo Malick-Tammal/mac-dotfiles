@@ -1,11 +1,4 @@
 -----------------------------------------------------------
--- Theme
------------------------------------------------------------
--- vim.o.background = "dark"
--- vim.cmd([[colorscheme gruvbox]])
--- hello
-
------------------------------------------------------------
 -- Config
 -----------------------------------------------------------
 local g = vim.g -- Global variables
@@ -51,43 +44,3 @@ opt.history = 100 -- Remember N lines in history
 opt.lazyredraw = true -- Faster scrolling
 opt.synmaxcol = 240 -- Max column for syntax highlight
 opt.updatetime = 250 -- ms to wait for trigger an event
-
--- Show diagnostic beside line
-vim.diagnostic.config({
-	underline = false,
-	virtual_text = {
-		spacing = 2,
-		prefix = "󱓻",
-	},
-	update_in_insert = false,
-	severity_sort = true,
-	signs = {
-		text = {
-			-- Alas nerdfont icons don't render properly on Medium!
-			[vim.diagnostic.severity.ERROR] = " ",
-			[vim.diagnostic.severity.WARN] = " ",
-			[vim.diagnostic.severity.HINT] = " ",
-			[vim.diagnostic.severity.INFO] = " ",
-		},
-	},
-})
-
--- Show diagnostic under line
--- vim.diagnostic.config({
--- 	underline = false,
--- 	virtual_text = false,
--- 	update_in_insert = false,
--- 	severity_sort = true,
--- 	virtual_lines = {
--- 		current_line = true,
--- 	},
--- 	signs = {
--- 		text = {
--- 			-- Alas nerdfont icons don't render properly on Medium!
--- 			[vim.diagnostic.severity.ERROR] = " ",
--- 			[vim.diagnostic.severity.WARN] = " ",
--- 			[vim.diagnostic.severity.HINT] = " ",
--- 			[vim.diagnostic.severity.INFO] = " ",
--- 		},
--- 	},
--- })

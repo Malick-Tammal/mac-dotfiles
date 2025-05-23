@@ -18,27 +18,22 @@ vim.opt.rtp:prepend(lazypath)
 -- Setup lazy.nvim
 require("lazy").setup({
 	spec = {
+
 		-- Plugins
+
 		require("plugins.colortheme"),
 
 		require("plugins.notify"),
 
 		require("plugins.neotree"),
 
-		{
-			"mason-org/mason.nvim",
-			event = "VeryLazy",
-			lazy = true,
-			config = function()
-				require("mason").setup({
-					ui = {
-						border = "rounded",
-					},
-				})
-			end,
-		},
+		require("plugins.lsp.mason"),
 
-		require("plugins.conform"),
+		require("plugins.lsp.conform"),
+
+		require("plugins.lsp.lsp_config"),
+
+		require("plugins.lsp.cmp"),
 
 		require("plugins.treesitter"),
 
@@ -77,19 +72,7 @@ require("lazy").setup({
 
 		require("plugins.noice"),
 
-		{
-			"hashivim/vim-terraform",
-			init = function()
-				vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-					pattern = "*,*",
-					command = "echo expand('%:t') . ' Saved!'",
-				})
-			end,
-		},
-
-		require("plugins.lsp_config"),
-
-		require("plugins.cmp"),
+		require("plugins.terraform"),
 
 		-- Auto update plugins
 		checker = { enabled = false },

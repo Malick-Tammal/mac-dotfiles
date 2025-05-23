@@ -29,5 +29,9 @@ return {
 			},
 			indent = { enable = true, disable = { "ruby" } },
 		})
+
+		vim.filetype.add({
+			pattern = { ["config"] = "config" },
+		})
 	end,
 }

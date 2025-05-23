@@ -35,8 +35,11 @@ alias nvals="nv ~/.aliases"
 
 ## TERMINAL
 alias neo="neofetch"
+alias fast="fastfetch"
 alias c="clear"
 alias rmrf="rm -rf"
+alias md="mkdir"
+alias t="touch" 
 # Eza
 alias ls="eza --color=always --icons=always"
 alias lsa="eza --color=always --icons=always -a"
