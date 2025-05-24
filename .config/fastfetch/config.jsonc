@@ -1,15 +1,16 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
 
+  /* Logo */
   "logo": {
-    "type": "small", // Logo type: auto, builtin, small, file, etc.
-    "source": "apple", // Built-in logo name or file path
-    "width": 65, // Width in characters (for image logos)
-    "height": 35, // Height in characters (for image logos)
+    "type": "small",
+    "source": "apple",
+    "width": 65,
+    "height": 35,
     "padding": {
-      "top": 0, // Top padding
-      "left": 5, // Left padding
-      "right": 2, // Right padding
+      "top": 1,
+      "left": 5,
+      "right": 5,
     },
     "color": {
       "1": "green",
@@ -19,42 +20,33 @@
     },
   },
 
+  /* Display settings */
   "display": {
-    /* Display settings */
-    "separator": " › ", // Separator between keys and values
+    "separator": " › ",
     "color": {
-      "keys": "blue", // Key color
-      "title": "red", // Title color
+      "keys": "green",
     },
     "key": {
-      "width": 12, // Aligns keys to this width
-      "type": "string", // string, icon, both, or none
-    },
-    "bar": {
-      "width": 10, // Width of percentage bars
-      "charElapsed": "■", // Character for elapsed portion
-      "charTotal": "-", // Character for total portion
-    },
-    "percent": {
-      "type": 9, // 1=number, 2=bar, 3=both, 9=colored number
-      "color": {
-        "green": "green",
-        "yellow": "light_yellow",
-        "red": "light_red",
-      },
+      "width": 7,
+      "type": "string",
     },
   },
+
+  /* Modules to display */
   "modules": [
-    /* Modules to display */
+    "break",
+    "break",
+    {
+      "type": "custom",
+      "format": "{#blue}malick.dev@Macbook-Air{#}",
+    },
     {
       "type": "os",
       "key": " ",
-      "keyColor": "yellow",
     },
     {
       "type": "kernel",
       "key": " ",
-      "keyColor": "yellow",
     },
     {
       "type": "cpu",
@@ -63,12 +55,11 @@
     {
       "type": "memory",
       "key": " ",
-      "keyColor": "yellow",
-      "percent": {
-        "type": 3, // Show both percentage number and bar
-        "green": 30, // Values below 30% in green
-        "yellow": 70, // 30-70% in yellow, >70% in red
-      },
     },
+    {
+      "type": "packages",
+      "key": " ",
+    },
+    "break",
   ],
 }
