@@ -8,11 +8,22 @@ vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
 -- For conciseness
 local opts = { noremap = true, silent = true }
 
--- save file
-vim.keymap.set("n", "<C-s>", "<cmd> w <CR>", opts)
+-- -- Code actions
+-- Save
+vim.keymap.set("n", "<leader>cs", "<cmd> w <CR>", opts)
 
--- save file without auto-formatting
-vim.keymap.set("n", "<leader>sn", "<cmd>noautocmd w <CR>", opts)
+-- Save without formatting
+vim.keymap.set("n", "<leader>cn", "<cmd>noautocmd w <CR>", opts)
+
+-- Format
+vim.keymap.set({ "n", "v" }, "<leader>cf", function()
+	require("conform").format({
+		lsp_fallback = true,
+		async = true,
+		timeout_ms = 500,
+	})
+	vim.cmd("echo 'Code formatted!'")
+end)
 
 -- quit file
 vim.keymap.set("n", "<C-q>", "<cmd> q <CR>", opts)
@@ -79,16 +90,6 @@ vim.keymap.set("n", "<leader>n", "<Cmd>Neotree toggle position=left<CR>", { desc
 
 -- Search
 vim.keymap.set("n", "<C-c>", "<Cmd>noh<CR>", opts)
-
--- Format
-vim.keymap.set({ "n", "v" }, "<leader>cf", function()
-	require("conform").format({
-		lsp_fallback = true,
-		async = true,
-		timeout_ms = 500,
-	})
-	vim.cmd("echo 'Code formatted!'")
-end, { desc = "Format current file" })
 
 -- Telescope
 local builtin = require("telescope.builtin")
