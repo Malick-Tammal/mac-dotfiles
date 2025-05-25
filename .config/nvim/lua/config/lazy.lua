@@ -23,9 +23,11 @@ require("lazy").setup({
 
 		require("plugins.colortheme"),
 
+		require("plugins.mini"),
+
 		require("plugins.notify"),
 
-		-- require("plugis.neotree"),
+		require("plugins.neotree"),
 
 		require("plugins.lsp.mason"),
 
@@ -38,14 +40,6 @@ require("lazy").setup({
 		require("plugins.treesitter"),
 
 		require("plugins.incline"),
-
-		{
-			"echasnovski/mini.nvim",
-			version = "*",
-			config = function()
-				require("mini.pairs").setup()
-			end,
-		},
 
 		require("plugins.telescope"),
 
@@ -73,6 +67,7 @@ require("lazy").setup({
 		require("plugins.noice"),
 
 		require("plugins.terraform"),
+
 		require("plugins.snacks"),
 
 		-- Auto update plugins

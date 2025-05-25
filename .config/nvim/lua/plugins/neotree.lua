@@ -7,51 +7,143 @@ return {
 		"MunifTanjim/nui.nvim",
 	},
 	lazy = false,
+
+	-- HACK: Config
 	config = function()
 		local neotree = require("neo-tree")
 		neotree.setup({
-			close_if_last_window = true, -- Close Neo-tree if it is the last window left in the tab
-			popup_border_style = "rounded", -- or "" to use 'winborder' on Neovim v0.11+
-			enable_git_status = true,
-			enable_diagnostics = true,
-			open_files_do_not_replace_types = { "terminal", "trouble", "qf" }, -- when opening files, do not use windows containing these filetypes or buftypes
-			open_files_using_relative_paths = false,
-			sort_case_insensitive = false, -- used when sorting files and directories in the tree
-			sort_function = nil, -- use a custom function for sorting files and directories in the tree
-			default_component_configs = {
-				indent = {
-					with_expanders = true,
-				},
-			},
+			close_if_last_window = true,
+			popup_border_style = "rounded",
+			enable_cursor_hijack = true,
+			hide_root_node = true,
 			window = {
 				position = "left",
 				width = 30,
+
+				-- INFO: Keymaps
+				mappings = {
+					["l"] = "open",
+					["h"] = "close_node",
+					["z"] = "close_all_nodes",
+					["A"] = "add_directory",
+				},
 			},
 			filesystem = {
+				bind_to_cwd = false,
+				follow_current_file = { enabled = true },
 				filtered_items = {
-					visible = false, -- when true, they will just be displayed differently than normal items
+					visible = false,
 					hide_dotfiles = true,
 					hide_gitignored = false,
-					hide_hidden = true, -- only works on Windows for hidden files/directories
+					hide_hidden = true,
 					hide_by_name = {
 						"node_modules",
 					},
-					hide_by_pattern = { -- uses glob style patterns
+					hide_by_pattern = {
 						--"*.meta",
 						--"*/src/*/tsconfig.json",
 					},
-					always_show = { -- remains visible even if other settings would normally hide it
+					always_show = {
 						"dist",
 					},
-					always_show_by_pattern = { -- uses glob style patterns
+					always_show_by_pattern = {
 						--".env*",
 					},
-					never_show = { -- remains hidden even if visible is toggled to true, this overrides always_show
+					never_show = {
 						--".DS_Store",
 						--"thumbs.db"
 					},
-					never_show_by_pattern = { -- uses glob style patterns
+					never_show_by_pattern = {
 						--".null-ls_*",
+					},
+				},
+			},
+
+			default_component_configs = {
+
+				-- INFO: Icons
+				icon = {
+					folder_closed = "",
+					folder_open = "",
+					folder_empty = "",
+					folder_empty_open = "",
+					default = "*",
+					highlight = "NeoTreeFileIcon",
+				},
+				provider = function(icon, node, state)
+					if node.type == "file" or node.type == "terminal" then
+						local success, web_devicons = pcall(require, "nvim-web-devicons")
+						local name = node.type == "terminal" and "terminal" or node.name
+						if success then
+							local devicon, hl = web_devicons.get_icon(name)
+							icon.text = devicon or icon.text
+							icon.highlight = hl or icon.highlight
+						end
+					end
+				end,
+
+				modified = {
+					symbol = "󰤌",
+					highlight = "NeoTreeModified",
+				},
+
+				git_status = {
+					symbols = {
+						-- Change type
+						added = "✚",
+						deleted = "✖",
+						modified = "󱡾",
+						renamed = "󰁕",
+						-- Status type
+						untracked = "",
+						ignored = "",
+						unstaged = "󰅰",
+						staged = "",
+						conflict = "",
+					},
+					align = "left",
+				},
+
+				-- INFO: Indent
+				indent = {
+					indent_size = 2,
+					padding = 2,
+					with_markers = true,
+					indent_marker = "│",
+					last_indent_marker = "└",
+					highlight = "NeoTreeIndentMarker",
+					with_expanders = true,
+					expander_collapsed = "",
+					expander_expanded = "",
+					expander_highlight = "NeoTreeExpander",
+				},
+			},
+			renderers = {
+				file = {
+					{ "indent" },
+					{ "modified", zindex = 20, align = "right" },
+					{ "diagnostics", zindex = 20, align = "right" },
+					{ "icon" },
+					{
+						"container",
+						content = {
+							{
+								"name",
+								zindex = 10,
+							},
+							{
+								"symlink_target",
+								zindex = 10,
+								highlight = "NeoTreeSymbolicLinkTarget",
+							},
+							{ "clipboard", zindex = 10 },
+							{ "bufnr", zindex = 10 },
+							{ "git_status", zindex = 10, align = "right" },
+							{ "file_size", zindex = 10, align = "right" },
+							{ "type", zindex = 10, align = "right" },
+							{ "last_modified", zindex = 10, align = "right" },
+							{ "created", zindex = 10, align = "right" },
+						},
 					},
 				},
 			},

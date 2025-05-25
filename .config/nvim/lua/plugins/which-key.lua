@@ -15,13 +15,13 @@ return {
 		local wk = require("which-key")
 		wk.add({
 			-- Which Key (All info)
-			{ "<leader>?", group = " Which Key?", icon = { icon = "󰌏", color = "blue" } },
+			{ "<leader>?", group = "Which Key?", icon = { icon = "󰌏", color = "blue" } },
 
 			-- Neotree
-			{ "<leader>n", group = " Toggle NeoTree", icon = { icon = " ", color = "blue" } },
+			{ "<leader>n", group = "Explorer", icon = { icon = "󰲂", color = "yellow" } },
 
 			-- Delete
-			{ "<leader>d", group = "Delete (Black Hole)", icon = { icon = "󰗨", color = "blue" } },
+			{ "<leader>d", group = "Delete (Black Hole)", icon = { icon = "󰗨", color = "red" } },
 
 			-- Split
 			{ "<leader>s", group = "Split", icon = { icon = "󰯌", color = "red" } },
@@ -31,7 +31,7 @@ return {
 			{ "<leader>sx", desc = "Close", icon = { icon = "󰯌", color = "blue" } },
 
 			-- Mason
-			{ "<leader>m", group = "Mason", icon = { icon = "󰉩", color = "blue" } },
+			{ "<leader>m", group = "Mason", icon = { icon = "󰉩", color = "orange" } },
 
 			-- Exit
 			{ "<leader>q", group = "Quit", icon = { icon = "󰩈", color = "red" } },
@@ -43,7 +43,7 @@ return {
 			{ "<leader>bb", desc = "New", icon = { icon = "", color = "blue" } },
 			{ "<leader>bx", desc = "Close", icon = { icon = "", color = "blue" } },
 
-			-- Telescop
+			-- Telescope
 			{ "<leader>f", desc = "Telescope", icon = { icon = "", color = "red" } },
 
 			-- Tabs
@@ -57,6 +57,12 @@ return {
 			{ "<leader>cs", desc = "Save", icon = { icon = "󰆓", color = "red" } },
 			{ "<leader>cn", desc = "Save without format", icon = { icon = "󰽂", color = "red" } },
 			{ "<leader>cf", desc = "Format", icon = { icon = "󰉿", color = "red" } },
+
+			-- Finder
+			{ "<leader><space>", desc = "Finder", icon = { icon = "󱘞", color = "orange" } },
+
+			-- Zen mode
+			{ "<leader>z", desc = "Zen mode", icon = { icon = "", color = "cyan" } },
 		})
 		wk.setup({
 			preset = "helix",

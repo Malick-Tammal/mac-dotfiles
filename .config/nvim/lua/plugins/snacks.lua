@@ -10,15 +10,7 @@ return {
 			function()
 				Snacks.picker.smart()
 			end,
-			desc = "Find files",
-		},
-
-		{
-			"<leader>g",
-			function()
-				Snacks.picker.grep()
-			end,
-			desc = "Grep",
+			desc = "Finder",
 		},
 
 		{
@@ -28,20 +20,23 @@ return {
 			end,
 			desc = "List buffers",
 		},
+
 		{
 			"<leader>z",
 			function()
 				Snacks.zen()
 			end,
-			desc = "Toggle Zen Mode",
+			desc = "Zen Mode",
 			mode = "n",
 		},
+
 		{
-			"<leader>n",
+			"<leader>gl",
 			function()
-				Snacks.explorer()
+				Snacks.lazygit()
 			end,
-			desc = "File Explorer",
+			desc = "Lazygit",
+			mode = "n",
 		},
 	},
 
@@ -51,7 +46,7 @@ return {
 	opts = {
 		bigfile = { enabled = true },
 		dashboard = { enabled = true },
-		explorer = { enabled = true },
+		explorer = { enabled = false },
 		indent = { enabled = true },
 		input = { enabled = true },
 		picker = { enabled = true },

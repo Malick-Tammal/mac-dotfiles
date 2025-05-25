@@ -86,7 +86,7 @@ vim.keymap.set("n", "<leader>ef", vim.diagnostic.open_float, { desc = "Open floa
 vim.keymap.set("n", "<leader>el", vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
 
 -- Neotree
--- vim.keymap.set("n", "<leader>n", "<Cmd>Neotree toggle position=left<CR>", { desc = "Explorer NeoTree (Toggle)" })
+vim.keymap.set("n", "<leader>n", "<Cmd>Neotree toggle position=left<CR>", { desc = "Explorer Neoree (Toggle)" })
 
 -- Search
 vim.keymap.set("n", "<C-c>", "<Cmd>noh<CR>", opts)

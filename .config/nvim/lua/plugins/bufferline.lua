@@ -9,10 +9,13 @@ return {
 				offsets = {
 					{
 						filetype = "neo-tree",
-						text = "  Explorer",
+						text = "󰲂 Explorer",
 						separator = true,
 						text_align = "center",
 					},
+					-- {
+					-- 	filetype = "snacks_layout_box",
+					-- },
 				},
 				mode = "buffers", -- set to "tabs" to only show tabpages instead
 				themable = true, -- allows highlight groups to be overriden i.e. sets highlights as default
