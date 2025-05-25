@@ -86,7 +86,7 @@ vim.keymap.set("n", "<leader>ef", vim.diagnostic.open_float, { desc = "Open floa
 vim.keymap.set("n", "<leader>el", vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
 
 -- Neotree
-vim.keymap.set("n", "<leader>n", "<Cmd>Neotree toggle position=left<CR>", { desc = "Explorer NeoTree (Toggle)" })
+-- vim.keymap.set("n", "<leader>n", "<Cmd>Neotree toggle position=left<CR>", { desc = "Explorer NeoTree (Toggle)" })
 
 -- Search
 vim.keymap.set("n", "<C-c>", "<Cmd>noh<CR>", opts)
@@ -110,3 +110,32 @@ vim.keymap.set("n", "<leader>m", "<Cmd>Mason<CR>") -- Call Mason
 
 -- Delete
 vim.keymap.set("n", "<leader>d", '"_d') -- Black hole "Delete without copy it"
+
+-- HACK: Snacks keymaps
+
+-- local snacks = require("plugins.snacks")
+--
+-- -- Explorer
+-- vim.keymap.set("n", "<leader><space>", function()
+-- 	snacks.picker.smart()
+-- end, { desc = "Smart Find Files" })
+--
+-- -- Grep
+-- vim.keymap.set("n", "<leader>g", function()
+-- 	snacks.picker.grep()
+-- end, { desc = "Grep" })
+--
+-- -- Buffers
+-- vim.keymap.set("n", "<leader>u", function()
+-- 	snacks.picker.buffers()
+-- end, { desc = "List buffers" })
+--
+-- -- Command history
+-- vim.keymap.set("n", "<leader>h", function()
+-- 	snacks.picker.command_history()
+-- end, { desc = "Command history" })
+--
+-- -- Explorer
+-- vim.keymap.set("n", "<leader>n", function()
+-- 	snacks.picker.explorer()
+-- end, { desc = "Explorer" })

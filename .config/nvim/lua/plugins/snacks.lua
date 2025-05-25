@@ -1,36 +1,65 @@
 return {
 	"folke/snacks.nvim",
+	event = "UIEnter",
 	priority = 1000,
-	lazy = false,
-	opts = {
-		dashboard = {
-			preset = {
-				pick = function(cmd, opts)
-					return LazyVim.pick(cmd, opts)()
-				end,
-				header = [[
-███╗   ███╗ █████╗ ██╗     ██╗ ██████╗██╗  ██╗
-████╗ ████║██╔══██╗██║     ██║██╔════╝██║ ██╔╝
-██╔████╔██║███████║██║     ██║██║     █████╔╝ 
-██║╚██╔╝██║██╔══██║██║     ██║██║     ██╔═██╗ 
-██║ ╚═╝ ██║██║  ██║███████╗██║╚██████╗██║  ██╗
-    ╚═╝     ╚═╝╚═╝  ╚═╝╚══════╝╚═╝ ╚═════╝╚═╝  ╚═╝.dev
-                                              
- ]],
-        -- stylua: ignore
-        ---@type snacks.dashboard.Item[]
-        keys = {
-          { icon = " ", key = "f", desc = "Find File", action = ":lua Snacks.dashboard.pick('files')" },
-          { icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
-          { icon = " ", key = "g", desc = "Find Text", action = ":lua Snacks.dashboard.pick('live_grep')" },
-          { icon = " ", key = "r", desc = "Recent Files", action = ":lua Snacks.dashboard.pick('oldfiles')" },
-          { icon = " ", key = "c", desc = "Config", action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})" },
-          { icon = " ", key = "s", desc = "Restore Session", section = "session" },
-          { icon = " ", key = "x", desc = "Lazy Extras", action = ":LazyExtras" },
-          { icon = "󰒲 ", key = "l", desc = "Lazy", action = ":Lazy" },
-          { icon = " ", key = "q", desc = "Quit", action = ":qa" },
-        },
-			},
+
+	-- HACK: Keymaps
+	keys = {
+		{
+			"<leader><space>",
+			function()
+				Snacks.picker.smart()
+			end,
+			desc = "Find files",
 		},
+
+		{
+			"<leader>g",
+			function()
+				Snacks.picker.grep()
+			end,
+			desc = "Grep",
+		},
+
+		{
+			"<leader>u",
+			function()
+				Snacks.picker.buffers()
+			end,
+			desc = "List buffers",
+		},
+		{
+			"<leader>z",
+			function()
+				Snacks.zen()
+			end,
+			desc = "Toggle Zen Mode",
+			mode = "n",
+		},
+		{
+			"<leader>n",
+			function()
+				Snacks.explorer()
+			end,
+			desc = "File Explorer",
+		},
+	},
+
+	-- HACK: Config
+
+	---@type snacks.Config
+	opts = {
+		bigfile = { enabled = true },
+		dashboard = { enabled = true },
+		explorer = { enabled = true },
+		indent = { enabled = true },
+		input = { enabled = true },
+		picker = { enabled = true },
+		notifier = { enabled = false },
+		quickfile = { enabled = true },
+		scope = { enabled = true },
+		scroll = { enabled = true },
+		statuscolumn = { enabled = true },
+		words = { enabled = true },
 	},
 }

@@ -17,7 +17,9 @@ return {
 			"bash",
 			"tsx",
 			"css",
+			"scss",
 			"html",
+			"regex",
 
 			sync_install = false,
 

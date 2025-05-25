@@ -25,7 +25,7 @@ require("lazy").setup({
 
 		require("plugins.notify"),
 
-		require("plugins.neotree"),
+		-- require("plugis.neotree"),
 
 		require("plugins.lsp.mason"),
 
@@ -57,8 +57,6 @@ require("lazy").setup({
 
 		require("plugins.which-key"),
 
-		require("plugins.snacks"),
-
 		{
 			"numToStr/Comment.nvim",
 			event = "VeryLazy",
@@ -68,15 +66,19 @@ require("lazy").setup({
 			end,
 		},
 
+		require("plugins.todo-comments"),
+
 		require("plugins.lualine"),
 
 		require("plugins.noice"),
 
 		require("plugins.terraform"),
+		require("plugins.snacks"),
 
 		-- Auto update plugins
 		checker = { enabled = false },
 	},
+
 	ui = {
 		border = "rounded",
 		size = {
