@@ -74,6 +74,8 @@ require("lazy").setup({
 
 		require("plugins.lorem"),
 
+		require("plugins.surround"),
+
 		-- Auto update plugins
 		checker = { enabled = false },
 	},

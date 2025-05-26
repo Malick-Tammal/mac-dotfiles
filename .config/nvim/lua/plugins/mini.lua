@@ -13,8 +13,5 @@ return {
 
 		-- INFO: Auto pairs
 		require("mini.pairs").setup()
-
-		-- INFO: Surround
-		require("mini.surround").setup()
 	end,
 }

@@ -5,22 +5,6 @@ return {
 	-- HACK: Keymaps
 	keys = {
 		{
-			"<leader><space>",
-			function()
-				Snacks.picker.smart()
-			end,
-			desc = "Finder",
-		},
-
-		{
-			"<leader>u",
-			function()
-				Snacks.picker.buffers()
-			end,
-			desc = "List buffers",
-		},
-
-		{
 			"<leader>z",
 			function()
 				Snacks.zen()

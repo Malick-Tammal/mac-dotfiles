@@ -80,10 +80,10 @@ vim.keymap.set("v", ">", ">gv", opts)
 vim.keymap.set("v", "p", '"_dP', opts)
 
 -- Diagnostic keymaps
-vim.keymap.set("n", "<leader>ep", vim.diagnostic.goto_prev, { desc = "Go to previous diagnostic message" })
-vim.keymap.set("n", "<leader>en", vim.diagnostic.goto_next, { desc = "Go to next diagnostic message" })
-vim.keymap.set("n", "<leader>ef", vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
-vim.keymap.set("n", "<leader>el", vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
+vim.keymap.set("n", "<leader>dp", vim.diagnostic.goto_prev, { desc = "Go to previous diagnostic message" })
+vim.keymap.set("n", "<leader>dn", vim.diagnostic.goto_next, { desc = "Go to next diagnostic message" })
+vim.keymap.set("n", "<leader>df", vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
+vim.keymap.set("n", "<leader>dl", vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
 
 -- Neotree
 vim.keymap.set("n", "<leader>n", "<Cmd>Neotree toggle position=left<CR>", { desc = "Explorer Neoree (Toggle)" })
@@ -93,10 +93,10 @@ vim.keymap.set("n", "<C-c>", "<Cmd>noh<CR>", opts)
 
 -- Telescope
 local builtin = require("telescope.builtin")
-vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Telescope find files" })
-vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live grep" })
-vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
-vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
+vim.keymap.set("n", "<leader><space>", builtin.find_files, { desc = "Telescope find files" })
+vim.keymap.set("n", "<leader>r", builtin.live_grep, { desc = "Telescope live grep" })
+vim.keymap.set("n", "<leader>bf", builtin.buffers, { desc = "Telescope buffers" })
+vim.keymap.set("n", "<leader>h", builtin.help_tags, { desc = "Telescope help tags" })
 
 -- Quit
 vim.keymap.set("n", "<leader>qq", "<Cmd>qa!<CR>") -- Exit without saving!
@@ -120,10 +120,10 @@ vim.keymap.set("n", "[t", function()
 	require("todo-comments").jump_prev()
 end, { desc = "Previous todo comment" })
 
--- Todo comments
+-- Diagnostics
 vim.keymap.set(
 	"n",
-	"<leader>d",
+	"<leader>dt",
 	"<Cmd>lua require('tiny-inline-diagnostic').toggle()<CR>",
 	{ desc = "Toggle diagnostics" }
 )
