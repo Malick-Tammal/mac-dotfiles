@@ -47,22 +47,31 @@ return {
 			{ "<leader>f", desc = "Telescope", icon = { icon = "", color = "red" } },
 
 			-- Tabs
-			{ "<leader>t", desc = "Tabs", icon = { icon = "󱃢", color = "red" } },
+			{ "<leader>T", desc = "Tabs", icon = { icon = "󱃢", color = "red" } },
 
 			-- Diagnostics
 			{ "<leader>e", desc = "Diagnostics", icon = { icon = "󰮄", color = "red" } },
 
 			-- Code
 			{ "<leader>c", desc = "Code", icon = { icon = "", color = "red" } },
-			{ "<leader>cs", desc = "Save", icon = { icon = "󰆓", color = "red" } },
-			{ "<leader>cn", desc = "Save without format", icon = { icon = "󰽂", color = "red" } },
-			{ "<leader>cf", desc = "Format", icon = { icon = "󰉿", color = "red" } },
+			{ "<leader>cs", desc = "Save", icon = { icon = "󰆓", color = "yellow" } },
+			{ "<leader>cn", desc = "Save without format", icon = { icon = "󰽂", color = "yellow" } },
+			{ "<leader>cf", desc = "Format", icon = { icon = "󰉿", color = "yellow" } },
+			-- Dimming
+			{ "<leader>cd", desc = "Dim", icon = { icon = "󱜟", color = "yellow" } },
+			{ "<leader>cD", desc = "UnDim", icon = { icon = "󰞏", color = "yellow" } },
 
 			-- Finder
 			{ "<leader><space>", desc = "Finder", icon = { icon = "󱘞", color = "orange" } },
 
 			-- Zen mode
 			{ "<leader>z", desc = "Zen mode", icon = { icon = "", color = "cyan" } },
+
+			-- Lazygit
+			{ "<leader>g", desc = "Lazygit", icon = { icon = "", color = "cyan" } },
+
+			-- Terminal
+			{ "<leader>t", desc = "Terminal", icon = { icon = "", color = "purple" } },
 		})
 		wk.setup({
 			preset = "helix",

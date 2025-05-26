@@ -64,10 +64,10 @@ vim.keymap.set("n", "<C-h>", ":wincmd h<CR>", opts)
 vim.keymap.set("n", "<C-l>", ":wincmd l<CR>", opts)
 
 -- Tabs
-vim.keymap.set("n", "<leader>to", ":tabnew<CR>", opts) -- open new tab
-vim.keymap.set("n", "<leader>tx", ":tabclose<CR>", opts) -- close current tab
-vim.keymap.set("n", "<leader>tn", ":tabn<CR>", opts) --  go to next tab
-vim.keymap.set("n", "<leader>tp", ":tabp<CR>", opts) --  go to previous tab
+vim.keymap.set("n", "<leader>To", ":tabnew<CR>", opts) -- open new tab
+vim.keymap.set("n", "<leader>Tx", ":tabclose<CR>", opts) -- close current tab
+vim.keymap.set("n", "<leader>Tn", ":tabn<CR>", opts) --  go to next tab
+vim.keymap.set("n", "<leader>Tp", ":tabp<CR>", opts) --  go to previous tab
 
 -- Toggle line wrapping
 -- vim.keymap.set("n", "<leader>lw", "<cmd>set wrap!<CR>", opts)
@@ -110,32 +110,3 @@ vim.keymap.set("n", "<leader>m", "<Cmd>Mason<CR>") -- Call Mason
 
 -- Delete
 vim.keymap.set("n", "<leader>d", '"_d') -- Black hole "Delete without copy it"
-
--- HACK: Snacks keymaps
-
--- local snacks = require("plugins.snacks")
---
--- -- Explorer
--- vim.keymap.set("n", "<leader><space>", function()
--- 	snacks.picker.smart()
--- end, { desc = "Smart Find Files" })
---
--- -- Grep
--- vim.keymap.set("n", "<leader>g", function()
--- 	snacks.picker.grep()
--- end, { desc = "Grep" })
---
--- -- Buffers
--- vim.keymap.set("n", "<leader>u", function()
--- 	snacks.picker.buffers()
--- end, { desc = "List buffers" })
---
--- -- Command history
--- vim.keymap.set("n", "<leader>h", function()
--- 	snacks.picker.command_history()
--- end, { desc = "Command history" })
---
--- -- Explorer
--- vim.keymap.set("n", "<leader>n", function()
--- 	snacks.picker.explorer()
--- end, { desc = "Explorer" })
