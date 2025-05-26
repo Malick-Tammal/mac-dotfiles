@@ -4,8 +4,11 @@ return {
 	-- TODO: configure it
 	-- NOTE: Options
 	opts = {
-		-- your configuration comes here
-		-- or leave it empty to use the default settings
-		-- refer to the configuration section below
+		keywords = {
+			HACK = { icon = " ", color = "warning" },
+			PERF = { icon = "󰓅 ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
+			NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
+			TEST = { icon = "󰙨 ", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
+		},
 	},
 }

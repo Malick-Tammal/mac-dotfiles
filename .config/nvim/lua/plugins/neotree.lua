@@ -16,6 +16,16 @@ return {
 			popup_border_style = "rounded",
 			enable_cursor_hijack = true,
 			hide_root_node = true,
+
+			-- INFO: Showing realetive numbers
+			event_handlers = {
+				{
+					event = "neo_tree_buffer_enter",
+					handler = function()
+						vim.opt_local.relativenumber = true
+					end,
+				},
+			},
 			window = {
 				position = "left",
 				width = 30,
