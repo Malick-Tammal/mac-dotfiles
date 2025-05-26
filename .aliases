@@ -71,6 +71,7 @@ alias nrde="npm run deploy"
 
 # Git
 alias gcmm="git commit -m"
+alias lg="lazygit"
 
 # Bench zsh
 alias bench="time zsh -i -c exit"
