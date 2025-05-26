@@ -70,6 +70,8 @@ require("lazy").setup({
 
 		require("plugins.snacks"),
 
+		require("plugins.smear-cursor"),
+
 		-- Auto update plugins
 		checker = { enabled = false },
 	},
