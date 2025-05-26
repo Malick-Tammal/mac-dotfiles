@@ -102,25 +102,21 @@ return {
 					diag = "󱓻",
 				},
 				options = {
-					use_icons_from_diagnostic = false,
+					use_icons_from_diagnostic = true,
 
 					multilines = {
 						-- Enable multiline diagnostic messages
 						enabled = true,
-
 						-- Always show messages on all lines for multiline diagnostics
-						always_show = true,
+						always_show = false,
 					},
 				},
+				disabled_ft = {}, -- List of filetypes to disable the plugin
 			})
 
 			-- Change the Diagnostic symbols
 			vim.diagnostic.config({
 				underline = false,
-				-- virtual_text = {
-				-- 	spacing = 2,
-				-- 	prefix = "󱓻",
-				-- },
 				virtual_text = false,
 				update_in_insert = false,
 				severity_sort = true,

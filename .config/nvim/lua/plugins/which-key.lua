@@ -21,7 +21,7 @@ return {
 			{ "<leader>n", group = "Explorer", icon = { icon = "󰲂", color = "yellow" } },
 
 			-- Delete
-			{ "<leader>d", group = "Delete (Black Hole)", icon = { icon = "󰗨", color = "red" } },
+			{ "<leader>x", group = "Delete (Black Hole)", icon = { icon = "󰗨", color = "red" } },
 
 			-- Split
 			{ "<leader>s", group = "Split", icon = { icon = "󰯌", color = "red" } },
@@ -51,6 +51,7 @@ return {
 
 			-- Diagnostics
 			{ "<leader>e", desc = "Diagnostics", icon = { icon = "󰮄", color = "red" } },
+			{ "<leader>d", desc = "Toggle diagnostics", icon = { icon = "󰮄", color = "red" } },
 
 			-- Code
 			{ "<leader>c", desc = "Code", icon = { icon = "", color = "red" } },

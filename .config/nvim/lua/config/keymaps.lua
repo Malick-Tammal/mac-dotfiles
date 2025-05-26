@@ -98,9 +98,9 @@ vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live gr
 vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
 
--- Exit
+-- Quit
 vim.keymap.set("n", "<leader>qq", "<Cmd>qa!<CR>") -- Exit without saving!
-vim.keymap.set("n", "<leader>qw", "<Cmd>qa!<CR>") -- Exit and save
+vim.keymap.set("n", "<leader>qw", "<Cmd>xa<CR>") -- Exit and save
 
 -- Lazy
 vim.keymap.set("n", "<leader>l", "<Cmd>Lazy<CR>", { desc = "Lazy" }) -- Call Lazy
@@ -109,7 +109,7 @@ vim.keymap.set("n", "<leader>l", "<Cmd>Lazy<CR>", { desc = "Lazy" }) -- Call Laz
 vim.keymap.set("n", "<leader>m", "<Cmd>Mason<CR>") -- Call Mason
 
 -- Delete
-vim.keymap.set("n", "<leader>d", '"_d') -- Black hole "Delete without copy it"
+vim.keymap.set("n", "<leader>x", '"_d') -- Black hole "Delete without copy it"
 
 -- Todo comments
 vim.keymap.set("n", "]t", function()
@@ -119,3 +119,11 @@ end, { desc = "Next todo comment" })
 vim.keymap.set("n", "[t", function()
 	require("todo-comments").jump_prev()
 end, { desc = "Previous todo comment" })
+
+-- Todo comments
+vim.keymap.set(
+	"n",
+	"<leader>d",
+	"<Cmd>lua require('tiny-inline-diagnostic').toggle()<CR>",
+	{ desc = "Toggle diagnostics" }
+)

@@ -2,7 +2,6 @@ return {
 	"folke/snacks.nvim",
 	event = "UIEnter",
 	priority = 1000,
-
 	-- HACK: Keymaps
 	keys = {
 		{
