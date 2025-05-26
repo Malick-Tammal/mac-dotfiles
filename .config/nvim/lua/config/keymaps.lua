@@ -127,3 +127,6 @@ vim.keymap.set(
 	"<Cmd>lua require('tiny-inline-diagnostic').toggle()<CR>",
 	{ desc = "Toggle diagnostics" }
 )
+
+-- Disabling letter "s" keymap
+vim.keymap.set("n", "s", "")

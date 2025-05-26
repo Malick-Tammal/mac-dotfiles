@@ -72,6 +72,8 @@ require("lazy").setup({
 
 		require("plugins.smear-cursor"),
 
+		require("plugins.lorem"),
+
 		-- Auto update plugins
 		checker = { enabled = false },
 	},
