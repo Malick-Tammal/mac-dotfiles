@@ -76,6 +76,8 @@ require("lazy").setup({
 
 		require("plugins.surround"),
 
+		require("plugins.colorizer"),
+
 		-- Auto update plugins
 		checker = { enabled = false },
 	},
