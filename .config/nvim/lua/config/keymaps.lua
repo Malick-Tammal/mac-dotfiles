@@ -137,3 +137,10 @@ local projects = require("plugins.custom.projects")
 vim.keymap.set("n", "<leader>p", function()
 	projects.setup()
 end, { desc = "Projects" })
+
+-- Theme switcher
+local theme_switcher = require("plugins.custom.theme-switcher")
+
+vim.keymap.set("n", "<leader>v", function()
+	theme_switcher.setup()
+end, { desc = "Projects" })

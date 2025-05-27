@@ -3,10 +3,10 @@ font-family = "MesloLGL Nerd Font"
 font-size = 15
 
 # Theme + Styling
-theme = gruvbox-material
+theme = Everforest Dark - Hard
 palette = 8=#7e7d7d
-background = #181818
-background-opacity = 0.8
+background = #111314
+background-opacity = 0.9
 background-blur = 35
 
 # Cursor 

@@ -21,7 +21,7 @@ require("lazy").setup({
 
 		-- Plugins
 
-		require("plugins.colortheme"),
+		require("plugins.colorthemes"),
 
 		require("plugins.mini"),
 

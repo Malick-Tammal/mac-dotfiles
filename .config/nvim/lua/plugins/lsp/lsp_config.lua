@@ -97,7 +97,7 @@ return {
 		config = function()
 			require("tiny-inline-diagnostic").setup({
 				preset = "modern",
-				transparent_bg = true,
+				transparent_bg = false,
 				signs = {
 					diag = "󱓻",
 				},
