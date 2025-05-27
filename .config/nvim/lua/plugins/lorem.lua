@@ -1,5 +1,7 @@
 return {
 	"derektata/lorem.nvim",
+	lazy = true,
+	event = "VeryLazy",
 	config = function()
 		require("lorem").opts({
 			sentence_length = "medium",
