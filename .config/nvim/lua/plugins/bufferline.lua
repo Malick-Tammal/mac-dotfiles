@@ -2,70 +2,86 @@ return {
 	"akinsho/bufferline.nvim",
 	version = "*",
 	dependencies = "nvim-tree/nvim-web-devicons",
+
+	-- HACK: Config
 	config = function()
 		vim.opt.termguicolors = true
-		require("bufferline").setup({
+		local bufferline = require("bufferline")
+		bufferline.setup({
 			options = {
+
+				-- INFO: Explorer
 				offsets = {
 					{
 						filetype = "neo-tree",
-						text = "󰲂 Explorer",
+						text = function()
+							local title = "󰲂 Explorer "
+							local path = vim.fn.fnamemodify(vim.fn.getcwd(), ":t")
+							return title .. '"' .. path .. '"'
+						end,
 						separator = true,
 						text_align = "center",
 					},
-					-- {
-					-- 	filetype = "snacks_layout_box",
-					-- },
 				},
-				mode = "buffers", -- set to "tabs" to only show tabpages instead
-				themable = true, -- allows highlight groups to be overriden i.e. sets highlights as default
-				numbers = "none", -- | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
-				close_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
-				-- buffer_close_icon = "✗",
-				-- close_icon = "✗",
-				buffer_close_icon = "󱎘",
-				close_icon = "󱎘",
-				path_components = 1, -- Show only the file name without the directory
-				modified_icon = "●",
-				left_trunc_marker = "",
-				right_trunc_marker = "",
-				max_name_length = 30,
-				max_prefix_length = 30, -- prefix used when a buffer is de-duplicated
-				tab_size = 21,
-				diagnostics = false,
-				diagnostics_update_in_insert = false,
-				color_icons = true,
-				show_buffer_icons = true,
-				show_buffer_close_icons = true,
-				show_close_icon = false,
-				persist_buffer_sort = true, -- whether or not custom sorted buffers should persist
-				separator_style = { "│", "│" }, -- | "thick" | "thin" | { 'any', 'any' },
-				enforce_regular_tabs = true,
-				always_show_bufferline = true,
-				show_tab_indicators = false,
+				themable = true,
 				indicator = {
-					-- icon = '▎', -- this should be omitted if indicator style is not 'icon'
-					style = "none", -- Options: 'icon', 'underline', 'none'
+					icon = "  ",
+					style = "icon",
 				},
-				icon_pinned = "󰐃",
-				minimum_padding = 1,
-				maximum_padding = 5,
-				maximum_length = 15,
-				sort_by = "insert_at_end",
+				buffer_close_icon = "󱎘 ",
+				modified_icon = "󰤌 ",
+				tab_size = 25,
+				color_icons = true,
+				separator_style = "thin",
+				-- numbers = "ordinal", -- Show numbers
+
+				hover = {
+					enabled = true,
+					delay = 150,
+					reveal = { "close" },
+				},
+
+				-- INFO: Diagnostics
+				diagnostics = "nvim_lsp",
+				diagnostics_indicator = function(count, level)
+					local icon = function()
+						if level:match("error") then
+							return " "
+						elseif level:match("warn") then
+							return " "
+						elseif level:match("hint") then
+							return "󰠠 "
+						elseif level:match("info") then
+							return " "
+						end
+					end
+					return " " .. icon() .. count
+				end,
+
+				-- INFO: Groups
+
+				-- groups = {
+				-- 	options = {
+				-- 		toggle_hidden_on_enter = true, -- when you re-enter a hidden group this options re-opens that group so the buffer is visible
+				-- 	},
+				-- 	items = {
+				-- 		{
+				-- 			name = "Tests", -- Mandatory
+				-- 			highlight = { underline = false, sp = "#ffb15d" }, -- Optional
+				-- 			priority = 2, -- determines where it will appear relative to other groups (Optional)
+				-- 			icon = " ", -- Optional
+				-- 			auto_close = true,
+				-- 			matcher = function(buf)
+				-- 				return buf.name:match("%.md") or buf.name:match("%.txt")
+				-- 			end,
+				-- 		},
+				-- 	},
+				-- },
 			},
 			highlights = {
-				separator = {
-					fg = "#434C5E",
+				indicator_selected = {
+					bg = "#ff9840",
 				},
-				buffer_selected = {
-					bold = true,
-					italic = false,
-				},
-				-- separator_selected = {},
-				-- tab_selected = {},
-				-- background = {},
-				-- indicator_selected = {},
-				-- fill = {},
 			},
 		})
 	end,
