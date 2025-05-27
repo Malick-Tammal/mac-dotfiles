@@ -47,7 +47,7 @@ return {
 			-- Telescope
 			-- { "<leader>f", desc = "Telescope", icon = { icon = "", color = "red" } },
 			{ "<leader>h", desc = "Help tags", icon = { icon = "󰞋 ", color = "green" } },
-			{ "<leader>g", desc = "Grep", icon = { icon = "󰈞 ", color = "cyan" } },
+			{ "<leader>G", desc = "Grep", icon = { icon = "󰈞 ", color = "cyan" } },
 
 			-- Tabs
 			{ "<leader>T", desc = "Tabs", icon = { icon = "󱃢 ", color = "purple" } },

@@ -1,6 +1,6 @@
 return {
 	"rcarriga/nvim-notify",
-    lazy = true,
+	lazy = true,
 	event = "VeryLazy",
 	config = function()
 		require("notify").setup({
@@ -10,7 +10,7 @@ return {
 			fps = 60,
 			max_height = 3,
 			max_width = 150,
-			timeout = 1000,
+			timeout = 5000,
 			level = 2,
 			time_formats = {
 				notification = " %H:%M",

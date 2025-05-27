@@ -94,7 +94,7 @@ vim.keymap.set("n", "<C-c>", "<Cmd>noh<CR>", opts)
 -- Telescope
 local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<leader><space>", builtin.find_files, { desc = "Telescope find files" })
-vim.keymap.set("n", "<leader>r", builtin.live_grep, { desc = "Telescope live grep" })
+vim.keymap.set("n", "<leader>G", builtin.live_grep, { desc = "Telescope live grep" })
 vim.keymap.set("n", "<leader>bf", builtin.buffers, { desc = "Telescope buffers" })
 vim.keymap.set("n", "<leader>h", builtin.help_tags, { desc = "Telescope help tags" })
 
@@ -130,3 +130,10 @@ vim.keymap.set(
 
 -- Disabling letter "s" keymap
 vim.keymap.set("n", "s", "")
+
+-- Projects
+local projects = require("plugins.custom.projects")
+
+vim.keymap.set("n", "<leader>p", function()
+	projects.setup()
+end, { desc = "Projects" })

@@ -15,7 +15,19 @@ return {
 			extensions = {
 				fzf = {},
 			},
+			pickers = {
+				find_files = {
+					find_command = { "rg", "--files", "--color", "never", "--no-require-git" },
+				},
+			},
+			defaults = {
+				prompt_prefix = " ",
+				selection_caret = " ",
+				path_display = { "smart" },
+			},
 		})
+
+		-- INFO: Extensions
 		tele.load_extension("fzf")
 	end,
 }
