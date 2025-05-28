@@ -143,4 +143,16 @@ local theme_switcher = require("plugins.custom.theme-switcher")
 
 vim.keymap.set("n", "<leader>v", function()
 	theme_switcher.setup()
-end, { desc = "Projects" })
+end, { desc = "Theme switcher" })
+
+-- NOTE: LoremIpsum
+
+-- Words
+vim.keymap.set("n", "<leader>Lw", function()
+	vim.cmd("LoremIpsum words " .. vim.fn.input("Number of words"))
+end, { desc = "Words" })
+
+-- Paragraphs
+vim.keymap.set("n", "<leader>Lp", function()
+	vim.cmd("LoremIpsum paragraphs " .. vim.fn.input("Number of paragraphs"))
+end, { desc = "Paragraphs" })

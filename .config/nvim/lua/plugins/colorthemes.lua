@@ -1,4 +1,5 @@
 return {
+	-- HACK: Gruvbox
 	{
 		"ellisonleao/gruvbox.nvim",
 		config = function()
@@ -30,6 +31,8 @@ return {
 			-- vim.cmd("colorscheme gruvbox"),
 		end,
 	},
+
+	-- HACK: Kanagawa
 	{
 		"rebelot/kanagawa.nvim",
 		config = function()
@@ -88,7 +91,7 @@ return {
 			require("everforest").setup({
 				-- INFO: Options (hard/ medium / soft)
 				background = "hard",
-				transparent_background_level = 0,
+				transparent_background_level = 1,
 				ui_contrast = "hard",
 				diagnostic_text_highlight = true,
 			})

@@ -1,7 +1,7 @@
 return {
 	"derektata/lorem.nvim",
+	event = { "BufReadPre", "BufNewFile" },
 	lazy = true,
-	event = "VeryLazy",
 	config = function()
 		require("lorem").opts({
 			sentence_length = "medium",

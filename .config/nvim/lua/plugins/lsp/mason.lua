@@ -30,11 +30,10 @@ return {
 			ensure_installed = {
 				"lua_ls",
 				"ts_ls",
-				"templ",
 				"cssls",
-				"emmet_language_server",
+				"emmet_ls",
 				"jsonls",
-				"vtsls",
+				"html",
 			},
 			automatic_enable = false,
 		})

@@ -76,11 +76,23 @@ return {
 
 			-- Terminal
 			{ "<leader>t", desc = "Terminal", icon = { icon = " ", color = "purple" } },
+
+			-- Lorem ipsum
+			{ "<leader>L", desc = "LoremIpsum", icon = { icon = "󰬓 ", color = "azure" } },
+			{ "<leader>Lw", desc = "Words", icon = { icon = "󰬞 ", color = "orange" } },
+			{ "<leader>Lp", desc = "Paragraphs", icon = { icon = "󰬗 ", color = "orange" } },
+
+			-- Projects
+			{ "<leader>p", desc = "Projects", icon = { icon = "󰅨 ", color = "orange" } },
+
+			-- Theme switcher
+			{ "<leader>v", desc = "Theme switcher", icon = { icon = " ", color = "pink" } },
 		})
+
 		wk.setup({
 			preset = "helix",
 			icons = {
-				group = " ",
+				group = "   ",
 			},
 		})
 	end,

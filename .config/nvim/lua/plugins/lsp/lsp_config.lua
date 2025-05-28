@@ -48,7 +48,7 @@ return {
 			})
 
 			-- HTML
-			lspconfig.templ.setup({
+			lspconfig.html.setup({
 				capabilities = capabilities,
 				filetypes = {
 					"html",
@@ -73,8 +73,7 @@ return {
 				},
 			})
 
-			-- Emmet
-			lspconfig.emmet_language_server.setup({
+			lspconfig.emmet_ls.setup({
 				capabilities = capabilities,
 				filetypes = {
 					"css",

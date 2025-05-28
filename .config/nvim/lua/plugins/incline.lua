@@ -27,11 +27,8 @@ return {
 					" ",
 					{ filename, gui = modified and "bold,italic" or "bold" },
 					" ",
-					guibg = "#3b3836",
 				}
 			end,
 		})
 	end,
-	-- Optional: Lazy load Incline
-	event = "VeryLazy",
 }

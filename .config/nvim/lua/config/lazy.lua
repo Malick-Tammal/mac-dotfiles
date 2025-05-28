@@ -78,6 +78,10 @@ require("lazy").setup({
 
 		require("plugins.colorizer"),
 
+		require("plugins.lsp.autotag"),
+
+		require("plugins.lsp.autopairs"),
+
 		-- Auto update plugins
 		checker = { enabled = false },
 	},

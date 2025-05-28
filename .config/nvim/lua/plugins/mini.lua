@@ -10,8 +10,5 @@ return {
 			require("mini.icons").mock_nvim_web_devicons()
 			return package.loaded["nvim-web-devicons"]
 		end
-
-		-- INFO: Auto pairs
-		require("mini.pairs").setup()
 	end,
 }

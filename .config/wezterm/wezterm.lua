@@ -14,12 +14,11 @@ config.window_padding = {
 	top = 80,
 	bottom = 0,
 }
-config.window_background_opacity = 0.7
+config.window_background_opacity = 0.65
 config.macos_window_background_blur = 30
 
 -- INFO: Font
 config.font = wezterm.font("MesloLGL Nerd Font", { weight = "Bold" })
-config.font_size = 15
 config.font_size = 15
 config.window_frame = {
 	font = wezterm.font("MesloLGL Nerd Font", { weight = "Bold" }),
