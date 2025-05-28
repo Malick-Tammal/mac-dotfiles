@@ -82,6 +82,8 @@ require("lazy").setup({
 
 		require("plugins.lsp.autopairs"),
 
+		require("plugins.flash"),
+
 		-- Auto update plugins
 		checker = { enabled = false },
 	},

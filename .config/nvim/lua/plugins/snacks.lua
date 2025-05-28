@@ -109,6 +109,7 @@ return {
 						desc = "Projects",
 						action = ":lua require('plugins.custom.projects').setup()",
 					},
+					{ icon = "󰊢 ", key = "g", desc = "Lazy git", action = ":lua Snacks.lazygit() " },
 					{ icon = " ", key = "f", desc = "Find File", action = ":lua Snacks.dashboard.pick('files')" },
 					{ icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
 					{
