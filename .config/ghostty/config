@@ -5,8 +5,8 @@ font-size = 15
 # Theme + Styling
 theme = Everforest Dark - Hard
 palette = 8=#7e7d7d
-background = #111314
-background-opacity = 0.9
+# background = #1f2326
+background-opacity = 0.8
 background-blur = 35
 
 # Cursor 

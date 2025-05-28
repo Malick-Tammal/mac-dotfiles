@@ -10,7 +10,7 @@
 # INFO: Brew (macos / linux)
 alias bi="brew install"
 alias bic="brew install --cask"
-alias bu="brew uninstall"
+alias br="brew uninstall"
 alias bu="brew update"
 alias bs="brew search"
 alias bl="brew list"
