@@ -52,5 +52,6 @@ wezterm.on("toggle-opacity", function(window, pane)
 end)
 
 config.animation_fps = 60
+config.max_fps = 60
 
 return config
