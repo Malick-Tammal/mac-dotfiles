@@ -92,7 +92,8 @@ return {
 		wk.setup({
 			preset = "helix",
 			icons = {
-				group = "   ",
+				-- group = "   ",
+				group = "  ",
 			},
 		})
 	end,

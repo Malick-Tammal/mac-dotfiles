@@ -1,5 +1,6 @@
 return {
 	"echasnovski/mini.nvim",
+	event = "UIEnter",
 	version = "*",
 	specs = {
 		{ "nvim-tree/nvim-web-devicons", enabled = false, optional = true },

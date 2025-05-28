@@ -1,5 +1,6 @@
 return {
 	"windwp/nvim-ts-autotag",
+	event = "InsertEnter",
 
 	-- INFO: Config
 	config = function()

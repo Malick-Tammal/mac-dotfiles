@@ -26,7 +26,8 @@ return {
 				},
 				themable = true,
 				indicator = {
-					icon = "  ",
+					-- icon = "  ",
+					icon = "  ",
 					style = "icon",
 				},
 				buffer_close_icon = "󱎘 ",
@@ -38,7 +39,6 @@ return {
 
 				hover = {
 					enabled = true,
-					delay = 150,
 					reveal = { "close" },
 				},
 
@@ -61,28 +61,23 @@ return {
 
 				-- INFO: Groups
 
-				groups = {
-					options = {
-						toggle_hidden_on_enter = true, -- when you re-enter a hidden group this options re-opens that group so the buffer is visible
-					},
-					items = {
-						{
-							name = "Tests", -- Mandatory
-							highlight = { underline = false, sp = "#ffb15d" }, -- Optional
-							priority = 2, -- determines where it will appear relative to other groups (Optional)
-							icon = " ", -- Optional
-							auto_close = true,
-							matcher = function(buf)
-								return buf.name:match("%.md") or buf.name:match("%.txt")
-							end,
-						},
-					},
-				},
-			},
-			highlights = {
-				indicator_selected = {
-					bg = "#ff9b39",
-				},
+				-- groups = {
+				-- 	options = {
+				-- 		toggle_hidden_on_enter = true, -- when you re-enter a hidden group this options re-opens that group so the buffer is visible
+				-- 	},
+				-- 	items = {
+				-- 		{
+				-- 			name = "Tests", -- Mandatory
+				-- 			highlight = { underline = false, sp = "#db9c7b" }, -- Optional
+				-- 			priority = 2, -- determines where it will appear relative to other groups (Optional)
+				-- 			icon = " ", -- Optional
+				-- 			auto_close = true,
+				-- 			matcher = function(buf)
+				-- 				return buf.name:match("%.md") or buf.name:match("%.txt")
+				-- 			end,
+				-- 		},
+				-- 	},
+				-- },
 			},
 		})
 	end,
