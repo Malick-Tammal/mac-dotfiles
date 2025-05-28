@@ -1,13 +1,13 @@
-## "Aliases" MAKE YOUR LIFE EASY
+# HACK: "Aliases" MAKE YOUR LIFE EASY
 
-# YAY (arch)
+# INFO: YAY (arch)
 # alias i="yay -S"
 # alias s="yay -Ss"
 # alias r="yay -R"
 # alias update="yay -Syu"
 # alias list="yay -Q"
 
-# Brew (macos / linux)
+# INFO: Brew (macos / linux)
 alias bi="brew install"
 alias bic="brew install --cask"
 alias bu="brew uninstall"
@@ -16,30 +16,31 @@ alias bs="brew search"
 alias bl="brew list"
 alias bfu='brew update; brew upgrade --cask --greedy ; brew upgrade $(brew outdated | awk "{ print $1 }") ; brew cleanup'
 
-# ZSH / BASH
+# INFO: ZSH / BASH
 alias szsh="source ~/.zshrc"
 alias vzsh="vim ~/.zshrc"
 alias vbsh="vim ~/.bashrc"
 alias nvzsh="nvim ~/.zshrc"
 alias nvbsh="nvim ~/.bashrc"
 
-# EDIT ALIASES
+# INFO: EDIT ALIASES
 alias vals="vim ~/.aliases"
 alias bals="bat ~/.aliases"
 alias cals="code ~/.aliases"
 alias nvals="nv ~/.aliases"
 
-# HYPRLAND
+# INFO: HYPRLAND
 # alias vhypr="vim ~/.config/hypr/hyprland.conf"
 # alias chypr="code ~/.config/hypr/hyprland.conf"
 
-## TERMINAL
+# INFO: TERMINAL
 alias neo="neofetch"
 alias fast="fastfetch"
 alias c="clear"
 alias rmrf="rm -rf"
 alias md="mkdir"
 alias t="touch" 
+
 # Eza
 alias ls="eza --color=always --icons=always"
 alias lsa="eza --color=always --icons=always -a"
@@ -50,28 +51,29 @@ alias lsla="eza --color=always --icons=always -la"
 # alias lsa="lsd -a"
 # alias lsla="lsd -la"
 
-# Nvim
+# INFO: Nvim
 alias nv="nvim"
+aials nvh="nv ."
 
-# Mac borders
+# INFO: Mac borders
 alias cbor="code ~/.config/borders/bordersrc"
 alias rbor="brew services restart borders"
 
-# Node
-alias n="npm"
-alias ni="npm i"
-alias nig="npm i -g"
-alias nisd="npm i --save-dev"
-alias nr="npm remove"
-alias ns="npm start"
-alias nrd="npm run dev"
-alias nrp="npm run preview"
-alias nrb="npm run build"
-alias nrde="npm run deploy"
+# INFO: Node
+alias npmi="npm i"
+alias npmig="npm i -g"
+alias npmisd="npm i --save-dev"
+alias npmre="npm remove"
+alias npms="npm start"
+alias npmrd="npm run dev"
+alias npmrp="npm run preview"
+alias npmrb="npm run build"
+alias npmrde="npm run deploy"
+alias npmcv="npm create vite@latest"
 
-# Git
+# INFO: Git
 alias gcmm="git commit -m"
 alias lg="lazygit"
 
-# Bench zsh
+# INFO: Bench zsh
 alias bench="time zsh -i -c exit"
