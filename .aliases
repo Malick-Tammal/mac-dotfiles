@@ -53,7 +53,7 @@ alias lsla="eza --color=always --icons=always -la"
 
 # INFO: Nvim
 alias nv="nvim"
-aials nvh="nv ."
+alias nvh="nv ."
 
 # INFO: Mac borders
 alias cbor="code ~/.config/borders/bordersrc"
