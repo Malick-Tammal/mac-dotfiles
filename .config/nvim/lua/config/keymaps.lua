@@ -31,10 +31,6 @@ vim.keymap.set("n", "<C-q>", "<cmd> q <CR>", opts)
 -- delete single character without copying into register
 vim.keymap.set("n", "x", '"_x', opts)
 
--- Vertical scroll and center
-vim.keymap.set("n", "<C-d>", "<C-d>zz", opts)
-vim.keymap.set("n", "<C-u>", "<C-u>zz", opts)
-
 -- Find and center
 vim.keymap.set("n", "n", "nzzzv", opts)
 vim.keymap.set("n", "N", "Nzzzv", opts)
@@ -68,9 +64,6 @@ vim.keymap.set("n", "<leader>To", ":tabnew<CR>", opts) -- open new tab
 vim.keymap.set("n", "<leader>Tx", ":tabclose<CR>", opts) -- close current tab
 vim.keymap.set("n", "<leader>Tn", ":tabn<CR>", opts) --  go to next tab
 vim.keymap.set("n", "<leader>Tp", ":tabp<CR>", opts) --  go to previous tab
-
--- Toggle line wrapping
--- vim.keymap.set("n", "<leader>lw", "<cmd>set wrap!<CR>", opts)
 
 -- Stay in indent mode
 vim.keymap.set("v", "<", "<gv", opts)
@@ -156,3 +149,7 @@ end, { desc = "Words" })
 vim.keymap.set("n", "<leader>Lp", function()
 	vim.cmd("LoremIpsum paragraphs " .. vim.fn.input("Number of paragraphs"))
 end, { desc = "Paragraphs" })
+
+vim.keymap.set("n", "<leader>w", function()
+	require("treesj").toggle()
+end, { desc = "split / join" })

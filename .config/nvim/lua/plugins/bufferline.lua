@@ -37,10 +37,7 @@ return {
 				separator_style = "thin",
 				-- numbers = "ordinal", -- Show numbers
 
-				hover = {
-					enabled = true,
-					reveal = { "close" },
-				},
+				hover = { enabled = true, reveal = { "close" } },
 
 				-- INFO: Diagnostics
 				diagnostics = "nvim_lsp",

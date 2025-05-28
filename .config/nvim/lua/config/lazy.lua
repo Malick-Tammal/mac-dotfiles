@@ -84,6 +84,8 @@ require("lazy").setup({
 
 		require("plugins.flash"),
 
+		require("plugins.treesj"),
+
 		-- Auto update plugins
 		checker = { enabled = false },
 	},
