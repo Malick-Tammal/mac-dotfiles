@@ -57,7 +57,7 @@ return {
 			{ "<leader>dt", desc = "Toggle", icon = { icon = " ", color = "yellow" } },
 
 			-- Code
-			{ "<leader>c", desc = "Code", icon = { icon = " ", color = "orange" } },
+			{ "<leader>c", desc = "Code (File)", icon = { icon = " ", color = "orange" } },
 			{ "<leader>cs", desc = "Save", icon = { icon = "󰆓 ", color = "orange" } },
 			{ "<leader>cn", desc = "Save without format", icon = { icon = "󰽂 ", color = "orange" } },
 			{ "<leader>cf", desc = "Format", icon = { icon = "󰉿 ", color = "blue" } },
@@ -87,6 +87,9 @@ return {
 
 			-- Theme switcher
 			{ "<leader>v", desc = "Theme switcher", icon = { icon = " ", color = "pink" } },
+
+			-- Treesj (split / join)
+			{ "<leader>w", desc = "Split / Join", icon = { icon = " ", color = "yellow" } },
 		})
 
 		wk.setup({

@@ -4,9 +4,9 @@ return {
 	event = "VeryLazy",
 	init = function()
 		-- INFO: Notify when file saved
-		vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-			pattern = "*,*",
-			command = "echo expand('%:t') . ' Saved!'",
-		})
+		-- vim.api.nvim_create_autocmd({ "BufWrite" }, {
+		-- 	pattern = "*,*",
+		-- 	command = "echo expand('%:t') . ' Saved!'",
+		-- })
 	end,
 }

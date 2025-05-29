@@ -9,11 +9,22 @@ vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
 local opts = { noremap = true, silent = true }
 
 -- -- Code actions
+function message(msg, icon)
+	local file = vim.fn.expand("%:t")
+	return icon .. file .. msg
+end
+
 -- Save
-vim.keymap.set("n", "<leader>cs", "<cmd> w <CR>", opts)
+vim.keymap.set("n", "<leader>cs", function()
+	vim.cmd("w")
+	vim.notify(message(" Saved ", "󰆓 "))
+end, opts)
 
 -- Save without formatting
-vim.keymap.set("n", "<leader>cn", "<cmd>noautocmd w <CR>", opts)
+vim.keymap.set("n", "<leader>cn", function()
+	vim.cmd("noautocmd w")
+	vim.notify(message(" Saved (no format)", "󰽂 "))
+end, opts)
 
 -- Format
 vim.keymap.set({ "n", "v" }, "<leader>cf", function()
@@ -149,8 +160,3 @@ end, { desc = "Words" })
 vim.keymap.set("n", "<leader>Lp", function()
 	vim.cmd("LoremIpsum paragraphs " .. vim.fn.input("Number of paragraphs"))
 end, { desc = "Paragraphs" })
-
--- NOTE: Treej "split / join" code block
-vim.keymap.set("n", "<leader>w", function()
-	require("treesj").toggle()
-end, { desc = "split / join" })
