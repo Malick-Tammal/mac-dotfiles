@@ -38,7 +38,7 @@ return {
 
 			mapping = cmp.mapping.preset.insert({
 				["<CR>"] = cmp.mapping.confirm({ select = false }),
-				["<C-CR>"] = cmp.mapping.confirm({ select = true }),
+				["<S-CR>"] = cmp.mapping.confirm({ select = true }),
 				["<C-j>"] = cmp.mapping.select_next_item(),
 				["<C-k>"] = cmp.mapping.select_prev_item(),
 				["<C-b>"] = cmp.mapping.scroll_docs(-4),

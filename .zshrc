@@ -109,3 +109,6 @@ function y() {
     [ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
     rm -f -- "$tmp"
 }
+
+# Setting default editor to "nvim"
+export EDITOR="nvim"

@@ -150,6 +150,7 @@ vim.keymap.set("n", "<leader>Lp", function()
 	vim.cmd("LoremIpsum paragraphs " .. vim.fn.input("Number of paragraphs"))
 end, { desc = "Paragraphs" })
 
+-- NOTE: Treej "split / join" code block
 vim.keymap.set("n", "<leader>w", function()
 	require("treesj").toggle()
 end, { desc = "split / join" })

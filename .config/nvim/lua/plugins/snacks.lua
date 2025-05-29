@@ -55,16 +55,16 @@ return {
 	---@type snacks.Config
 	opts = {
 		-- INFO: Animation
-		-- animate = {
-		-- 	fps = 60,
-		-- 	easing = "linear",
-		-- 	duration = {
-		-- 		step = 10,
-		-- 		total = 500,
-		-- 	},
-		-- },
+		animate = {
+			fps = 60,
+			easing = "linear",
+			duration = {
+				step = 10,
+				total = 500,
+			},
+		},
 
-		-- INFO: Scroll animation
+		-- INFO: Smooth scroll
 		scroll = { enabled = true },
 
 		-- INFO: Dimming
