@@ -1,5 +1,6 @@
 local wezterm = require("wezterm")
 local action = wezterm.action
+
 local config = {
 	-- INFO: Theme
 	color_scheme = "Everforest Dark Hard (Gogh)",
@@ -53,6 +54,9 @@ local config = {
 	front_end = "OpenGL",
 	animation_fps = 250,
 	max_fps = 250,
+
+	-- INFO: Close confirm message
+	window_close_confirmation = "NeverPrompt",
 }
 
 return config
