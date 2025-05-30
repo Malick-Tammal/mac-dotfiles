@@ -8,7 +8,7 @@ return {
 			render = "default",
 			stages = "slide",
 			fps = 60,
-			max_height = 3,
+			max_height = 8,
 			max_width = 150,
 			timeout = 1000,
 			level = 2,

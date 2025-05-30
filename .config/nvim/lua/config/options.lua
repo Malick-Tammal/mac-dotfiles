@@ -35,13 +35,14 @@ opt.laststatus = 3 -- Set global statusline
 opt.shiftwidth = 4 -- Shift 4 spaces when tab
 opt.tabstop = 4 -- 1 tab == 4 spaces
 opt.smartindent = true -- Autoindent new lines
+opt.signcolumn = "yes:1"
 
 -----------------------------------------------------------
 -- Memory, CPU
 -----------------------------------------------------------
 opt.hidden = true -- Enable background buffers
 opt.history = 100 -- Remember N lines in history
-opt.lazyredraw = true -- Faster scrolling
+-- opt.lazyredraw = true -- Faster scrolling
 opt.synmaxcol = 240 -- Max column for syntax highlight
 opt.updatetime = 250 -- ms to wait for trigger an event
 

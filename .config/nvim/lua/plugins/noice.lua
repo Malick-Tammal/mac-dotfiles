@@ -4,6 +4,7 @@ return {
 		"MunifTanjim/nui.nvim",
 		"rcarriga/nvim-notify",
 	},
+
 	opts = {},
 	config = function()
 		local noice = require("noice")
@@ -15,6 +16,11 @@ return {
 			},
 			health = {
 				checker = false,
+			},
+			lsp = {
+				signature = {
+					auto_open = { enabled = false },
+				},
 			},
 		})
 	end,
