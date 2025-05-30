@@ -79,7 +79,7 @@ return {
 		},
 
 		-- INFO: Word highlight
-		words = { enabled = true },
+		words = { enabled = false },
 
 		-- INFO: Picker (Buffers / Smart file picker)
 		picker = { enabled = true },

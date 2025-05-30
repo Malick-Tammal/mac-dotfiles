@@ -17,13 +17,13 @@ end
 -- Save
 vim.keymap.set("n", "<leader>cs", function()
 	vim.cmd("w")
-	vim.notify(message(" Saved ", "󰆓 "))
+	vim.notify(message(" Saved ", " 󰆓 "))
 end, opts)
 
 -- Save without formatting
 vim.keymap.set("n", "<leader>cn", function()
 	vim.cmd("noautocmd w")
-	vim.notify(message(" Saved (no format)", "󰽂 "))
+	vim.notify(message(" Saved (no format)", " 󰽂 "))
 end, opts)
 
 -- Format
