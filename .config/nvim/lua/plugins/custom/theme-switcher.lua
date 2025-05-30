@@ -53,5 +53,6 @@ end
 theme_switcher.setup = function()
 	example()
 end
+example()
 
 return theme_switcher

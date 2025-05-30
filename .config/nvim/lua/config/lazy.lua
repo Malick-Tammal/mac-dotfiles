@@ -18,10 +18,9 @@ vim.opt.rtp:prepend(lazypath)
 -- Setup lazy.nvim
 require("lazy").setup({
 	spec = {
-
 		-- Plugins
 
-		require("plugins.colorthemes"),
+		require("plugins.themes.everforest"),
 
 		require("plugins.mini"),
 
@@ -65,8 +64,6 @@ require("lazy").setup({
 		require("plugins.lualine"),
 
 		require("plugins.noice"),
-
-		require("plugins.terraform"),
 
 		require("plugins.snacks"),
 

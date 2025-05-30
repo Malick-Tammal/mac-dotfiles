@@ -45,12 +45,13 @@ return {
 				["<C-f>"] = cmp.mapping.scroll_docs(4),
 				["<C-Tab>"] = cmp.mapping.complete(),
 				["<C-e>"] = cmp.mapping.abort(),
+				["<esc>"] = cmp.mapping.abort(),
 			}),
 
 			sources = cmp.config.sources({
+				{ name = "buffer" },
 				{ name = "luasnip" },
 				{ name = "nvim_lsp" },
-				{ name = "buffer" },
 				{ name = "path" },
 			}),
 

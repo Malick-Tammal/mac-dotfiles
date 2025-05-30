@@ -19,7 +19,6 @@ return {
 		local hide_in_width = function()
 			return vim.fn.winwidth(0) > 100
 		end
-
 		local diagnostics = {
 			"diagnostics",
 			sources = { "nvim_diagnostic" },
@@ -46,7 +45,7 @@ return {
 				-- https://www.nerdfonts.com/cheat-sheet
 				--        
 				section_separators = { left = "", right = "" },
-				component_separators = { left = "", right = "" },
+				component_separators = { left = "", right = "" },
 				disabled_filetypes = { "alpha", "neo-tree" },
 				always_divide_middle = true,
 			},

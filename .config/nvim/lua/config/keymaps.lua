@@ -27,7 +27,7 @@ vim.keymap.set("n", "<leader>cn", function()
 end, opts)
 
 -- Format
-vim.keymap.set({ "n", "v" }, "<leader>cf", function()
+vim.keymap.set({ "n" }, "<leader>cf", function()
 	require("conform").format({
 		lsp_fallback = true,
 		async = true,
@@ -113,7 +113,7 @@ vim.keymap.set("n", "<leader>l", "<Cmd>Lazy<CR>", { desc = "Lazy" }) -- Call Laz
 vim.keymap.set("n", "<leader>m", "<Cmd>Mason<CR>") -- Call Mason
 
 -- Delete
-vim.keymap.set("n", "<leader>x", '"_d') -- Black hole "Delete without copy it"
+vim.keymap.set({ "n", "v" }, "<leader>x", '"_d') -- Black hole "Delete without copy it"
 
 -- Todo comments
 vim.keymap.set("n", "]t", function()
@@ -132,9 +132,6 @@ vim.keymap.set(
 	{ desc = "Toggle diagnostics" }
 )
 
--- Disabling letter "s" keymap
-vim.keymap.set("n", "s", "")
-
 -- Projects
 local projects = require("plugins.custom.projects")
 
@@ -143,11 +140,11 @@ vim.keymap.set("n", "<leader>p", function()
 end, { desc = "Projects" })
 
 -- Theme switcher
-local theme_switcher = require("plugins.custom.theme-switcher")
+-- local theme_switcher = require("plugins.custom.theme-switcher")
 
-vim.keymap.set("n", "<leader>v", function()
-	theme_switcher.setup()
-end, { desc = "Theme switcher" })
+-- vim.keymap.set("n", "<leader>v", function()
+-- 	theme_switcher.setup()
+-- end, { desc = "Theme switcher" })
 
 -- NOTE: LoremIpsum
 
