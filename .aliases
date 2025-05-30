@@ -51,6 +51,10 @@ alias lsla="eza --color=always --icons=always -la"
 # alias lsa="lsd -a"
 # alias lsla="lsd -la"
 
+# Move
+alias ..="cd .."
+alias ...="cd ../.."
+
 # INFO: Nvim
 alias nv="nvim"
 alias nvh="nv ."
@@ -62,6 +66,7 @@ alias rbor="brew services restart borders"
 # INFO: Node
 alias npmi="npm i"
 alias npmig="npm i -g"
+alias npmiy="npm init -y"
 alias npmisd="npm i --save-dev"
 alias npmre="npm remove"
 alias npms="npm start"
