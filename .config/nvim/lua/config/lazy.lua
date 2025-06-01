@@ -62,8 +62,6 @@ require("lazy").setup({
 
 		require("plugins.lorem"),
 
-		require("plugins.surround"),
-
 		require("plugins.colorizer"),
 
 		require("plugins.lsp.autotag"),
@@ -73,6 +71,8 @@ require("lazy").setup({
 		require("plugins.flash"),
 
 		require("plugins.treesj"),
+
+		require("plugins.transparent"),
 
 		-- Auto update plugins
 		checker = { enabled = false },

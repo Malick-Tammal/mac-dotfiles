@@ -32,8 +32,11 @@ return {
 			},
 
 			window = {
-				completion = cmp.config.window.bordered(),
 				documentation = cmp.config.window.bordered(),
+				completion = {
+					border = "rounded",
+					winhighlight = "Normal:CmpNormal",
+				},
 			},
 
 			mapping = cmp.mapping.preset.insert({
@@ -57,7 +60,7 @@ return {
 
 			formatting = {
 				format = lspkind.cmp_format({
-					mode = "symbol",
+					mode = "symbol_text",
 					maxwidth = {
 						menu = 50,
 						abbr = 50,

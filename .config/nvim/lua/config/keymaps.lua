@@ -22,7 +22,8 @@ end
 
 vim.keymap.set("n", "<leader>cs", function()
 	vim.cmd("w")
-	vim.notify(message(" Saved ", " 󰆓 ")) -- Save
+	vim.notify(message(" Saved ", " 󰆓 "))
+	-- Save
 end, opts)
 
 vim.keymap.set("n", "<leader>cn", function()
@@ -188,20 +189,25 @@ end, { desc = "Paragraphs" })
 -----------------------------------------------------------
 local inscom = require("plugins.custom.inscom")
 
-vim.keymap.set("n", "<leader>o1", function()
+vim.keymap.set("n", "<leader>C1", function()
 	inscom.setup({
 		style = "style-1", -- style 1
 	})
 end, { desc = "Header 1" })
 
-vim.keymap.set("n", "<leader>o2", function()
+vim.keymap.set("n", "<leader>C2", function()
 	inscom.setup({
 		style = "style-2", -- style 2
 	})
 end, { desc = "Header 2" })
 
-vim.keymap.set("n", "<leader>o3", function()
+vim.keymap.set("n", "<leader>C3", function()
 	inscom.setup({
 		style = "style-3", -- style 3
 	})
 end, { desc = "Header 3" })
+
+-----------------------------------------------------------
+--  INFO: Transparency
+-----------------------------------------------------------
+vim.keymap.set("n", "<leader>o", "<Cmd>TransparentToggle<CR>")

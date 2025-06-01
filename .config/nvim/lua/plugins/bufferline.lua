@@ -31,7 +31,9 @@ return {
 			},
 			buffer_close_icon = "󱎘 ",
 			modified_icon = "󰤌 ",
-			tab_size = 25,
+			close_command = "lua MiniBufremove.delete()",
+			right_command = "lua MiniBufremove.delete()",
+			tab_size = 20,
 			color_icons = true,
 			separator_style = "thin",
 			-- numbers = "ordinal", -- Show numbers
@@ -40,20 +42,22 @@ return {
 
 			-- INFO: Diagnostics
 			diagnostics = "nvim_lsp",
-			diagnostics_indicator = function(count, level)
-				local icon = function()
-					if level:match("error") then
-						return " "
-					elseif level:match("warn") then
-						return " "
-					elseif level:match("hint") then
-						return "󰠠 "
-					elseif level:match("info") then
-						return " "
-					end
-				end
-				return " " .. icon() .. count
-			end,
+
+			-- Diagnostics icons
+			-- diagnostics_indicator = function(count, level)
+			-- 	local icon = function()
+			-- 		if level:match("error") then
+			-- 			return " "
+			-- 		elseif level:match("warn") then
+			-- 			return " "
+			-- 		elseif level:match("hint") then
+			-- 			return "󰠠 "
+			-- 		elseif level:match("info") then
+			-- 			return " "
+			-- 		end
+			-- 	end
+			-- 	return " " .. icon() .. count
+			-- end,
 
 			-- INFO: Groups
 
