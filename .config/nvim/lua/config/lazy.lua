@@ -78,12 +78,21 @@ require("lazy").setup({
 
 		{
 			"nvzone/minty",
+			lazy = true,
 			cmd = { "Shades", "Huefy" },
 		},
 
-		"nvim-lua/plenary.nvim",
+		{
+			"nvim-lua/plenary.nvim",
+			lazy = true,
+		},
 
-		"MunifTanjim/nui.nvim",
+		{
+			"MunifTanjim/nui.nvim",
+			lazy = true,
+		},
+
+		require("plugins.highlight-colors"),
 
 		-- Auto update plugins
 		checker = { enabled = false },
