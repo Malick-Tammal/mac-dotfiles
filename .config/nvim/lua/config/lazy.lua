@@ -62,7 +62,7 @@ require("lazy").setup({
 
 		require("plugins.lorem"),
 
-		require("plugins.colorizer"),
+		-- require("plugins.colorizer"),
 
 		require("plugins.lsp.autotag"),
 
@@ -73,6 +73,17 @@ require("lazy").setup({
 		require("plugins.treesj"),
 
 		require("plugins.transparent"),
+
+		{ "nvzone/volt", lazy = true },
+
+		{
+			"nvzone/minty",
+			cmd = { "Shades", "Huefy" },
+		},
+
+		"nvim-lua/plenary.nvim",
+
+		"MunifTanjim/nui.nvim",
 
 		-- Auto update plugins
 		checker = { enabled = false },

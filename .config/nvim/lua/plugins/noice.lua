@@ -1,9 +1,5 @@
 return {
 	"folke/noice.nvim",
-	dependencies = {
-		"MunifTanjim/nui.nvim",
-	},
-
 	opts = {
 		presets = {
 			bottom_search = true,
