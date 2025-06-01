@@ -2,7 +2,6 @@ return {
 	"Wansmer/treesj",
 	event = "VeryLazy",
 	lazy = true,
-	dependencies = { "nvim-treesitter/nvim-treesitter" }, -- if you install parsers with `nvim-treesitter`
 
 	-- HACK: Config
 	config = function()
@@ -12,6 +11,10 @@ return {
 		-- INFO: Keymaps
 		vim.keymap.set("n", "<leader>w", function()
 			require("treesj").toggle()
-		end, { desc = "split / join" })
+		end)
+
+		-- WK
+		local wk = require("which-key")
+		wk.add({ "<leader>w", desc = "(Split / Join)", icon = { icon = " ", color = "yellow" } })
 	end,
 }

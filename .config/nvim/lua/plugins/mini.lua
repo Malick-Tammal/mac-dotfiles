@@ -11,5 +11,8 @@ return {
 			require("mini.icons").mock_nvim_web_devicons()
 			return package.loaded["nvim-web-devicons"]
 		end
+
+		require("mini.bufremove").setup()
+		require("mini.comment").setup()
 	end,
 }

@@ -19,11 +19,12 @@ return {
 		local hide_in_width = function()
 			return vim.fn.winwidth(0) > 100
 		end
+
 		local diagnostics = {
 			"diagnostics",
 			sources = { "nvim_diagnostic" },
 			sections = { "error", "warn" },
-			symbols = { error = " ", warn = " ", info = " ", hint = " " },
+			symbols = { error = " ", warn = " ", info = " ", hint = "󰠠 " },
 			colored = false,
 			update_in_insert = false,
 			always_visible = false,

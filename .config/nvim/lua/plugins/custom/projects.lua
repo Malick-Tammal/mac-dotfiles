@@ -1,3 +1,4 @@
+-- HACK: My custom projects browser / opener
 local pickers = require("telescope.pickers")
 local finders = require("telescope.finders")
 local conf = require("telescope.config").values
@@ -17,7 +18,7 @@ end
 
 local listProjects = function(opts)
 	opts = opts or {}
-	local path = "~/Projects/"
+	local path = opts.project_path
 	pickers
 		.new(opts, {
 			finder = finders.new_table({
@@ -39,13 +40,14 @@ local listProjects = function(opts)
 		:find()
 end
 
+-- INFO: Config
 local config = {
+	project_path = "~/Projects/",
 	prompt_title = "Project name",
 	results_title = "󰅨 Projects",
 	prompt_prefix = " ",
 	layout_strategy = "vertical",
 	layout_config = { width = 0.3, height = 0.5 },
-	prompt_title = { bg = "#000000" },
 }
 
 projects.setup = function()

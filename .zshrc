@@ -119,3 +119,6 @@ function y() {
 
 # Setting default editor to "nvim"
 export EDITOR="nvim"
+
+# .local/bin to path
+export PATH=~/.local/bin/:$PATH

@@ -11,6 +11,10 @@ return {
 			desc = "Which-key 'I know you forget'",
 		},
 	},
+
+	--
+	--  HACK: Config ("ALL KEYS")
+	--
 	config = function()
 		local wk = require("which-key")
 		wk.add({
@@ -88,8 +92,8 @@ return {
 			-- Theme switcher
 			{ "<leader>v", desc = "Theme switcher", icon = { icon = " ", color = "pink" } },
 
-			-- Treesj (split / join)
-			{ "<leader>w", desc = "Split / Join", icon = { icon = " ", color = "yellow" } },
+			-- Treesj (Split / Join)
+			{ "<leader>w", desc = "(Split / Join)", icon = { icon = " ", color = "yellow" } },
 		})
 
 		wk.setup({

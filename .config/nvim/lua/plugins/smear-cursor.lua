@@ -1,6 +1,7 @@
 return {
 	"sphamba/smear-cursor.nvim",
 	event = "VeryLazy",
+	lazy = true,
 	opts = {
 		legacy_computing_symbols_support = true,
 		stiffness = 0.8,
