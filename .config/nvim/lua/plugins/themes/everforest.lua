@@ -1,6 +1,3 @@
---
---  HACK: Everforest
---
 return {
 	"neanias/everforest-nvim",
 

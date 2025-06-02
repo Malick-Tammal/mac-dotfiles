@@ -166,12 +166,7 @@ vim.keymap.set("n", "<leader>p", function()
 	projects.setup()
 end, { desc = "Projects" })
 
--- Theme switcher
--- local theme_switcher = require("plugins.custom.theme-switcher")
-
--- vim.keymap.set("n", "<leader>v", function()
--- 	theme_switcher.setup()
--- end, { desc = "Theme switcher" })
+vim.keymap.set("n", "<leader>v", "<Cmd>Themify<CR>", { desc = "Theme switcher" })
 
 -----------------------------------------------------------
 --  INFO: Lorem Ipsum
@@ -210,4 +205,12 @@ end, { desc = "Header 3" })
 -----------------------------------------------------------
 --  INFO: Transparency
 -----------------------------------------------------------
-vim.keymap.set("n", "<leader>o", "<Cmd>TransparentToggle<CR>")
+
+vim.keymap.set("n", "<leader>o", function()
+	vim.cmd("TransparentToggle")
+
+	local themify = require("themify.api")
+
+	print(themify.get_current().theme .. themify.get_current().colorscheme_id)
+	themify.set_current(themify.get_current().colorscheme_id, themify.get_current().theme)
+end)

@@ -20,8 +20,6 @@ require("lazy").setup({
 	spec = {
 		-- Plugins
 
-		require("plugins.themes.everforest"),
-
 		require("plugins.mini"),
 
 		require("plugins.notify"),
@@ -62,8 +60,6 @@ require("lazy").setup({
 
 		require("plugins.lorem"),
 
-		-- require("plugins.colorizer"),
-
 		require("plugins.lsp.autotag"),
 
 		require("plugins.lsp.autopairs"),
@@ -93,6 +89,8 @@ require("lazy").setup({
 		},
 
 		require("plugins.highlight-colors"),
+
+		require("plugins.themify"),
 
 		-- Auto update plugins
 		checker = { enabled = false },
