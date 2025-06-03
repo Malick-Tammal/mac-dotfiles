@@ -96,17 +96,19 @@ return {
 		config = function()
 			require("tiny-inline-diagnostic").setup({
 				preset = "modern",
-				transparent_bg = true,
+				transparent_bg = false,
+				transparent_cursorline = false,
 				signs = {
 					diag = "󱓻",
+				},
+				hi = {
+					mixing_color = "CursorColumn",
 				},
 				options = {
 					use_icons_from_diagnostic = true,
 
 					multilines = {
-						-- Enable multiline diagnostic messages
 						enabled = true,
-						-- Always show messages on all lines for multiline diagnostics
 						always_show = false,
 					},
 				},

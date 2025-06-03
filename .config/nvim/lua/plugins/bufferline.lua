@@ -43,22 +43,6 @@ return {
 			-- INFO: Diagnostics
 			diagnostics = "nvim_lsp",
 
-			-- Diagnostics icons
-			-- diagnostics_indicator = function(count, level)
-			-- 	local icon = function()
-			-- 		if level:match("error") then
-			-- 			return " "
-			-- 		elseif level:match("warn") then
-			-- 			return " "
-			-- 		elseif level:match("hint") then
-			-- 			return "󰠠 "
-			-- 		elseif level:match("info") then
-			-- 			return " "
-			-- 		end
-			-- 	end
-			-- 	return " " .. icon() .. count
-			-- end,
-
 			-- INFO: Groups
 
 			-- groups = {

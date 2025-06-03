@@ -3,10 +3,15 @@ return {
 	event = "VeryLazy",
 	lazy = true,
 	config = function()
+		local hide_in_width = function()
+			return vim.fn.winwidth(0) > 100
+		end
+
 		local mode = {
 			"mode",
+			separator = { left = "" },
 			fmt = function(str)
-				return " " .. str
+				return " " .. str .. " "
 			end,
 		}
 
@@ -14,11 +19,30 @@ return {
 			"filename",
 			file_status = true,
 			path = 0,
+			symbols = {
+				modified = "󰷈",
+				readonly = "󰈡",
+			},
+			fmt = function(str)
+				return " " .. str
+			end,
 		}
 
-		local hide_in_width = function()
-			return vim.fn.winwidth(0) > 100
-		end
+		local progress = {
+			"progress",
+			separator = { right = "" },
+			left_padding = 2,
+			fmt = function(str)
+				return " " .. str
+			end,
+		}
+
+		local location = {
+			"location",
+			fmt = function(str)
+				return str .. " "
+			end,
+		}
 
 		local diagnostics = {
 			"diagnostics",
@@ -41,27 +65,31 @@ return {
 		require("lualine").setup({
 			options = {
 				icons_enabled = true,
-				theme = "auto", -- Set theme based on environment variable
-				-- Some useful glyphs:
-				-- https://www.nerdfonts.com/cheat-sheet
-				--        
+				theme = "auto",
 				section_separators = { left = "", right = "" },
-				component_separators = { left = "", right = "" },
-				disabled_filetypes = { "alpha", "neo-tree" },
+				-- component_separators = { left = "", right = "" },
+				component_separators = { left = "", right = "" },
+				disabled_filetypes = { "alpha", "snacks_dashboard" },
 				always_divide_middle = true,
 			},
 			sections = {
 				lualine_a = { mode },
-				lualine_b = { "branch" },
+				lualine_b = { { "branch", icon = "" } },
 				lualine_c = { filename },
 				lualine_x = {
 					diagnostics,
 					diff,
 					{ "encoding", cond = hide_in_width },
 					{ "filetype", cond = hide_in_width },
+					{
+						"fileformat",
+						symbols = {
+							unix = "",
+						},
+					},
 				},
-				lualine_y = { "location" },
-				lualine_z = { "progress" },
+				lualine_y = { location },
+				lualine_z = { progress },
 			},
 			inactive_sections = {
 				lualine_a = {},
@@ -72,7 +100,7 @@ return {
 				lualine_z = {},
 			},
 			tabline = {},
-			extensions = { "fugitive" },
+			extensions = { "neo-tree" },
 		})
 	end,
 }
