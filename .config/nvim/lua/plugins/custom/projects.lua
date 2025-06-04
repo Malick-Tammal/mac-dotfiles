@@ -1,4 +1,7 @@
--- HACK: My custom projects browser / opener
+-----------------------------------------------------------
+--  HACK: Projects Opener
+-----------------------------------------------------------
+
 local pickers = require("telescope.pickers")
 local finders = require("telescope.finders")
 local conf = require("telescope.config").values

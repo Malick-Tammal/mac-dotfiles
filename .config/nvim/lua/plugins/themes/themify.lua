@@ -1,5 +1,5 @@
 -----------------------------------------------------------
---  HACK: Theme Switcher
+--  HACK: Theme Switcher (Themify)
 -----------------------------------------------------------
 return {
 	"lmantw/themify.nvim",
