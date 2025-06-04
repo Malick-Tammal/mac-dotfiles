@@ -90,6 +90,11 @@ require("lazy").setup({
 
 		require("plugins.themes.themify"),
 
+		defaults = {
+			lazy = true,
+			version = false,
+		},
+
 		-- Auto update plugins
 		checker = { enabled = false },
 	},

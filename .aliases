@@ -82,3 +82,6 @@ alias lg="lazygit"
 
 # INFO: Bench zsh
 alias bench="time zsh -i -c exit"
+
+# INFO: Matrix effect
+alias matrix="cmatrix"

@@ -85,7 +85,7 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always --icons=alway
 zstyle ':fzf-tab:*' --bind=tab:accept
 
 # Fzf-tab Theme
-zstyle ':fzf-tab:*' fzf-flags --color=fg:#d1c6ad,fg+:#d1c6ad,bg:-1,bg+:-1,hl:#8cb9b3,hl+:#85d8cd,info:#afaf87,marker:#b5df63,prompt:#e96866,spinner:#e09064,pointer:#e09064,header:#87afaf,border:#d1c6ad,label:#aeaeae,query:#f8f5e6 --border="rounded" --border-label="" --preview-window="border-rounded" --prompt=" " --marker=">" --pointer=" " --separator="─" --scrollbar="│"
+zstyle ':fzf-tab:*' fzf-flags --color=fg:#d1c6ad,fg+:#d1c6ad,bg:-1,bg+:-1,hl:#8cb9b3,hl+:#85d8cd,info:#afaf87,marker:#b5df63,prompt:#e09064,spinner:#e09064,pointer:#91bb87,header:#87afaf,border:#d1c6ad,label:#aeaeae,query:#f8f5e6 --border="rounded" --border-label="" --preview-window="border-rounded" --prompt=" " --marker=">" --pointer=" " --separator="─" --scrollbar="│"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -127,13 +127,13 @@ export PATH=~/.local/bin/:$PATH
 alias nvchad="NVIM_APPNAME=NvChad nvim"
 
 function nvs() {
-	items=("default" "NvChad") 
-  config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config " --height=~50% --layout=reverse --border --exit-0)
-  if [[ -z $config ]]; then
-    echo "Nothing selected"
-    return 0
-  elif [[ $config == "default" ]]; then
-    config=""
-  fi
-  NVIM_APPNAME=$config nvim $@
+    items=("default" "NvChad")
+    config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config " --height=~50% --layout=reverse --border --exit-0)
+    if [[ -z $config ]]; then
+        echo "Nothing selected"
+        return 0
+    elif [[ $config == "default" ]]; then
+        config=""
+    fi
+    NVIM_APPNAME=$config nvim $@
 }
