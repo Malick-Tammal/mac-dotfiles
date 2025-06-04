@@ -6,13 +6,16 @@ return {
 	-- NOTE: Options
 	opts = {
 		keywords = {
+			INFO = { icon = " ", color = "info" },
 			FIX = { icon = " ", color = "error", alt = { "FIXME", "BUG", "FIXIT", "ISSUE" } },
 			HACK = { icon = " ", color = "warning" },
 			PERF = { icon = "󰓅 ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
-			NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
+			NOTE = { icon = " ", color = "hint", alt = {} },
+			TODO = { icon = " ", color = "info" },
 			TEST = { icon = "󰙨 ", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
 			WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX" } },
 		},
+
 		highlight = {
 			multiline = false,
 		},

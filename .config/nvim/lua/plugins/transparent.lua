@@ -32,7 +32,7 @@ return {
 				"EndOfBuffer",
 			},
 			-- table: additional groups that should be cleared
-			extra_groups = {},
+			extra_groups = { "" },
 			-- table: groups you don't want to clear
 			exclude_groups = { "NormalFloat" },
 			-- function: code to be executed after highlight groups are cleared

@@ -14,7 +14,7 @@ local config = {
 		top = 80,
 		bottom = 0,
 	},
-	window_background_opacity = 0.65,
+	window_background_opacity = 0.75,
 	macos_window_background_blur = 30,
 
 	-- INFO: Font

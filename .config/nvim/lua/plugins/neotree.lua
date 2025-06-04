@@ -13,14 +13,6 @@ return {
 
 		sources = {
 			"filesystem",
-			"buffers",
-		},
-		source_selector = {
-			winbar = true,
-			sources = {
-				{ source = "filesystem" },
-				{ source = "buffers" },
-			},
 		},
 
 		-- INFO: Showing realetive numbers
@@ -42,6 +34,16 @@ return {
 				["h"] = "close_node",
 				["z"] = "close_all_nodes",
 				["A"] = "add_directory",
+				["P"] = {
+					"toggle_preview",
+					config = {
+						use_float = true,
+						use_image_nvim = true,
+						title = "󰍹 Quick Preview",
+					},
+				},
+				["<C-b>"] = { "scroll_preview", config = { direction = -10 } },
+				["<C-f>"] = { "scroll_preview", config = { direction = 10 } },
 			},
 		},
 		filesystem = {

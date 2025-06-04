@@ -1,11 +1,17 @@
 #!/bin/bash
 
+#----------------------------------------------------------
+#-- HACK: Borders
+#----------------------------------------------------------
+
+# INFO: Color converter link = https://convertingcolors.com/
+
 options=(
 	style=round
 	width=5.0
 	hidpi=off
-	active_color=0xFF25A777	
-    inactive_color=0xFF737373
+	active_color=0xFF55DFE0
+	inactive_color=0xFF737373
 )
 
 borders "${options[@]}"

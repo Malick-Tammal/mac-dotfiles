@@ -11,6 +11,7 @@ return {
 	config = function()
 		local tele = require("telescope")
 		tele.setup({
+			winblend = 10,
 			extensions = {
 				fzf = {},
 			},
@@ -24,6 +25,8 @@ return {
 				selection_caret = "  ",
 				path_display = { "smart" },
 			},
+
+			extensions_list = { "themes" },
 		})
 
 		-- INFO: Extensions
