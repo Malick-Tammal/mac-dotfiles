@@ -7,7 +7,6 @@ local config = {
 
 	-- INFO: Window
 	window_decorations = "INTEGRATED_BUTTONS",
-	hide_tab_bar_if_only_one_tab = true,
 	window_padding = {
 		left = 20,
 		right = 0,
@@ -15,7 +14,9 @@ local config = {
 		bottom = 0,
 	},
 	window_background_opacity = 0.8,
-	macos_window_background_blur = 30,
+	macos_window_background_blur = 40,
+	hide_tab_bar_if_only_one_tab = true,
+	use_fancy_tab_bar = false,
 
 	-- INFO: Font
 	font = wezterm.font("MesloLGL Nerd Font", { weight = "Bold" }),
@@ -59,4 +60,40 @@ local config = {
 	window_close_confirmation = "NeverPrompt",
 }
 
+local tabline = wezterm.plugin.require("https://github.com/michaelbrusegard/tabline.wez")
+
+tabline.setup({
+	options = {
+		icons_enabled = true,
+		theme = "Everforest Dark Hard (Gogh)",
+		tabs_enabled = true,
+		theme_overrides = {},
+		section_separators = {
+			left = wezterm.nerdfonts.pl_left_hard_divider,
+			right = wezterm.nerdfonts.pl_right_hard_divider,
+		},
+		component_separators = {
+			left = wezterm.nerdfonts.pl_left_soft_divider,
+			right = wezterm.nerdfonts.pl_right_soft_divider,
+		},
+		tab_separators = {
+			left = wezterm.nerdfonts.pl_left_hard_divider,
+			right = wezterm.nerdfonts.pl_right_hard_divider,
+		},
+	},
+	sections = {
+		tabline_a = {},
+		tabline_b = {},
+		tabline_c = {},
+		tab_active = {
+			"process",
+			{ "parent", padding = { right = 4 } },
+			{ "cwd", padding = { right = 4 } },
+		},
+		tab_inactive = { "index", "process" },
+		tabline_x = {},
+		tabline_y = {},
+	},
+	extensions = {},
+})
 return config

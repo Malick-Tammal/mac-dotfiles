@@ -8,9 +8,10 @@
 
 options=(
 	style=round
-	width=5.0
-	hidpi=off
-	active_color=0xFF55DFE0
+	width=6.0
+	hidpi=on
+	# active_color=0xFF55DFE0
+	"active_color=gradient(top_left=0xFFFF9B3F,bottom_right=0xFF54B3DF)"
 	inactive_color=0xFF737373
 )
 

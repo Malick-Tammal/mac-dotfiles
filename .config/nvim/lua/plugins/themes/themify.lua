@@ -13,17 +13,18 @@ return {
 
 	config = function()
 		-- TODO: Setting Highlights ( changing some ui colors )
+
 		local function setHl(palette)
 			-- Buffer line
-			vim.api.nvim_set_hl(0, "BufferLineIndicatorSelected", { bg = palette.blue, fg = palette.bg_dim })
+			vim.api.nvim_set_hl(0, "BufferLineIndicatorSelected", { bg = palette.orange, fg = palette.bg_dim })
 			vim.api.nvim_set_hl(0, "BufferLineNeoTree", { bg = palette.bg0, fg = palette.grey2 })
+			vim.api.nvim_set_hl(0, "BufferLineFill", { bg = palette.bg_dim })
 			-- vim.api.nvim_set_hl(0, "TelescopePreviewNormal", { bg = palette.bg_dim, fg = palette.grey2 })
 			-- vim.api.nvim_set_hl(0, "TelescopeNormal", { bg = palette.bg_dim, fg = palette.grey2 })
 			-- vim.api.nvim_set_hl(0, "TelescopePreviewNormal", { bg = palette.bg0, fg = palette.grey2 })
 
 			-- vim.api.nvim_set_hl(0, "BufferLineTab", { bg = palette.orange, fg = palette.bg3 })
 			-- vim.api.nvim_set_hl(0, "BufferLineBufferVisible", { bg = palette.orange, fg = palette.bg3 })
-			-- vim.api.nvim_set_hl(0, "BufferLineFill", { bg = palette.orange, fg = palette.bg3 })
 			-- vim.api.nvim_set_hl(0, "BufferLineBackground", { bg = palette.orange, fg = palette.bg3 })
 			-- vim.api.nvim_set_hl(0, "BufferLineBufferSelected", { bg = palette.orange, fg = palette.bg3 })
 			-- vim.api.nvim_set_hl(0, "BufferLineBuffer", { bg = palette.orange, fg = palette.bg3 })
@@ -41,6 +42,9 @@ return {
 			-- Cmp ( Completion menu )
 			vim.api.nvim_set_hl(0, "CmpPmenu", { bg = palette.bg_dim })
 			vim.api.nvim_set_hl(0, "PmenuSel", { bg = palette.green, fg = palette.bg3 })
+
+			-- Highlight relative number
+			vim.api.nvim_set_hl(0, "LineNr", { fg = palette.orange })
 		end
 
 		local colors

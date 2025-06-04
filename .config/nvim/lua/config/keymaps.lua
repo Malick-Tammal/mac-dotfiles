@@ -166,7 +166,14 @@ vim.keymap.set("n", "<leader>p", function()
 	projects.setup()
 end, { desc = "Projects" })
 
-vim.keymap.set("n", "<leader>v", "<Cmd>Themify<CR>", { desc = "Theme switcher" })
+-----------------------------------------------------------
+-- INFO: Theme Switcher
+-----------------------------------------------------------
+local themeSwitcher = require("plugins.themes.theme-switcher")
+
+vim.keymap.set("n", "<leader>v", function()
+	themeSwitcher.setup()
+end, { desc = "Theme switcher" })
 
 -----------------------------------------------------------
 --  INFO: Lorem Ipsum
@@ -211,6 +218,5 @@ vim.keymap.set("n", "<leader>o", function()
 
 	local themify = require("themify.api")
 
-	print(themify.get_current().theme .. themify.get_current().colorscheme_id)
 	themify.set_current(themify.get_current().colorscheme_id, themify.get_current().theme)
 end)

@@ -11,7 +11,7 @@ local getFiles = function(path)
 	local files = {}
 	for dir in io.popen("ls " .. path .. " | grep -v /"):lines() do
 		local dirWithIcon = "󰉋 " .. dir
-		table.insert(files, dirWithIcon)
+		table.insert(files, dir)
 	end
 	return files
 end
@@ -23,16 +23,22 @@ local listProjects = function(opts)
 		.new(opts, {
 			finder = finders.new_table({
 				results = getFiles(path),
+				entry_maker = function(entry)
+					return {
+						value = entry,
+						display = "󰉋 " .. entry,
+						ordinal = entry,
+					}
+				end,
 			}),
 			sorter = conf.generic_sorter(opts),
 			attach_mappings = function(bufnr, map)
 				actions.select_default:replace(function()
 					actions.close(bufnr)
 					local selection = action_state.get_selected_entry()
-					local selName = string.sub(selection[1], 6, -1)
-					print("Project " .. "~" .. selName .. "~" .. " selected!")
-					vim.cmd("edit" .. path .. selName)
-					vim.cmd("cd" .. path .. selName)
+					print("Project " .. '"' .. selection.value .. '"' .. " selected!")
+					vim.cmd("edit" .. path .. selection.value)
+					vim.cmd("cd" .. path .. selection.value)
 				end)
 				return true
 			end,

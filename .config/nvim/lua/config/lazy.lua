@@ -88,7 +88,7 @@ require("lazy").setup({
 
 		require("plugins.highlight-colors"),
 
-		require("plugins.themify"),
+		require("plugins.themes.themify"),
 
 		-- Auto update plugins
 		checker = { enabled = false },

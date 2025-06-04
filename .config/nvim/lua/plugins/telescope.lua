@@ -25,8 +25,6 @@ return {
 				selection_caret = "  ",
 				path_display = { "smart" },
 			},
-
-			extensions_list = { "themes" },
 		})
 
 		-- INFO: Extensions
