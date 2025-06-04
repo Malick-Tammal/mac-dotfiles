@@ -15,7 +15,7 @@ return {
 		-- TODO: Setting Highlights ( changing some ui colors )
 		local function setHl(palette)
 			-- Buffer line
-			vim.api.nvim_set_hl(0, "BufferLineIndicatorSelected", { bg = palette.blue, fg = palette.bg3 })
+			vim.api.nvim_set_hl(0, "BufferLineIndicatorSelected", { bg = palette.blue, fg = palette.bg_dim })
 			vim.api.nvim_set_hl(0, "BufferLineNeoTree", { bg = palette.bg0, fg = palette.grey2 })
 			-- vim.api.nvim_set_hl(0, "TelescopePreviewNormal", { bg = palette.bg_dim, fg = palette.grey2 })
 			-- vim.api.nvim_set_hl(0, "TelescopeNormal", { bg = palette.bg_dim, fg = palette.grey2 })
@@ -93,32 +93,6 @@ return {
 								config.foreground,
 								config.colors_override
 							)
-
-							for k, v in pairs(palette) do
-								palette[k] = v[1]
-							end
-
-							colors = palette
-						end,
-					})
-				end,
-
-				-- Settings colors
-				after = function()
-					setHl(colors)
-				end,
-			},
-			{
-				"sainnhe/sonokai",
-
-				before = function()
-					-- vim.g.sonokai_style = "atlantis"
-					vim.api.nvim_create_autocmd("ColorScheme", {
-						group = vim.api.nvim_create_augroup("custom_highlights_sonokai", {}),
-						pattern = "sonokai",
-						callback = function()
-							local config = vim.fn["sonokai#get_configuration"]()
-							local palette = vim.fn["sonokai#get_palette"](config.style, config.colors_override)
 
 							for k, v in pairs(palette) do
 								palette[k] = v[1]
