@@ -1,0 +1,8 @@
+#!/bin/sh
+
+export TRANSPARENT=0x00000000
+
+# export BAR_COLOR=
+export BG_COLOR=0xFF102021
+export FG_COLOR=0xFFD1C6AD
+# export ACCENT_COLOR=

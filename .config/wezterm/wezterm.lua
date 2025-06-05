@@ -39,6 +39,13 @@ local config = {
 				args = { os.getenv("SHELL"), "-c", "open ." },
 			}),
 		},
+		{
+			key = "H",
+			mods = "CMD",
+			action = action.SpawnCommandInNewWindow({
+				args = { os.getenv("SHELL"), "-c", "open ." },
+			}),
+		},
 	},
 	-- Toggle opacity function
 	wezterm.on("toggle-opacity", function(window, pane)
