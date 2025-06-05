@@ -1,5 +1,6 @@
 return {
 	"folke/noice.nvim",
+	event = "UIEnter",
 	opts = {
 		presets = {
 			bottom_search = true,

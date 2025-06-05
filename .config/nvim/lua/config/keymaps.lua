@@ -2,10 +2,6 @@
 --  HACK: Keymaps
 -----------------------------------------------------------
 
--- Set leader key
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
-
 -- Disable the spacebar key's default behavior in Normal and Visual modes
 vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
 
@@ -169,7 +165,7 @@ end, { desc = "Projects" })
 -----------------------------------------------------------
 -- INFO: Theme Switcher
 -----------------------------------------------------------
-local themeSwitcher = require("plugins.themes.theme-switcher")
+local themeSwitcher = require("plugins.custom.theme-switcher")
 
 vim.keymap.set("n", "<leader>v", function()
 	themeSwitcher.setup()

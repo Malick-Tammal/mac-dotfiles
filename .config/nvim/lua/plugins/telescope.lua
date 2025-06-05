@@ -5,7 +5,6 @@ return {
 		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 	},
 	event = "VeryLazy",
-	lazy = true,
 
 	-- HACK: Config
 	config = function()

@@ -1,7 +1,6 @@
 return {
 	"Wansmer/treesj",
-	event = "VeryLazy",
-	lazy = true,
+	event = { "BufReadPre", "BufNewFile" },
 
 	-- HACK: Config
 	config = function()

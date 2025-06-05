@@ -1,7 +1,7 @@
 return {
 	"nvim-neo-tree/neo-tree.nvim",
 	branch = "v3.x",
-	lazy = false,
+	event = "VeryLazy",
 
 	-- HACK: Config
 
@@ -25,8 +25,8 @@ return {
 			},
 		},
 		window = {
-			position = "left",
-			width = 30,
+			position = "right",
+			width = 40,
 
 			-- INFO: Keymaps
 			mappings = {

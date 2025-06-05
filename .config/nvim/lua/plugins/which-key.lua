@@ -1,7 +1,7 @@
 return {
 	"folke/which-key.nvim",
 	event = "VeryLazy",
-	lazy = true,
+
 	keys = {
 		{
 			"<leader>?",
@@ -75,8 +75,16 @@ return {
 			-- Zen mode
 			{ "<leader>z", desc = "Zen mode", icon = { icon = " ", color = "cyan" } },
 
+			-- Git
+			{ "<leader>g", desc = "Git", icon = { icon = " ", color = "cyan" } },
+			{ "<leader>gs", desc = "Stage hunk", icon = { icon = " ", color = "cyan" } },
+			{ "<leader>gr", desc = "Reset hunk", icon = { icon = "󰑓 ", color = "cyan" } },
+			{ "<leader>gd", desc = "Diff this", icon = { icon = " ", color = "cyan" } },
+			{ "<leader>gb", desc = "Blame line", icon = { icon = " ", color = "cyan" } },
+			{ "<leader>gm", desc = "Line blame", icon = { icon = "󰘤 ", color = "cyan" } },
+			{ "<leader>gi", desc = "Preview Hunk", icon = { icon = "󰮳 ", color = "cyan" } },
 			-- Lazygit
-			{ "<leader>g", desc = "Lazygit", icon = { icon = " ", color = "cyan" } },
+			{ "<leader>gl", desc = "Lazygit", icon = { icon = "󰒲 ", color = "cyan" } },
 
 			-- Terminal
 			{ "<leader>t", desc = "Terminal", icon = { icon = " ", color = "purple" } },

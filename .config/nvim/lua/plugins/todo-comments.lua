@@ -1,7 +1,7 @@
 return {
 	"folke/todo-comments.nvim",
-	lazy = true,
-	event = "VeryLazy",
+	event = { "BufReadPre", "BufNewFile" },
+
 	-- TODO: configure it
 	-- NOTE: Options
 	opts = {

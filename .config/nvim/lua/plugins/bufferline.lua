@@ -1,8 +1,7 @@
 return {
 	"akinsho/bufferline.nvim",
 	version = "*",
-	event = "VeryLazy",
-	lazy = true,
+	event = { "BufReadPre", "BufNewFile" },
 
 	-- HACK: Config
 

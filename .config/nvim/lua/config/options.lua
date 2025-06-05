@@ -4,6 +4,10 @@
 local g = vim.g -- Global variables
 local opt = vim.opt -- Set options (global/buffer/windows-scoped)
 
+-- Set leader key
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
 -----------------------------------------------------------
 -- General
 -----------------------------------------------------------
