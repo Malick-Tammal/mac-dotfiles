@@ -112,6 +112,9 @@ return {
 
 			-- Transparency toggle
 			{ "<leader>o", desc = "Toggle Transparency", icon = { icon = "󰗌 ", color = "blue" } },
+
+			-- Renamer
+			{ "<leader>r", desc = "Renamer", icon = { icon = "󰑕 ", color = "cyan" } },
 		})
 
 		wk.setup({

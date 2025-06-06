@@ -28,7 +28,7 @@ require("lazy").setup({
 	},
 
 	-- Auto update plugins
-	checker = { enabled = false },
+	checker = { enabled = false, notify = false },
 
 	ui = {
 		border = "rounded",
@@ -37,6 +37,8 @@ require("lazy").setup({
 			height = 0.8,
 		},
 	},
+
+	change_detection = { enabled = false },
 
 	performance = {
 		rtp = {

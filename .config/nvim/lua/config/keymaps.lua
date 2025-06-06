@@ -122,7 +122,7 @@ vim.keymap.set("n", "<leader>h", builtin.help_tags, { desc = "Telescope help tag
 -----------------------------------------------------------
 --  INFO: Quit
 -----------------------------------------------------------
-vim.keymap.set("n", "<leader>qq", "<Cmd>qa!<CR>") -- Quit without saving!
+vim.keymap.set("n", "<leader>qq", "<Cmd>qa<CR>") -- Quit without saving!
 vim.keymap.set("n", "<leader>qw", "<Cmd>xa<CR>") -- Quit and save
 vim.keymap.set("n", "<C-q>", "<cmd> q <CR>", opts) -- Quit current
 
@@ -216,3 +216,5 @@ vim.keymap.set("n", "<leader>o", function()
 
 	themify.set_current(themify.get_current().colorscheme_id, themify.get_current().theme)
 end)
+
+vim.keymap.set("n", "<leader>r", ":Renamer ")

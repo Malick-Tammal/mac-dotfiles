@@ -1,6 +1,6 @@
 return {
 	"echasnovski/mini.nvim",
-	event = "UIEnter",
+	event = "VeryLazy",
 	version = "*",
 	specs = {
 		{ "nvim-tree/nvim-web-devicons", enabled = false, optional = true },
@@ -27,6 +27,18 @@ return {
 
 				suffix_last = "l", -- Suffix to search with "prev" method
 				suffix_next = "n", -- Suffix to search with "next" method
+			},
+			custom_surroundings = {
+				t = {
+					input = { "<(%w+)[^<>]->.-</%1>", "^<()%w+().*</()%w+()>$" },
+					output = function()
+						local tag_name = MiniSurround.user_input(" Tag name")
+						if tag_name == nil then
+							return nil
+						end
+						return { left = tag_name, right = tag_name }
+					end,
+				},
 			},
 		})
 	end,

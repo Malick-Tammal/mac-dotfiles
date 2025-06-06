@@ -1,7 +1,6 @@
 return {
 	"folke/flash.nvim",
-	event = "VeryLazy",
-	lazy = true,
+	event = { "BufReadPre", "BufNewFile" },
 
 	---@type Flash.Config
 	opts = {},

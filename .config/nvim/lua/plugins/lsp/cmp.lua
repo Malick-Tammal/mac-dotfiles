@@ -32,11 +32,13 @@ return {
 			},
 
 			window = {
-				documentation = cmp.config.window.bordered(),
 				completion = {
 					border = "rounded",
-					-- winhighlight = "Normal:CmpNormal",
 					winhighlight = "Normal:CmpPmenu,FloatBorder:CmpPmenu,CursorLine:PmenuSel,Search:None",
+				},
+				documentation = {
+					border = "rounded",
+					winhighlight = "Normal:CmpDocNormal",
 				},
 			},
 

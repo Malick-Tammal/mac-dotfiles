@@ -41,6 +41,7 @@ return {
 
 			-- Cmp ( Completion menu )
 			vim.api.nvim_set_hl(0, "CmpPmenu", { bg = palette.bg_dim })
+			vim.api.nvim_set_hl(0, "CmpDocNormal", { bg = palette.bg_dim })
 			vim.api.nvim_set_hl(0, "PmenuSel", { bg = palette.green, fg = palette.bg3 })
 
 			-- Highlight relative number
