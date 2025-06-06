@@ -52,5 +52,3 @@ opt.updatetime = 250 -- ms to wait for trigger an event
 
 -- then you need to set the option below.
 vim.g.lazyvim_picker = "snacks"
-
-vim.opt.confirm = true
