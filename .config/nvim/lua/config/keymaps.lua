@@ -217,4 +217,14 @@ vim.keymap.set("n", "<leader>o", function()
 	themify.set_current(themify.get_current().colorscheme_id, themify.get_current().theme)
 end)
 
+-----------------------------------------------------------
+--  INFO: Renamer
+-----------------------------------------------------------
+
 vim.keymap.set("n", "<leader>r", ":Renamer ")
+
+-----------------------------------------------------------
+--  INFO: Yanky
+-----------------------------------------------------------
+
+vim.keymap.set("n", "<leader>yh", ":YankyRingHistory<CR>")

@@ -12,6 +12,9 @@ return {
 				highlight = "FloatTitle",
 				hide_if_all_visible = false, -- Hides handle if all lines are visible
 			},
+			excluded_filetypes = {
+				"notify",
+			},
 		})
 	end,
 }
