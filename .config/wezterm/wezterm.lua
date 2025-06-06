@@ -5,26 +5,6 @@ local config = {
 	-- INFO: Theme
 	color_scheme = "Everforest Dark Hard (Gogh)",
 
-	-- INFO: Window
-	window_decorations = "INTEGRATED_BUTTONS",
-	window_padding = {
-		left = 20,
-		right = 0,
-		top = 80,
-		bottom = 0,
-	},
-	window_background_opacity = 0.8,
-	macos_window_background_blur = 40,
-	hide_tab_bar_if_only_one_tab = true,
-	use_fancy_tab_bar = false,
-
-	-- INFO: Font
-	font = wezterm.font("MesloLGL Nerd Font", { weight = "Bold" }),
-	font_size = 15,
-	window_frame = {
-		font = wezterm.font("MesloLGL Nerd Font", { weight = "Bold" }),
-	},
-
 	-- INFO: Keybinds
 	keys = {
 		{
@@ -58,6 +38,26 @@ local config = {
 		window:set_config_overrides(overrides)
 	end),
 
+	-- INFO: Window
+	window_decorations = "INTEGRATED_BUTTONS",
+	window_padding = {
+		left = 20,
+		right = 0,
+		top = 80,
+		bottom = 0,
+	},
+	window_background_opacity = 0.8,
+	macos_window_background_blur = 40,
+	hide_tab_bar_if_only_one_tab = true,
+	use_fancy_tab_bar = false,
+
+	-- INFO: Font
+	font = wezterm.font("MesloLGL Nerd Font", { weight = "Bold" }),
+	font_size = 15,
+	window_frame = {
+		font = wezterm.font("MesloLGL Nerd Font", { weight = "Bold" }),
+	},
+
 	-- INFO: Performence
 	front_end = "OpenGL",
 	animation_fps = 250,
@@ -66,6 +66,8 @@ local config = {
 	-- INFO: Close confirm message
 	window_close_confirmation = "NeverPrompt",
 }
+
+-- config.keys = require("keymaps").config.keys
 
 local tabline = wezterm.plugin.require("https://github.com/michaelbrusegard/tabline.wez")
 
