@@ -56,7 +56,7 @@ return {
 	opts = {
 		-- INFO: Animation
 		animate = {
-			fps = 60,
+			fps = 240,
 			easing = "linear",
 			duration = {
 				step = 10,
@@ -89,6 +89,10 @@ return {
 			enabled = true,
 			notify = true,
 			size = 1.5 * 1024 * 1024, -- 1.5mb
+		},
+
+		notifier = {
+			enabled = true,
 		},
 
 		-- INFO: Quick file rendering

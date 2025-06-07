@@ -1,7 +1,7 @@
 return {
 	"nvim-lualine/lualine.nvim",
 	event = "VeryLazy",
-	lazy = true,
+
 	config = function()
 		local hide_in_width = function()
 			return vim.fn.winwidth(0) > 100
@@ -84,7 +84,7 @@ return {
 					{
 						"fileformat",
 						symbols = {
-							unix = "",
+							unix = " ",
 						},
 					},
 				},
