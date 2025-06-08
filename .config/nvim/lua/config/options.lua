@@ -1,15 +1,21 @@
+--
+--  HACK: Options
+--
+
 -----------------------------------------------------------
--- Config
+--  INFO: Config
 -----------------------------------------------------------
 local g = vim.g -- Global variables
 local opt = vim.opt -- Set options (global/buffer/windows-scoped)
 
--- Set leader key
+-----------------------------------------------------------
+--  INFO: Set leader key
+-----------------------------------------------------------
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -----------------------------------------------------------
--- General
+--  INFO: General
 -----------------------------------------------------------
 opt.mouse = "a" -- Enable mouse support
 opt.clipboard = "unnamedplus" -- Copy/paste to system clipboard
@@ -17,7 +23,7 @@ opt.swapfile = false -- Don't use swapfile
 opt.completeopt = "menuone,noinsert,noselect" -- Autocomplete options
 
 -----------------------------------------------------------
--- Neovim UI
+--  INFO: Neovim UI
 -----------------------------------------------------------
 opt.number = true -- Show line number
 opt.relativenumber = true -- Set relative numbered lines
@@ -33,7 +39,7 @@ opt.termguicolors = true -- Enable 24-bit RGB colors
 opt.laststatus = 3 -- Set global statusline
 
 -----------------------------------------------------------
--- Tabs, indent
+--  INFO: Tabs, indent
 -----------------------------------------------------------
 -- opt.expandtab = true -- Use spaces instead of tabs
 opt.shiftwidth = 4 -- Shift 4 spaces when tab
@@ -42,7 +48,7 @@ opt.smartindent = true -- Autoindent new lines
 opt.signcolumn = "yes:1"
 
 -----------------------------------------------------------
--- Memory, CPU
+--  INFO: Memory, CPU
 -----------------------------------------------------------
 opt.hidden = true -- Enable background buffers
 opt.history = 100 -- Remember N lines in history
@@ -50,11 +56,15 @@ opt.history = 100 -- Remember N lines in history
 opt.synmaxcol = 240 -- Max column for syntax highlight
 opt.updatetime = 250 -- ms to wait for trigger an event
 
--- then you need to set the option below.
+-----------------------------------------------------------
+--  INFO: Snacks picker
+-----------------------------------------------------------
 vim.g.lazyvim_picker = "snacks"
-
 vim.opt.confirm = true
 
+-----------------------------------------------------------
+--  INFO: Folding code block
+-----------------------------------------------------------
 vim.o.foldcolumn = "1" -- '0' is not bad
 vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
 vim.o.foldlevelstart = 99

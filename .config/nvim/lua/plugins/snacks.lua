@@ -93,6 +93,8 @@ return {
 
 		notifier = {
 			enabled = true,
+			timeout = 1000,
+			margin = { top = 1, right = 2, bottom = 0 },
 		},
 
 		-- INFO: Quick file rendering

@@ -1,6 +1,6 @@
------------------------------------------------------------
+--
 --  HACK: Keymaps
------------------------------------------------------------
+--
 
 -- Disable the spacebar key's default behavior in Normal and Visual modes
 vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
@@ -227,4 +227,4 @@ vim.keymap.set("n", "<leader>r", ":Renamer ")
 --  INFO: Yanky
 -----------------------------------------------------------
 
-vim.keymap.set("n", "<leader>yh", ":YankyRingHistory<CR>")
+vim.keymap.set("n", "<leader>y", ":YankyRingHistory<CR>")

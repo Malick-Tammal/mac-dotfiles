@@ -115,6 +115,9 @@ return {
 
 			-- Renamer
 			{ "<leader>r", desc = "Renamer", icon = { icon = "󰑕 ", color = "cyan" } },
+
+			-- Yanky (Yank history)
+			{ "<leader>y", desc = "Yank history", icon = { icon = " ", color = "purple" } },
 		})
 
 		wk.setup({
