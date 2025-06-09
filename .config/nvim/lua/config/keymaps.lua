@@ -228,3 +228,9 @@ vim.keymap.set("n", "<leader>r", ":Renamer ")
 -----------------------------------------------------------
 
 vim.keymap.set("n", "<leader>y", ":YankyRingHistory<CR>")
+
+-----------------------------------------------------------
+--  INFO: Exit "insert" mode
+-----------------------------------------------------------
+
+vim.keymap.set("i", "jj", "<Esc>", { noremap = false })
