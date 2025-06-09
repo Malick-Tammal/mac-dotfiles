@@ -20,9 +20,50 @@ config.keys = {
 			args = { os.getenv("SHELL"), "-c", "open ." },
 		}),
 	},
+	{
+		key = "H",
+		mods = "CMD",
+		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+	},
+	{
+		key = "V",
+		mods = "CMD",
+		action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
+	},
+	{
+		key = "X",
+		mods = "CMD",
+		action = wezterm.action.CloseCurrentPane({ confirm = false }),
+	},
+	{
+		key = "J",
+		mods = "CMD",
+		action = wezterm.action({ ActivatePaneDirection = "Next" }),
+	},
+	{
+		key = "K",
+		mods = "CMD",
+		action = wezterm.action({ ActivatePaneDirection = "Prev" }),
+	},
+	{
+		key = "LeftArrow",
+		mods = "CMD",
+		action = action.AdjustPaneSize({ "Left", 5 }),
+	},
+	{
+		key = "DownArrow",
+		mods = "CMD",
+		action = action.AdjustPaneSize({ "Down", 5 }),
+	},
+	{ key = "UpArrow", mods = "CMD", action = action.AdjustPaneSize({ "Up", 5 }) },
+	{
+		key = "RightArrow",
+		mods = "CMD",
+		action = action.AdjustPaneSize({ "Right", 5 }),
+	},
 }
 
--- Toggle opacity function
+-- TIP: Toggle opacity function
 wezterm.on("toggle-opacity", function(window, pane)
 	local overrides = window:get_config_overrides() or {}
 	if not overrides.window_background_opacity then
@@ -104,7 +145,7 @@ tabline.setup({
 		tab_inactive = { "index", { "process", padding = { left = 0, right = 1 } } },
 		tabline_x = { "battery" },
 		tabline_y = { "datetime" },
-		tabline_z = { " Malick.dev " },
+		tabline_z = { "  Malick.dev " },
 	},
 	extensions = {},
 })
