@@ -1,76 +1,76 @@
 local wezterm = require("wezterm")
 local action = wezterm.action
 
-local config = {
-	-- INFO: Theme
-	color_scheme = "Everforest Dark Hard (Gogh)",
+local config = wezterm.config_builder()
 
-	-- INFO: Keybinds
-	keys = {
-		{
-			key = "T",
-			mods = "CMD",
-			action = action.EmitEvent("toggle-opacity"),
-		},
-		{
-			key = "O",
-			mods = "CMD",
-			action = action.SpawnCommandInNewWindow({
-				args = { os.getenv("SHELL"), "-c", "open ." },
-			}),
-		},
-		{
-			key = "H",
-			mods = "CMD",
-			action = action.SpawnCommandInNewWindow({
-				args = { os.getenv("SHELL"), "-c", "open ." },
-			}),
-		},
+-- INFO: Theme
+config.color_scheme = "Everforest Dark Hard (Gogh)"
+
+-- INFO: Keybinds
+config.keys = {
+	{
+		key = "T",
+		mods = "CMD",
+		action = action.EmitEvent("toggle-opacity"),
 	},
-	-- Toggle opacity function
-	wezterm.on("toggle-opacity", function(window, pane)
-		local overrides = window:get_config_overrides() or {}
-		if not overrides.window_background_opacity then
-			overrides.window_background_opacity = 1.0
-		else
-			overrides.window_background_opacity = nil
-		end
-		window:set_config_overrides(overrides)
-	end),
-
-	-- INFO: Window
-	window_decorations = "INTEGRATED_BUTTONS",
-	window_padding = {
-		left = 20,
-		right = 0,
-		top = 80,
-		bottom = 0,
+	{
+		key = "O",
+		mods = "CMD",
+		action = action.SpawnCommandInNewWindow({
+			args = { os.getenv("SHELL"), "-c", "open ." },
+		}),
 	},
-	window_background_opacity = 0.8,
-	macos_window_background_blur = 40,
-	hide_tab_bar_if_only_one_tab = true,
-	use_fancy_tab_bar = false,
-
-	-- INFO: Font
-	font = wezterm.font("MesloLGL Nerd Font", { weight = "Bold" }),
-	font_size = 15,
-	window_frame = {
-		font = wezterm.font("MesloLGL Nerd Font", { weight = "Bold" }),
-	},
-
-	-- INFO: Performence
-	front_end = "OpenGL",
-	animation_fps = 250,
-	max_fps = 250,
-
-	-- INFO: Close confirm message
-	window_close_confirmation = "NeverPrompt",
 }
 
--- config.keys = require("keymaps").config.keys
+-- Toggle opacity function
+wezterm.on("toggle-opacity", function(window, pane)
+	local overrides = window:get_config_overrides() or {}
+	if not overrides.window_background_opacity then
+		overrides.window_background_opacity = 1.0
+	else
+		overrides.window_background_opacity = nil
+	end
+	window:set_config_overrides(overrides)
+end)
 
+-- INFO: Window
+config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
+config.window_padding = {
+	left = 20,
+	right = 10,
+	top = 20,
+	bottom = 10,
+}
+config.window_background_opacity = 0.8
+config.macos_window_background_blur = 40
+config.hide_tab_bar_if_only_one_tab = true
+config.use_fancy_tab_bar = false
+config.tab_max_width = 1600
+config.tab_and_split_indices_are_zero_based = false
+
+-- INFO: Font
+config.font = wezterm.font("MesloLGL Nerd Font", { weight = "Bold" })
+config.font_size = 15
+config.window_frame = {
+	font = wezterm.font("MesloLGL Nerd Font", { weight = "Bold" }),
+}
+
+-- INFO: Performence
+config.front_end = "OpenGL"
+config.animation_fps = 250
+config.max_fps = 250
+
+-- INFO: Close confirm message
+config.window_close_confirmation = "NeverPrompt"
+
+config.colors = {
+	tab_bar = {
+		background = "#1E2326",
+	},
+}
+
+-- INFO: Tabline plugin
 local tabline = wezterm.plugin.require("https://github.com/michaelbrusegard/tabline.wez")
-
 tabline.setup({
 	options = {
 		icons_enabled = true,
@@ -78,16 +78,16 @@ tabline.setup({
 		tabs_enabled = true,
 		theme_overrides = {},
 		section_separators = {
-			left = wezterm.nerdfonts.pl_left_hard_divider,
-			right = wezterm.nerdfonts.pl_right_hard_divider,
+			left = "",
+			right = "",
 		},
 		component_separators = {
-			left = wezterm.nerdfonts.pl_left_soft_divider,
-			right = wezterm.nerdfonts.pl_right_soft_divider,
+			left = "",
+			right = "",
 		},
 		tab_separators = {
-			left = wezterm.nerdfonts.pl_left_hard_divider,
-			right = wezterm.nerdfonts.pl_right_hard_divider,
+			left = "",
+			right = "",
 		},
 	},
 	sections = {
@@ -95,14 +95,18 @@ tabline.setup({
 		tabline_b = {},
 		tabline_c = {},
 		tab_active = {
-			"process",
-			{ "parent", padding = { right = 4 } },
-			{ "cwd", padding = { right = 4 } },
+			"index",
+			{ "parent", padding = 0 },
+			"/",
+			{ "cwd", padding = { left = 0, right = 1 } },
+			{ "zoomed", padding = 0 },
 		},
-		tab_inactive = { "index", "process" },
-		tabline_x = {},
-		tabline_y = {},
+		tab_inactive = { "index", { "process", padding = { left = 0, right = 1 } } },
+		tabline_x = { "battery" },
+		tabline_y = { "datetime" },
+		tabline_z = { " Malick.dev " },
 	},
 	extensions = {},
 })
+
 return config

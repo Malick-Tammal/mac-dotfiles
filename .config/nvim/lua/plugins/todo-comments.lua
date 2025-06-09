@@ -7,6 +7,7 @@ return {
 	opts = {
 		keywords = {
 			INFO = { icon = " ", color = "info" },
+			TIP = { icon = " ", color = "tip" },
 			FIX = { icon = " ", color = "error", alt = { "FIXME", "BUG", "FIXIT", "ISSUE" } },
 			HACK = { icon = " ", color = "warning" },
 			PERF = { icon = "󰓅 ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
@@ -18,6 +19,10 @@ return {
 
 		highlight = {
 			multiline = false,
+		},
+
+		colors = {
+			tip = { "LineNr" },
 		},
 	},
 }
