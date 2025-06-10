@@ -118,6 +118,9 @@ return {
 
 			-- Yanky (Yank history)
 			{ "<leader>y", desc = "Yank history", icon = { icon = " ", color = "purple" } },
+
+			-- Live server
+			{ "<leader>S", desc = "Live Server", icon = { icon = " ", color = "green" } },
 		})
 
 		wk.setup({

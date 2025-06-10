@@ -234,3 +234,9 @@ vim.keymap.set("n", "<leader>y", ":YankyRingHistory<CR>")
 -----------------------------------------------------------
 
 vim.keymap.set("i", "jj", "<Esc>", { noremap = false })
+
+-----------------------------------------------------------
+--  INFO: Live server
+-----------------------------------------------------------
+
+vim.keymap.set("n", "<leader>S", ":LiveServerToggle<CR>")
