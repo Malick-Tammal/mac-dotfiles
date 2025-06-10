@@ -51,7 +51,7 @@ return {
 				["<C-b>"] = cmp.mapping.scroll_docs(-4),
 				["<C-f>"] = cmp.mapping.scroll_docs(4),
 				["<C-e>"] = cmp.mapping.complete(),
-				["<C-Tab>"] = cmp.mapping.abort(),
+				["<C-d>"] = cmp.mapping.abort(),
 			}),
 
 			sources = cmp.config.sources({
