@@ -85,3 +85,6 @@ alias bench="time zsh -i -c exit"
 
 # INFO: Matrix effect
 alias matrix="cmatrix"
+
+# INFO: Copy current dir path
+alias cdp="pwd | tr -d '\n' | pbcopy"

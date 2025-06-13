@@ -79,7 +79,7 @@ config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
 config.window_padding = {
 	left = 20,
 	right = 10,
-	top = 30,
+	top = 60,
 	bottom = 10,
 }
 config.window_background_opacity = 0.8

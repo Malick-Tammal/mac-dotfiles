@@ -124,6 +124,8 @@ export EDITOR="nvim"
 export PATH=~/.local/bin/:$PATH
 
 
+
+# Multi nvim builds
 alias nvchad="NVIM_APPNAME=NvChad nvim"
 
 function nvs() {
