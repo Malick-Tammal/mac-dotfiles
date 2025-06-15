@@ -82,8 +82,8 @@ config.window_padding = {
 	top = 60,
 	bottom = 10,
 }
-config.window_background_opacity = 0.7
-config.macos_window_background_blur = 40
+config.window_background_opacity = 0.3
+config.macos_window_background_blur = 30
 config.hide_tab_bar_if_only_one_tab = true
 config.use_fancy_tab_bar = false
 config.tab_max_width = 1600

@@ -8,11 +8,11 @@
 
 options=(
 	style=round
-	width=6.0
+	width=3.0
 	hidpi=on
 	# active_color=0xFF55DFE0
 	# "active_color=gradient(top_left=0xFFFF9B3F,bottom_right=0xFF54B3DF)"
-	"active_color=gradient(top_left=0xFF55CE9B,bottom_right=0xFFEEEE7F)"
+	"active_color=gradient(top_left=0xFF617D64,bottom_right=0xFFDACE49)"
 	inactive_color=0xFF737373
 )
 
