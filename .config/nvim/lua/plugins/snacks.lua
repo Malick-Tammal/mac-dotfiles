@@ -76,6 +76,10 @@ return {
 		indent = {
 			enabled = true,
 			priority = 1,
+			scope = {
+				enabled = true,
+				char = "┃",
+			},
 		},
 
 		-- INFO: Word highlight
@@ -92,7 +96,7 @@ return {
 		},
 
 		notifier = {
-			enabled = true,
+			enabled = false,
 			timeout = 1000,
 			margin = { top = 1, right = 2, bottom = 0 },
 		},

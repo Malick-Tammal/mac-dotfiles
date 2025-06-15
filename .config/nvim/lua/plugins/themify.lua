@@ -49,6 +49,7 @@ return {
 
 			-- vim.api.nvim_set_hl(0, "Comment", { fg = palette.grey1 })
 
+			-- Indent line and highlight active
 			vim.api.nvim_set_hl(0, "SnacksIndent", { fg = palette.grey0 })
 			vim.api.nvim_set_hl(0, "SnacksIndentScope", { fg = palette.orange })
 		end

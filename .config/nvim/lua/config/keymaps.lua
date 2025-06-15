@@ -18,7 +18,9 @@ end
 
 vim.keymap.set("n", "<leader>cs", function()
 	vim.cmd("w")
-	vim.notify(message(" Saved ", " 󰆓 "))
+	vim.notify(message(" Saved ", " 󰆓 "), "", {
+		title = "VIM",
+	})
 	-- Save
 end, opts)
 
