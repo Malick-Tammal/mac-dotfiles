@@ -36,7 +36,6 @@ vim.keymap.set({ "n" }, "<leader>cf", function()
 		async = true,
 		timeout_ms = 500,
 	})
-	vim.cmd("echo 'Code formatted!'") -- Format
 	vim.notify(message(" Code formatted!", " 󰆓 "), "", {
 		title = "VIM",
 	})
@@ -241,3 +240,12 @@ vim.keymap.set("i", "jj", "<Esc>", { noremap = false })
 --  INFO: Live server
 -----------------------------------------------------------
 vim.keymap.set("n", "<leader>S", ":LiveServerToggle<CR>")
+
+-----------------------------------------------------------
+--  INFO: Copilot
+-----------------------------------------------------------
+vim.keymap.set("i", "<Tab>", 'copilot#Accept("\\<CR>")', {
+	expr = true,
+	replace_keycodes = false,
+})
+vim.g.copilot_no_tab_map = true
