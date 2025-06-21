@@ -7,14 +7,18 @@ return {
 			"hrsh7th/cmp-nvim-lsp",
 		},
 		config = function()
-			-- import lspconfig plugin
+			-- lspconfig plugin
 			local lspconfig = require("lspconfig")
 
-			-- import cmp-nvim-lsp plugin
+			-- cmp-nvim-lsp plugin
 			local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
 			-- Autocompletion
 			local capabilities = cmp_nvim_lsp.default_capabilities()
+
+			-- Blink cmp plugin
+			-- local blink = require("blink.cmp")
+			-- local capabilities = blink.get_lsp_capabilities()
 
 			-- HACK: LSPs
 

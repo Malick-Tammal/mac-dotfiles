@@ -1,14 +1,15 @@
 return {
 	"hrsh7th/nvim-cmp",
 	event = "InsertEnter",
+	enabled = true,
 
 	dependencies = {
 		"hrsh7th/cmp-path",
 		"hrsh7th/cmp-buffer",
+		"hrsh7th/cmp-calc",
 		"onsails/lspkind.nvim",
 		"saadparwaiz1/cmp_luasnip",
 		"rafamadriz/friendly-snippets",
-		"hrsh7th/cmp-nvim-lsp",
 		{
 			"L3MON4D3/LuaSnip",
 			build = "make install_jsregexp",
@@ -35,15 +36,14 @@ return {
 			window = {
 				completion = {
 					border = "rounded",
-					winhighlight = "Normal:CmpPmenu,FloatBorder:CmpPmenu,CursorLine:PmenuSel,Search:None",
+					winhighlight = "Normal:CmpPmenu,FloatBorder:CmpMenuBorder,CursorLine:PmenuSel,Search:None",
+					side_padding = 1,
 				},
 				documentation = {
 					border = "rounded",
-					winhighlight = "Normal:CmpDocNormal",
+					winhighlight = "Normal:CmpDocNormal,FloatBorder:CmpMenuBorder",
 				},
 			},
-
-			preselect = cmp.PreselectMode.Item,
 
 			mapping = cmp.mapping.preset.insert({
 				["<CR>"] = cmp.mapping.confirm({ select = true }),
@@ -62,6 +62,7 @@ return {
 				{ name = "nvim_lsp" },
 				{ name = "buffer" },
 				{ name = "path" },
+				{ name = "calc" },
 			}),
 
 			formatting = {
@@ -75,8 +76,9 @@ return {
 				}),
 			},
 
+			--  INFO: Ghost text
 			experimental = {
-				ghost_text = true,
+				ghost_text = false,
 			},
 		})
 

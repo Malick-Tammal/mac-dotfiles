@@ -20,13 +20,14 @@ vim.keymap.set("n", "<leader>cs", function()
 	vim.cmd("w")
 	vim.notify(message(" Saved ", " 󰆓 "), "", {
 		title = "VIM",
-	})
-	-- Save
+	}) -- Save
 end, opts)
 
 vim.keymap.set("n", "<leader>cn", function()
 	vim.cmd("noautocmd w")
-	vim.notify(message(" Saved (no format)", " 󰽂 ")) -- Save without formatting
+	vim.notify(message(" Saved (no format)", " 󰽂 "), "", {
+		title = "VIM",
+	}) -- Save without formatting
 end, opts)
 
 vim.keymap.set({ "n" }, "<leader>cf", function()
@@ -36,6 +37,9 @@ vim.keymap.set({ "n" }, "<leader>cf", function()
 		timeout_ms = 500,
 	})
 	vim.cmd("echo 'Code formatted!'") -- Format
+	vim.notify(message(" Code formatted!", " 󰆓 "), "", {
+		title = "VIM",
+	})
 end)
 
 -----------------------------------------------------------
@@ -210,7 +214,6 @@ end, { desc = "Header 3" })
 -----------------------------------------------------------
 --  INFO: Transparency
 -----------------------------------------------------------
-
 vim.keymap.set("n", "<leader>o", function()
 	vim.cmd("TransparentToggle")
 
@@ -222,23 +225,19 @@ end)
 -----------------------------------------------------------
 --  INFO: Renamer
 -----------------------------------------------------------
-
 vim.keymap.set("n", "<leader>r", ":Renamer ")
 
 -----------------------------------------------------------
 --  INFO: Yanky
 -----------------------------------------------------------
-
 vim.keymap.set("n", "<leader>y", ":YankyRingHistory<CR>")
 
 -----------------------------------------------------------
 --  INFO: Exit "insert" mode
 -----------------------------------------------------------
-
 vim.keymap.set("i", "jj", "<Esc>", { noremap = false })
 
 -----------------------------------------------------------
 --  INFO: Live server
 -----------------------------------------------------------
-
 vim.keymap.set("n", "<leader>S", ":LiveServerToggle<CR>")

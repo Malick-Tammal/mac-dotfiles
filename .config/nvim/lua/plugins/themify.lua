@@ -14,73 +14,66 @@ return {
 	config = function()
 		-- TODO: Setting Highlights ( changing some ui colors )
 
-		local function setHl(palette)
-			-- Buffer line
-			vim.api.nvim_set_hl(0, "BufferLineIndicatorSelected", { bg = palette.orange, fg = palette.bg_dim })
-			vim.api.nvim_set_hl(0, "BufferLineNeoTree", { bg = palette.bg0, fg = palette.grey2 })
-			vim.api.nvim_set_hl(0, "BufferLineFill", { bg = palette.bg_dim })
-			-- vim.api.nvim_set_hl(0, "TelescopePreviewNormal", { bg = palette.bg_dim, fg = palette.grey2 })
-			-- vim.api.nvim_set_hl(0, "TelescopeNormal", { bg = palette.bg_dim, fg = palette.grey2 })
-			-- vim.api.nvim_set_hl(0, "TelescopePreviewNormal", { bg = palette.bg0, fg = palette.grey2 })
+		local function setHl(palette, colorScheme)
+			if colorScheme == "tokyonight" then
+				-- Buffer line
+				vim.api.nvim_set_hl(0, "BufferLineIndicatorSelected", { bg = palette.red, fg = palette.bg })
+				vim.api.nvim_set_hl(0, "BufferLineNeoTree", { bg = palette.bg0, fg = palette.grey2 })
+				vim.api.nvim_set_hl(0, "BufferLineFill", { bg = palette.bg })
 
-			-- vim.api.nvim_set_hl(0, "BufferLineTab", { bg = palette.orange, fg = palette.bg3 })
-			-- vim.api.nvim_set_hl(0, "BufferLineBufferVisible", { bg = palette.orange, fg = palette.bg3 })
-			-- vim.api.nvim_set_hl(0, "BufferLineBackground", { bg = palette.orange, fg = palette.bg3 })
-			-- vim.api.nvim_set_hl(0, "BufferLineBufferSelected", { bg = palette.orange, fg = palette.bg3 })
-			-- vim.api.nvim_set_hl(0, "BufferLineBuffer", { bg = palette.orange, fg = palette.bg3 })
-			-- vim.api.nvim_set_hl(0, "BufferLineCloseButtonSelected", { bg = palette.orange, fg = palette.bg3 })
-			-- vim.api.nvim_set_hl(0, "BufferLineInfoSelected", { bg = palette.orange, fg = palette.bg3 })
-			-- vim.api.nvim_set_hl(0, "BufferLineGroupLabel", { bg = palette.orange, fg = palette.bg3 })
-			-- vim.api.nvim_set_hl(0, "BufferLineFileIcon", { bg = palette.orange })
+				-- Telescope
+				vim.api.nvim_set_hl(0, "TelescopeResultsTitle", { bg = palette.red, fg = palette.bg })
+				vim.api.nvim_set_hl(0, "TelescopePreviewTitle", { bg = palette.yellow, fg = palette.bg })
+				vim.api.nvim_set_hl(0, "TelescopePromptTitle", { bg = palette.orange, fg = palette.bg })
+				vim.api.nvim_set_hl(0, "TelescopeSelection", { fg = palette.orange })
 
-			-- Telescope
-			vim.api.nvim_set_hl(0, "TelescopeResultsTitle", { bg = palette.green, fg = palette.bg3 })
-			vim.api.nvim_set_hl(0, "TelescopePreviewTitle", { bg = palette.orange, fg = palette.bg3 })
-			vim.api.nvim_set_hl(0, "TelescopePromptTitle", { bg = palette.yellow, fg = palette.bg3 })
-			vim.api.nvim_set_hl(0, "TelescopeSelection", { fg = palette.orange })
+				-- Cmp ( Completion menu )
+				vim.api.nvim_set_hl(0, "CmpPmenu", { bg = palette.bg })
+				vim.api.nvim_set_hl(0, "CmpDocNormal", { bg = palette.bg })
+				vim.api.nvim_set_hl(0, "PmenuSel", { bg = palette.red, fg = palette.bg })
+				vim.api.nvim_set_hl(0, "CmpMenuBorder", { bg = "none" })
 
-			-- Cmp ( Completion menu )
-			vim.api.nvim_set_hl(0, "CmpPmenu", { bg = palette.bg_dim })
-			vim.api.nvim_set_hl(0, "CmpDocNormal", { bg = palette.bg_dim })
-			vim.api.nvim_set_hl(0, "PmenuSel", { bg = palette.green, fg = palette.bg3 })
+				-- Highlight relative number
+				vim.api.nvim_set_hl(0, "LineNr", { fg = palette.blue2 })
 
-			-- Highlight relative number
-			vim.api.nvim_set_hl(0, "LineNr", { fg = palette.aqua })
+				-- Indent line and highlight active
+				vim.api.nvim_set_hl(0, "SnacksIndent", { fg = palette.grey0 })
+				vim.api.nvim_set_hl(0, "SnacksIndentScope", { fg = palette.orange })
 
-			-- vim.api.nvim_set_hl(0, "Comment", { fg = palette.grey1 })
+				-- Notify
+				vim.api.nvim_set_hl(0, "NotifyINFOBody", { bg = palette.none })
+				vim.api.nvim_set_hl(0, "NotifyINFOBorder", { bg = palette.none, fg = palette.info })
+				vim.api.nvim_set_hl(0, "NotifyERRORBody", { bg = palette.none })
+				vim.api.nvim_set_hl(0, "NotifyERRORBorder", { bg = palette.none, fg = palette.error })
+				vim.api.nvim_set_hl(0, "NotifyWARNBody", { bg = palette.none })
+				vim.api.nvim_set_hl(0, "NotifyWARNBorder", { bg = palette.none, fg = palette.warning })
+			else
+				-- Buffer line
+				vim.api.nvim_set_hl(0, "BufferLineIndicatorSelected", { bg = palette.orange, fg = palette.bg_dim })
+				vim.api.nvim_set_hl(0, "BufferLineNeoTree", { bg = palette.bg0, fg = palette.grey2 })
+				vim.api.nvim_set_hl(0, "BufferLineFill", { bg = palette.bg_dim })
 
-			-- Indent line and highlight active
-			vim.api.nvim_set_hl(0, "SnacksIndent", { fg = palette.grey0 })
-			vim.api.nvim_set_hl(0, "SnacksIndentScope", { fg = palette.orange })
+				-- Telescope
+				vim.api.nvim_set_hl(0, "TelescopeResultsTitle", { bg = palette.green, fg = palette.bg3 })
+				vim.api.nvim_set_hl(0, "TelescopePreviewTitle", { bg = palette.orange, fg = palette.bg3 })
+				vim.api.nvim_set_hl(0, "TelescopePromptTitle", { bg = palette.yellow, fg = palette.bg3 })
+				vim.api.nvim_set_hl(0, "TelescopeSelection", { fg = palette.orange })
+
+				-- Cmp ( Completion menu )
+				vim.api.nvim_set_hl(0, "CmpPmenu", { bg = palette.bg_dim })
+				vim.api.nvim_set_hl(0, "CmpDocNormal", { bg = palette.bg_dim })
+				vim.api.nvim_set_hl(0, "PmenuSel", { bg = palette.green, fg = palette.bg3 })
+
+				vim.api.nvim_set_hl(0, "CmpMenuBorder", { bg = "none" })
+
+				-- Highlight relative number
+				vim.api.nvim_set_hl(0, "LineNr", { fg = palette.aqua })
+
+				-- Indent line and highlight active
+				vim.api.nvim_set_hl(0, "SnacksIndent", { fg = palette.grey0 })
+				vim.api.nvim_set_hl(0, "SnacksIndentScope", { fg = palette.orange })
+			end
 		end
-
-		-- aqua = "#83c092",
-		-- bg0 = "#272e33",
-		-- bg1 = "#2e383c",
-		-- bg2 = "#374145",
-		-- bg3 = "#414b50",
-		-- bg4 = "#495156",
-		-- bg5 = "#4f5b58",
-		-- bg_blue = "#384b55",
-		-- bg_dim = "#1e2326",
-		-- bg_green = "#3c4841",
-		-- bg_red = "#493b40",
-		-- bg_visual = "#4c3743",
-		-- bg_yellow = "#45443c",
-		-- blue = "#7fbbb3",
-		-- fg = "#d3c6aa",
-		-- green = "#a7c080",
-		-- grey0 = "#7a8478",
-		-- grey1 = "#859289",
-		-- grey2 = "#9da9a0",
-		-- none = "NONE",
-		-- orange = "#e69875",
-		-- purple = "#d699b6",
-		-- red = "#e67e80",
-		-- statusline1 = "#a7c080",
-		-- statusline2 = "#d3c6aa",
-		-- statusline3 = "#e67e80",
-		-- yellow = "#dbbc7f"
 
 		local colors
 
@@ -145,6 +138,20 @@ return {
 				-- Settings colors
 				after = function()
 					setHl(colors)
+				end,
+			},
+			{
+				"folke/tokyonight.nvim",
+
+				before = function()
+					local palette = require("tokyonight.colors").setup()
+
+					colors = palette
+				end,
+
+				-- Settings colors
+				after = function()
+					setHl(colors, "tokyonight")
 				end,
 			},
 		})
