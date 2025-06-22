@@ -139,3 +139,6 @@ function nvs() {
     fi
     NVIM_APPNAME=$config nvim $@
 }
+
+# Load custom environment variables
+source ./env.sh
