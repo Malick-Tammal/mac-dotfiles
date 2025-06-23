@@ -141,4 +141,4 @@ function nvs() {
 }
 
 # Load custom environment variables
-source ./env.sh
+source ~/.env.sh
