@@ -251,3 +251,6 @@ vim.keymap.set("i", "<S-Tab>", 'copilot#Accept("\\<CR>")', {
 vim.g.copilot_no_tab_map = true
 
 vim.keymap.set("n", "<leader>M", ":RenderMarkdown toggle<CR>")
+
+vim.keymap.set("n", "<leader>Oe", ":Copilot enable<CR>", { desc = "Enable" })
+vim.keymap.set("n", "<leader>Od", ":Copilot disable<CR>", { desc = "Disable" })

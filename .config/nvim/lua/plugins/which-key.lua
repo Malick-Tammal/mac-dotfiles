@@ -30,23 +30,23 @@ return {
 			-- Split
 			{ "<leader>s", group = "Split", icon = { icon = "󰯌 ", color = "blue" } },
 			{ "<leader>sh", desc = "Horizontally", icon = { icon = " ", color = "yellow" } },
-			{ "<leader>sv", desc = "Vertically", icon = { icon = " ", color = "orange" } },
-			{ "<leader>se", desc = "50/50", icon = { icon = " ", color = "blue" } },
-			{ "<leader>sx", desc = "Close", icon = { icon = " ", color = "red" } },
+			{ "<leader>sv", desc = "Vertically", icon = { icon = " ", color = "yellow" } },
+			{ "<leader>se", desc = "50/50", icon = { icon = " ", color = "yellow" } },
+			{ "<leader>sx", desc = "Close", icon = { icon = " ", color = "yellow" } },
 
 			-- Mason
 			{ "<leader>m", group = "Mason", icon = { icon = "󰉡 ", color = "orange" } },
 
 			-- Quit
 			{ "<leader>q", group = "Quit", icon = { icon = "󰩈 ", color = "red" } },
-			{ "<leader>qq", desc = "Quit without saving!", icon = { icon = "󰽂 ", color = "red" } },
+			{ "<leader>qq", desc = "Quit without saving!", icon = { icon = "󰽂 ", color = "yellow" } },
 			{ "<leader>qw", desc = "Quit and save!", icon = { icon = "󰆓 ", color = "yellow" } },
 
 			-- Buffers
 			{ "<leader>b", group = "Buffers", icon = { icon = " ", color = "blue" } },
 			{ "<leader>bb", desc = "New", icon = { icon = " ", color = "yellow" } },
-			{ "<leader>bx", desc = "Close", icon = { icon = " ", color = "red" } },
-			{ "<leader>bf", desc = "Find", icon = { icon = " ", color = "orange" } },
+			{ "<leader>bx", desc = "Close", icon = { icon = " ", color = "yellow" } },
+			{ "<leader>bf", desc = "Find", icon = { icon = " ", color = "yellow" } },
 
 			-- Telescope
 			-- { "<leader>f", desc = "Telescope", icon = { icon = "", color = "red" } },
@@ -55,6 +55,10 @@ return {
 
 			-- Tabs
 			{ "<leader>T", desc = "Tabs", icon = { icon = "󱃢 ", color = "purple" } },
+			{ "<leader>Tn", desc = "Next", icon = { icon = "󰙡 ", color = "yellow" } },
+			{ "<leader>To", desc = "New", icon = { icon = " ", color = "yellow" } },
+			{ "<leader>Tp", desc = "Previous", icon = { icon = "󰙣 ", color = "yellow" } },
+			{ "<leader>Tx", desc = "Close", icon = { icon = "󰅙 ", color = "yellow" } },
 
 			-- Diagnostics
 			{ "<leader>d", desc = "Diagnostics", icon = { icon = " ", color = "green" } },
@@ -62,9 +66,9 @@ return {
 
 			-- Code
 			{ "<leader>c", desc = "Code (File)", icon = { icon = " ", color = "orange" } },
-			{ "<leader>cs", desc = "Save", icon = { icon = "󰆓 ", color = "orange" } },
-			{ "<leader>cn", desc = "Save without format", icon = { icon = "󰽂 ", color = "orange" } },
-			{ "<leader>cf", desc = "Format", icon = { icon = "󰉿 ", color = "blue" } },
+			{ "<leader>cs", desc = "Save", icon = { icon = "󰆓 ", color = "yellow" } },
+			{ "<leader>cn", desc = "Save without format", icon = { icon = "󰽂 ", color = "yellow" } },
+			{ "<leader>cf", desc = "Format", icon = { icon = "󰉿 ", color = "yellow" } },
 			-- Dimming
 			{ "<leader>cd", desc = "Dim", icon = { icon = "󱜟 ", color = "yellow" } },
 			{ "<leader>cD", desc = "UnDim", icon = { icon = "󰞏 ", color = "yellow" } },
@@ -77,14 +81,14 @@ return {
 
 			-- Git
 			{ "<leader>g", desc = "Git", icon = { icon = " ", color = "cyan" } },
-			{ "<leader>gs", desc = "Stage hunk", icon = { icon = " ", color = "cyan" } },
-			{ "<leader>gr", desc = "Reset hunk", icon = { icon = "󰑓 ", color = "cyan" } },
-			{ "<leader>gd", desc = "Diff this", icon = { icon = " ", color = "cyan" } },
-			{ "<leader>gb", desc = "Blame line", icon = { icon = " ", color = "cyan" } },
-			{ "<leader>gm", desc = "Line blame", icon = { icon = "󰘤 ", color = "cyan" } },
-			{ "<leader>gi", desc = "Preview Hunk", icon = { icon = "󰮳 ", color = "cyan" } },
+			{ "<leader>gs", desc = "Stage hunk", icon = { icon = " ", color = "yellow" } },
+			{ "<leader>gr", desc = "Reset hunk", icon = { icon = "󰑓 ", color = "yellow" } },
+			{ "<leader>gd", desc = "Diff this", icon = { icon = " ", color = "yellow" } },
+			{ "<leader>gb", desc = "Blame line", icon = { icon = " ", color = "yellow" } },
+			{ "<leader>gm", desc = "Line blame", icon = { icon = "󰘤 ", color = "yellow" } },
+			{ "<leader>gi", desc = "Preview Hunk", icon = { icon = "󰮳 ", color = "yellow" } },
 			-- Lazygit
-			{ "<leader>gl", desc = "Lazygit", icon = { icon = "󰒲 ", color = "cyan" } },
+			{ "<leader>gl", desc = "Lazygit", icon = { icon = "󰒲 ", color = "yellow" } },
 
 			-- Terminal
 			{ "<leader>t", desc = "Terminal", icon = { icon = " ", color = "purple" } },
@@ -121,6 +125,11 @@ return {
 
 			-- Live server
 			{ "<leader>S", desc = "Live Server", icon = { icon = " ", color = "green" } },
+
+			-- Copilot
+			{ "<leader>O", desc = "Copilot", icon = { icon = " ", color = "orange" } },
+			{ "<leader>Oe", desc = "Enable", icon = { icon = " ", color = "yellow" } },
+			{ "<leader>Od", desc = "Disable", icon = { icon = " ", color = "yellow" } },
 
 			-- Avante
 			{ "<leader>a", desc = "Avante (AI)", icon = { icon = "󰚩 ", color = "red" } },
