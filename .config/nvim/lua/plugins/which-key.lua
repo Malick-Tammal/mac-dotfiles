@@ -121,6 +121,12 @@ return {
 
 			-- Live server
 			{ "<leader>S", desc = "Live Server", icon = { icon = " ", color = "green" } },
+
+			-- Avante
+			{ "<leader>a", desc = "Avante (AI)", icon = { icon = "󰚩 ", color = "red" } },
+
+			-- Render Markdown
+			{ "<leader>M", desc = "Render Markdown", icon = { icon = " ", color = "cyan" } },
 		})
 
 		wk.setup({

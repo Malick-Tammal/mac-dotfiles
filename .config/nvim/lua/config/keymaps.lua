@@ -249,3 +249,5 @@ vim.keymap.set("i", "<S-Tab>", 'copilot#Accept("\\<CR>")', {
 	replace_keycodes = false,
 })
 vim.g.copilot_no_tab_map = true
+
+vim.keymap.set("n", "<leader>M", ":RenderMarkdown toggle<CR>")
