@@ -48,6 +48,9 @@ return {
 				vim.api.nvim_set_hl(0, "NotifyWARNBody", { bg = palette.none })
 				vim.api.nvim_set_hl(0, "NotifyWARNBorder", { bg = palette.none, fg = palette.warning })
 
+				vim.api.nvim_set_hl(0, "YankyYanked", { bg = palette.hint, fg = palette.bg })
+				vim.api.nvim_set_hl(0, "YankyPut", { bg = palette.warning, fg = palette.bg })
+
 			--
 			-- 		  bg = "#222436",
 			-- bg_dark = "#1e2030",

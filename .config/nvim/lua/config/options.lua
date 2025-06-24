@@ -75,3 +75,5 @@ vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
 --  INFO: Save undo data
 -----------------------------------------------------------
 vim.opt.undofile = true
+
+vim.opt.conceallevel = 1

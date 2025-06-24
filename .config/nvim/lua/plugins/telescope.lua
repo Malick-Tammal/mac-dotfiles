@@ -4,6 +4,7 @@ return {
 	dependencies = {
 		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 	},
+	event = "VeryLazy",
 
 	-- HACK: Config
 	config = function()
