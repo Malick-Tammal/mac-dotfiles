@@ -7,6 +7,7 @@
 -----------------------------------------------------------
 local g = vim.g -- Global variables
 local opt = vim.opt -- Set options (global/buffer/windows-scoped)
+local o = vim.o
 
 -----------------------------------------------------------
 --  INFO: Set leader key
@@ -59,27 +60,26 @@ opt.updatetime = 250 -- ms to wait for trigger an event
 -----------------------------------------------------------
 --  INFO: Snacks picker
 -----------------------------------------------------------
-vim.g.lazyvim_picker = "snacks"
-vim.opt.confirm = true
+g.lazyvim_picker = "snacks"
+opt.confirm = true
 
 -----------------------------------------------------------
 --  INFO: Folding code block
 -----------------------------------------------------------
-vim.o.foldcolumn = "1" -- '0' is not bad
-vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
-vim.o.foldlevelstart = 99
-vim.o.foldenable = true
+o.foldcolumn = "1"
+o.foldlevel = 99
+o.foldlevelstart = 99
+o.foldenable = true
 -- vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
-vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
+o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
+o.foldmethod = "expr"
+o.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+o.foldtext = ""
 
-vim.o.foldmethod = "expr"
-vim.o.foldexpr = "v:lua.vim.treesitter.foldexpr()"
-vim.o.foldtext = ""
-vim.opt.fillchars:append({ fold = " " })
+opt.fillchars:append({ fold = " " })
+opt.conceallevel = 1
 
 -----------------------------------------------------------
 --  INFO: Save undo data
 -----------------------------------------------------------
-vim.opt.undofile = true
-
-vim.opt.conceallevel = 1
+opt.undofile = true
