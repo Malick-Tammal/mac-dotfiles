@@ -6,7 +6,7 @@ return {
 		{
 			"<leader>?",
 			function()
-				require("which-key").show({ global = false })
+				require("which-key").show({ global = true, loop = true })
 			end,
 			desc = "Which-key 'I know you forget'",
 		},
