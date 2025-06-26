@@ -21,7 +21,8 @@ return {
 		},
 
 		ui = {
-			enable = false,
+			enable = true,
+			checkboxes = {},
 		},
 	},
 }

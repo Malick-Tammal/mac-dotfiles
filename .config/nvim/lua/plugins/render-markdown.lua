@@ -5,7 +5,7 @@ return {
 
 	opts = {
 		file_types = { "markdown", "Avante" },
-		checkbox = {
+		checkbox = { -- {{{
 			enabled = true,
 			right_pad = 1,
 
@@ -22,6 +22,6 @@ return {
 			custom = {
 				todo = { raw = "[-]", rendered = "󰥔 ", highlight = "RenderMarkdownTodo", scope_highlight = nil },
 			},
-		},
+		}, -- }}}
 	},
 }
