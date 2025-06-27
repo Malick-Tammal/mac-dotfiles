@@ -114,7 +114,7 @@ map.set("n", "<leader>dt", "<Cmd>lua require('tiny-inline-diagnostic').toggle()<
 -----------------------------------------------------------
 --  INFO: Neotree
 -----------------------------------------------------------
-map.set("n", "<leader>n", "<Cmd>Neotree toggle position=left<CR>", { desc = "Explorer Neoree (Toggle)" })
+map.set("n", "<leader>n", "<Cmd>Neotree toggle position=left<CR>", { desc = "Explorer Neoree (Toggle)" }) -- Toggle Neotree
 
 -- Search
 map.set("n", "<C-c>", "<Cmd>noh<CR>", opts)
@@ -123,10 +123,10 @@ map.set("n", "<C-c>", "<Cmd>noh<CR>", opts)
 --  INFO: Telescope
 -----------------------------------------------------------
 local builtin = require("telescope.builtin")
-map.set("n", "<leader><space>", builtin.find_files, { desc = "Telescope find files" })
-map.set("n", "<leader>G", builtin.live_grep, { desc = "Telescope live grep" })
-map.set("n", "<leader>bf", builtin.buffers, { desc = "Telescope buffers" })
-map.set("n", "<leader>h", builtin.help_tags, { desc = "Telescope help tags" })
+map.set("n", "<leader><space>", builtin.find_files) -- Telescope find files
+map.set("n", "<leader>G", builtin.live_grep) -- Telescope live grep
+map.set("n", "<leader>bf", builtin.buffers) -- Telescope buffers
+map.set("n", "<leader>h", builtin.help_tags) -- Telescope help tags
 
 -----------------------------------------------------------
 --  INFO: Quit
@@ -168,7 +168,7 @@ end, { desc = "Previous todo comment" })
 local projects = require("plugins.custom.projects")
 
 map.set("n", "<leader>p", function()
-	projects.setup()
+	projects.setup() -- Open projects folder
 end, { desc = "Projects" })
 
 -----------------------------------------------------------
@@ -261,3 +261,10 @@ map.set("n", "<leader>Od", ":Copilot disable<CR>", { desc = "Disable" })
 --  INFO: Render Markdown
 -----------------------------------------------------------
 map.set("n", "<leader>M", ":RenderMarkdown toggle<CR>")
+
+-----------------------------------------------------------
+--  INFO: Obsidian
+-----------------------------------------------------------
+map.set("n", "<leader>Nf", ":ObsidianFollowLink<CR>")
+map.set("n", "<leader>Nl", ":ObsidianLinks<CR>")
+map.set("n", "<leader>Nt", ":ObsidianTags<CR>")

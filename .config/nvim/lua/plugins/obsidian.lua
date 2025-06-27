@@ -11,7 +11,7 @@ return {
 		workspaces = {
 			{
 				name = "development",
-				path = "~/Data/Web_dev",
+				path = "~/Data/development/",
 			},
 			-- For more vaults
 			-- {

@@ -136,6 +136,12 @@ return {
 
 			-- Render Markdown
 			{ "<leader>M", desc = "Render Markdown", icon = { icon = " ", color = "cyan" } },
+
+			-- Obsidian
+			{ "<leader>N", desc = "Obsidian", icon = { icon = " ", color = "magenta" } },
+			{ "<leader>Nf", desc = "Follow link", icon = { icon = " ", color = "magenta" } },
+			{ "<leader>Nl", desc = "Links", icon = { icon = " ", color = "magenta" } },
+			{ "<leader>Nt", desc = "tags", icon = { icon = " ", color = "magenta" } },
 		})
 
 		wk.setup({
