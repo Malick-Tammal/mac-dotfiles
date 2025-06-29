@@ -1,7 +1,8 @@
 return {
 	"sphamba/smear-cursor.nvim",
 	event = "VeryLazy",
-	lazy = true,
+	enabled = false,
+
 	opts = {
 
 		--  INFO: Custom fast
