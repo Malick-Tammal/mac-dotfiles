@@ -78,10 +78,10 @@ map.set("n", "<leader>sx", ":close<CR>", opts) -- close current split window
 -----------------------------------------------------------
 --  INFO: Navigate between splits
 -----------------------------------------------------------
-map.set("n", "<C-k>", ":wincmd k<CR>", opts)
-map.set("n", "<C-j>", ":wincmd j<CR>", opts)
-map.set("n", "<C-h>", ":wincmd h<CR>", opts)
-map.set("n", "<C-l>", ":wincmd l<CR>", opts)
+-- map.set("n", "<C-K>", ":wincmd k<CR>", opts)
+-- map.set("n", "<C-J>", ":wincmd j<CR>", opts)
+-- map.set("n", "<C-H>", ":wincmd h<CR>", opts)
+-- map.set("n", "<C-L>", ":wincmd l<CR>", opts)
 
 -----------------------------------------------------------
 --  INFO: Tabs
