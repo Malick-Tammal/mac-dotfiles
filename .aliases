@@ -89,3 +89,10 @@ alias matrix="cmatrix"
 
 # INFO: Copy current dir path
 alias cdp="pwd | tr -d '\n' | pbcopy"
+
+# INFO: Tmux
+alias tn="tmux new-session -s"
+alias tl="tmux ls"
+alias tan="tmux attach -t"
+alias ta="tmux attach"
+alias tk="tmux kill-session -t"
