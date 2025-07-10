@@ -10,6 +10,17 @@ return {
 		providers = {
 			gemini = {},
 		},
+
+		-- provider = "groq", -- default provider
+		-- providers = {
+		-- 	["groq"] = {
+		-- 		-- groq provider options
+		-- 		__inherited_from = "openai",
+		-- 		api_key_name = "GROQ_API_KEY", -- environment variable name for the API key
+		-- 		endpoint = "https://api.groq.com/openai/v1/",
+		-- 		model = "deepseek-r1-distill-llama-70b",
+		-- 	},
+		-- },
 	},
 	dependencies = {
 		"ibhagwan/fzf-lua", -- for file_selector provider fzf
