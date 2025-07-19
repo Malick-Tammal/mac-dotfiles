@@ -26,6 +26,9 @@ macos-titlebar-proxy-icon = hidden
 window-decoration = client 
 window-subtitle = false
 
+# Close popup
+confirm-close-surface = false
+
 # Padding
 window-padding-x = 10,0
 window-padding-y = 10,0
