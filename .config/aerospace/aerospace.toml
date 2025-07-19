@@ -148,5 +148,5 @@ shift-down = [ 'volume set 0', 'mode main' ]
 [[on-window-detected]]
 if.app-id = "com.mitchellh.ghostty"
 run = [
-
+  "layout floating",
 ]
