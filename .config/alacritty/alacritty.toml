@@ -1,7 +1,7 @@
 [general]
 # ------------------- Theme -----------------------
 import = [
-  "~/.config/alacritty/themes/hypr.toml",
+  "~/.config/alacritty/themes/tokyo_night.toml",
 ]
 # -------------------------------------------------
 live_config_reload = true
