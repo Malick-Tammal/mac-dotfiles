@@ -31,7 +31,7 @@ return {
 				vim.api.nvim_set_hl(0, "CmpPmenu", { bg = palette.bg })
 				vim.api.nvim_set_hl(0, "CmpDocNormal", { bg = palette.bg })
 				vim.api.nvim_set_hl(0, "PmenuSel", { bg = palette.red, fg = palette.bg })
-				vim.api.nvim_set_hl(0, "CmpMenuBorder", { bg = "none" })
+				vim.api.nvim_set_hl(0, "CmpMenuBorder", { bg = "NONE", fg = "NONE" })
 
 				-- Highlight relative number
 				vim.api.nvim_set_hl(0, "LineNr", { fg = palette.blue2 })
@@ -48,88 +48,65 @@ return {
 				vim.api.nvim_set_hl(0, "NotifyWARNBody", { bg = palette.none })
 				vim.api.nvim_set_hl(0, "NotifyWARNBorder", { bg = palette.none, fg = palette.warning })
 
+				-- Yanky
 				vim.api.nvim_set_hl(0, "YankyYanked", { bg = palette.hint, fg = palette.bg })
 				vim.api.nvim_set_hl(0, "YankyPut", { bg = palette.warning, fg = palette.bg })
+			elseif colorScheme == "monokai-pro" then
+				-- Buffer line
+				vim.api.nvim_set_hl(
+					0,
+					"BufferLineIndicatorSelected",
+					{ bg = palette.base.blue, fg = palette.base.dark }
+				)
+				vim.api.nvim_set_hl(
+					0,
+					"BufferLineNeoTree",
+					{ bg = palette.button.separator, fg = palette.base.dimmed1 }
+				)
+				vim.api.nvim_set_hl(0, "BufferLineFill", { bg = palette.base.black })
 
-			--
-			-- 		  bg = "#222436",
-			-- bg_dark = "#1e2030",
-			-- bg_dark1 = "#191B29",
-			-- bg_float = "#1e2030",
-			-- bg_highlight = "#2f334d",
-			-- bg_popup = "#1e2030",
-			-- bg_search = "#3e68d7",
-			-- bg_sidebar = "#1e2030",
-			-- bg_statusline = "#1e2030",
-			-- bg_visual = "#2d3f76",
-			-- black = "#1b1d2b",
-			-- blue = "#82aaff",
-			-- blue0 = "#3e68d7",
-			-- blue1 = "#65bcff",
-			-- blue2 = "#0db9d7",
-			-- blue5 = "#89ddff",
-			-- blue6 = "#b4f9f8",
-			-- blue7 = "#394b70",
-			-- border = "#1b1d2b",
-			-- border_highlight = "#589ed7",
-			-- comment = "#636da6",
-			-- cyan = "#86e1fc",
-			-- dark3 = "#545c7e",
-			-- dark5 = "#737aa2",
-			-- diff = {
-			--   add = "#273849",
-			--   change = "#252a3f",
-			--   delete = "#3a273a",
-			--   text = "#394b70"
-			-- },
-			-- error = "#c53b53",
-			-- fg = "#c8d3f5",
-			-- fg_dark = "#828bb8",
-			-- fg_float = "#c8d3f5",
-			-- fg_gutter = "#3b4261",
-			-- fg_sidebar = "#828bb8",
-			-- git = {
-			--   add = "#b8db87",
-			--   change = "#7ca1f2",
-			--   delete = "#e26a75",
-			--   ignore = "#545c7e"
-			-- },
-			-- green = "#c3e88d",
-			-- green1 = "#4fd6be",
-			-- green2 = "#41a6b5",
-			-- hint = "#4fd6be",
-			-- info = "#0db9d7",
-			-- magenta = "#c099ff",
-			-- magenta2 = "#ff007c",
-			-- none = "NONE",
-			-- orange = "#ff966c",
-			-- purple = "#fca7ea",
-			-- rainbow = { "#82aaff", "#ffc777", "#c3e88d", "#4fd6be", "#c099ff", "#fca7ea", "#ff966c", "#ff757f" },
-			-- red = "#ff757f",
-			-- red1 = "#c53b53",
-			-- teal = "#4fd6be",
-			-- terminal = {
-			--   black = "#1b1d2b",
-			--   black_bright = "#444a73",
-			--   blue = "#82aaff",
-			--   blue_bright = "#9ab8ff",
-			--   cyan = "#86e1fc",
-			--   cyan_bright = "#b2ebff",
-			--   green = "#c3e88d",
-			--   green_bright = "#c7fb6d",
-			--   magenta = "#c099ff",
-			--   magenta_bright = "#caabff",
-			--   red = "#ff757f",
-			--   red_bright = "#ff8d94",
-			--   white = "#828bb8",
-			--   white_bright = "#c8d3f5",
-			--   yellow = "#ffc777",
-			--   yellow_bright = "#ffd8ab"
-			-- },
-			-- terminal_black = "#444a73",
-			-- todo = "#82aaff",
-			-- warning = "#ffc777",
-			-- yellow = "#ffc777"
+				-- Telescope
+				vim.api.nvim_set_hl(0, "TelescopeResultsTitle", { bg = palette.base.red, fg = palette.base.dimmed5 })
+				vim.api.nvim_set_hl(0, "TelescopePreviewTitle", { bg = palette.base.yellow, fg = palette.base.dimmed5 })
+				vim.api.nvim_set_hl(0, "TelescopePromptTitle", { bg = palette.base.blue, fg = palette.base.dimmed5 })
+				vim.api.nvim_set_hl(0, "TelescopeSelection", { fg = palette.base.blue })
+
+				-- Cmp ( Completion menu )
+				vim.api.nvim_set_hl(0, "CmpPmenu", { bg = palette.editor.lineHighlightBackground })
+				vim.api.nvim_set_hl(0, "CmpDocNormal", { bg = palette.editor.lineHighlightBackground })
+				vim.api.nvim_set_hl(0, "PmenuSel", { bg = palette.base.blue, fg = palette.base.dark })
+				-- vim.api.nvim_set_hl(0, "CmpMenuBorder", { bg = "none" })
+
+				-- Highlight relative number
+				vim.api.nvim_set_hl(0, "CursorLineNr", { fg = palette.base.blue })
+
+				-- Indent line and highlight active
+				vim.api.nvim_set_hl(0, "SnacksIndent", { fg = palette.base.dimmed3 })
+				vim.api.nvim_set_hl(0, "SnacksIndentScope", { fg = palette.base.green })
+
+				-- Notify
+				vim.api.nvim_set_hl(0, "NotifyINFOBody", { bg = palette.editor.background })
+				vim.api.nvim_set_hl(0, "NotifyINFOBorder", { bg = palette.editor.background, fg = palette.base.cyan })
+				vim.api.nvim_set_hl(0, "NotifyERRORBody", { bg = palette.editor.background })
+				vim.api.nvim_set_hl(0, "NotifyERRORBorder", { bg = palette.editor.background, fg = palette.base.red })
+				vim.api.nvim_set_hl(0, "NotifyWARNBody", { bg = palette.editor.background })
+				vim.api.nvim_set_hl(0, "NotifyWARNBorder", { bg = palette.editor.background, fg = palette.base.yellow })
+
+				-- Yanky
+				vim.api.nvim_set_hl(0, "YankyYanked", { bg = palette.base.red, fg = palette.base.dark })
+				vim.api.nvim_set_hl(0, "YankyPut", { bg = palette.yellow, fg = palette.base.dark })
+
+				-- Mini icons
+				vim.api.nvim_set_hl(0, "MiniIconsAzure", { fg = palette.base.cyan })
+				vim.api.nvim_set_hl(0, "MiniIconsBlue", { fg = palette.base.cyan })
+				vim.api.nvim_set_hl(0, "MiniIconsCyan", { fg = palette.base.cyan })
+				vim.api.nvim_set_hl(0, "MiniIconsGreen", { fg = palette.base.green })
+				vim.api.nvim_set_hl(0, "MiniIconsOrange", { fg = palette.base.blue })
+				vim.api.nvim_set_hl(0, "MiniIconsPurple", { fg = palette.base.magenta })
+				vim.api.nvim_set_hl(0, "MiniIconsRed", { fg = palette.base.red })
+				vim.api.nvim_set_hl(0, "MiniIconsYellow", { fg = palette.base.yellow })
+
+				vim.api.nvim_set_hl(0, "Folded", { fg = palette.base.yellow, bg = palette.base.dimmed5 })
 			else
 				-- Buffer line
 				vim.api.nvim_set_hl(0, "BufferLineIndicatorSelected", { bg = palette.orange, fg = palette.bg_dim })
@@ -235,6 +212,32 @@ return {
 				-- Settings colors
 				after = function()
 					setHl(colors, "tokyonight")
+				end,
+			},
+			{
+				"loctvl842/monokai-pro.nvim",
+
+				before = function()
+					require("monokai-pro").setup({
+						transparent_background = true,
+						background_clear = {
+							-- "float_win",
+							-- "toggleterm",
+							-- "telescope",
+							-- "which-key",
+							"renamer",
+							"notify",
+						},
+						override = function(c)
+							-- print(vim.inspect(c))
+							colors = c
+						end,
+					})
+				end,
+
+				-- Settings colors
+				after = function()
+					setHl(colors, "monokai-pro")
 				end,
 			},
 		})

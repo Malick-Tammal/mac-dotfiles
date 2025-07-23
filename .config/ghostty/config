@@ -1,13 +1,41 @@
-# Font 
-font-family = MesloLGL Nerd Font 
-font-size = 15
-font-style = Bold
+#
+#  HACK: Fonts 
+#
 
-# Theme + Styling
-theme = tokyonight
+#  INFO: MesloLGLDZ Nerd Font Mono
+# font-family = MesloLGLDZ Nerd Font
+
+#  INFO: MesloLGM Nerd Font Mono
+# font-family = MesloLGM Nerd Font Mono
+
+#  INFO: MonaspiceAr Nerd Font Mono
+# font-family = MonaspiceAr Nerd Font Mono
+
+#  INFO: Roboto Mono Nerd Font
+# font-family = RobotoMono Nerd Font 
+
+#  INFO: DejaVu Sans Mono Nerd Font
+font-family = DejaVuSansM Nerd Font
+
+#  INFO: JetBrains Mono Nerd Font
+# font-family = JetBrainsMono Nerd Font 
+
+font-size = 18
+font-style = Medium
+
+#
+#  HACK: Themes + Styles
+#
+
+# theme = tokyonight
+# theme = arcoiris
+# theme = ayu
+# theme = GruvboxDarkHard
+# theme = Monokai Classic
+theme = Monokai Pro
+
 palette = 8=#7e7d7d
-# cursor-color = #ffffff
-background-opacity = 0.75
+background-opacity = 0.9
 background-blur = 60
 
 # Cursor 
@@ -15,12 +43,19 @@ shell-integration-features = no-cursor
 cursor-style = block 
 cursor-style-blink = true
 cursor-opacity = 0.9
+# cursor-color = #ffffff
 
-## keybind
-# Reload config
+#
+#  HACK: Keybinds
+#
+
+#  INFO: Reload config
 keybind = cmd+r=reload_config 
 
-# Window
+#
+#  HACK: Window
+#
+
 title = "malick.dev"
 macos-titlebar-proxy-icon = hidden
 window-decoration = client 
@@ -30,10 +65,14 @@ window-subtitle = false
 confirm-close-surface = false
 
 # Padding
+window-padding-balance = true
 window-padding-x = 10,0
 window-padding-y = 10,0
 
-# Shaders
+#
+#  HACK: Shaders
+#
+
 custom-shader = "./shaders/bloom025.glsl"
 custom-shader = "./shaders/cursor_smear.glsl"
 # custom-shader = "./shaders/cursor_synesthaxia.glsl"

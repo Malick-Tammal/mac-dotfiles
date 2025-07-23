@@ -1,6 +1,7 @@
 return {
 	"stevearc/conform.nvim",
 	event = { "BufReadPre", "BufNewFile" },
+
 	config = function()
 		local conform = require("conform")
 		conform.setup({
@@ -19,6 +20,9 @@ return {
 				sh = { "shfmt" },
 				zsh = { "beautysh" },
 				jsonc = { "prettier" },
+
+				-- Other
+				rust = { "rustfmt" },
 			},
 
 			format_on_save = {

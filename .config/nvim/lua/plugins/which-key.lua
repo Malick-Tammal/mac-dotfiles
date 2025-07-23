@@ -138,10 +138,17 @@ return {
 			{ "<leader>M", desc = "Render Markdown", icon = { icon = " ", color = "cyan" } },
 
 			-- Obsidian
-			{ "<leader>N", desc = "Obsidian", icon = { icon = " ", color = "magenta" } },
-			{ "<leader>Nf", desc = "Follow link", icon = { icon = " ", color = "magenta" } },
-			{ "<leader>Nl", desc = "Links", icon = { icon = " ", color = "magenta" } },
-			{ "<leader>Nt", desc = "tags", icon = { icon = " ", color = "magenta" } },
+			{ "<leader>N", desc = "Obsidian", icon = { icon = " ", color = "green" } },
+			{ "<leader>Nl", desc = "Links", icon = { icon = " ", color = "green" } },
+			{ "<leader>Nf", desc = "Follow link", icon = { icon = "󰪹 ", color = "green" } },
+			{ "<leader>Nt", desc = "Tags", icon = { icon = " ", color = "green" } },
+			{ "<leader>Nb", desc = "Backlinks", icon = { icon = "󰌷 ", color = "green" } },
+			{ "<leader>Nc", desc = "Check", icon = { icon = " ", color = "green" } },
+			{ "<leader>No", desc = "Open", icon = { icon = " ", color = "green" } },
+			{ "<leader>Nr", desc = "Rename", icon = { icon = "󰑕 ", color = "green" } },
+			{ "<leader>Ng", desc = "Grep", icon = { icon = "󰈞 ", color = "green" } },
+			{ "<leader>NT", desc = "Titles", icon = { icon = "󰕱 ", color = "green" } },
+			{ "<leader>Nw", desc = "Workspaces", icon = { icon = "󰂻 ", color = "green" } },
 		})
 
 		wk.setup({

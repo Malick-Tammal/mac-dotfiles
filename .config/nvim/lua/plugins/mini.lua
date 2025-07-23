@@ -2,16 +2,8 @@ return {
 	"echasnovski/mini.nvim",
 	event = "VeryLazy",
 	version = "*",
-	specs = {
-		{ "nvim-tree/nvim-web-devicons", enabled = false, optional = true },
-	},
-	config = function()
-		-- INFO: Replace Davicons with mini icons
-		package.preload["nvim-web-devicons"] = function()
-			require("mini.icons").mock_nvim_web_devicons()
-			return package.loaded["nvim-web-devicons"]
-		end
 
+	config = function()
 		require("mini.bufremove").setup()
 		require("mini.comment").setup()
 		require("mini.surround").setup({
@@ -41,5 +33,20 @@ return {
 				},
 			},
 		})
+
+		-- local icons = require("mini.icons")
+		--
+		-- -- INFO: Replace Davicons with mini icons
+		-- package.preload["nvim-web-devicons"] = function()
+		-- 	icons.mock_nvim_web_devicons()
+		-- 	return package.loaded["nvim-web-devicons"]
+		-- end
+		--
+		-- icons.setup({
+		-- 	directory = {
+		-- 		[".git"] = { glyph = "", hl = "MiniIconsPurple", is_dir = true },
+		-- 		["*/node_modules"] = { glyph = "", hl = "MiniIconsBlue", is_dir = true },
+		-- 	},
+		-- })
 	end,
 }

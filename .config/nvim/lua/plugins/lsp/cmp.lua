@@ -35,12 +35,12 @@ return {
 
 			window = {
 				completion = {
-					border = "rounded",
+					-- border = "rounded",
 					winhighlight = "Normal:CmpPmenu,FloatBorder:CmpMenuBorder,CursorLine:PmenuSel,Search:None",
 					side_padding = 1,
 				},
 				documentation = {
-					border = "rounded",
+					-- border = "rounded",
 					winhighlight = "Normal:CmpDocNormal,FloatBorder:CmpMenuBorder",
 				},
 			},
