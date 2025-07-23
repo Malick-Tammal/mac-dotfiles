@@ -106,7 +106,11 @@ return {
 				vim.api.nvim_set_hl(0, "MiniIconsRed", { fg = palette.base.red })
 				vim.api.nvim_set_hl(0, "MiniIconsYellow", { fg = palette.base.yellow })
 
+				-- Folded text
 				vim.api.nvim_set_hl(0, "Folded", { fg = palette.base.yellow, bg = palette.base.dimmed5 })
+
+				-- Scrollbar
+				vim.api.nvim_set_hl(0, "FloatTitle", { fg = palette.base.red, bg = palette.base.dimmed3 })
 			else
 				-- Buffer line
 				vim.api.nvim_set_hl(0, "BufferLineIndicatorSelected", { bg = palette.orange, fg = palette.bg_dim })

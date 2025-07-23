@@ -124,6 +124,13 @@ return {
 			refresh = 50, -- refresh at most every 50ms
 		},
 
+		lazygit = {
+			enabled = true,
+			theme = {
+				inactiveBorderColor = { fg = "StatusLineNC" },
+			},
+		},
+
 		-- INFO: Dashboard (welcome screen)
 		dashboard = {
 			preset = {
@@ -135,19 +142,20 @@ return {
 						action = ":lua require('plugins.custom.projects').setup()",
 					},
 					{ icon = "󰊢 ", key = "g", desc = "Lazy git", action = ":lua Snacks.lazygit() " },
-					{ icon = " ", key = "f", desc = "Find File", action = ":lua Snacks.dashboard.pick('files')" },
 					{ icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
+					{ icon = " ", key = "f", desc = "Find File", action = ":Telescope find_files" },
+					{ icon = "󱄽 ", key = "t", desc = "Find Text (Grep)", action = ":Telescope live_grep" },
 					{
 						icon = " ",
 						key = "r",
 						desc = "Recent Files",
-						action = ":lua Snacks.dashboard.pick('oldfiles')",
+						action = ":Telescope oldfiles",
 					},
 					{
 						icon = " ",
 						key = "c",
 						desc = "Config",
-						action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})",
+						action = ":lua vim.cmd('cd ~/dotfiles/.config/nvim') vim.cmd('edit ~/dotfiles/.config/nvim/init.lua')",
 					},
 					{ icon = " ", key = "q", desc = "Quit", action = ":qa" },
 				},
