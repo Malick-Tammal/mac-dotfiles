@@ -77,6 +77,7 @@ return {
 				},
 			})
 
+			-- Emmet
 			lspconfig.emmet_ls.setup({
 				capabilities = capabilities,
 				filetypes = {
@@ -87,6 +88,14 @@ return {
 					"sass",
 					"scss",
 					"typescriptreact",
+				},
+			})
+
+			-- Rust
+			lspconfig.rust_analyzer.setup({
+				capabilities = capabilities,
+				filetypes = {
+					"rust",
 				},
 			})
 		end,

@@ -35,6 +35,7 @@ return {
 				"emmet_ls",
 				"jsonls",
 				"html",
+				"rust_analyzer",
 			},
 			automatic_enable = false,
 		})
