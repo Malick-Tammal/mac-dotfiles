@@ -5,7 +5,9 @@ local config = wezterm.config_builder()
 
 -- INFO: Theme
 -- config.color_scheme = "Everforest Dark Hard (Gogh)"
-config.color_scheme = "Tokyo Night"
+-- config.color_scheme = "Tokyo Night"
+-- config.color_scheme = "DimmedMonokai"
+config.color_scheme = "Dimmed Monokai (Gogh)"
 
 -- INFO: Keybinds
 config.keys = {
