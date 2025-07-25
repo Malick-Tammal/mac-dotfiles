@@ -125,10 +125,11 @@ export PATH=~/.local/bin/:$PATH
 
 # Multi nvim builds
 alias nvchad="NVIM_APPNAME=NvChad nvim"
+alias lazyvim="NVIM_APPNAME=LazyVim nvim"
 
 function nvs() {
-    items=("default" "NvChad")
-    config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config " --height=~50% --layout=reverse --border --exit-0)
+    items=("default" "NvChad" "LazyVim" "AstroNvim" "Neovim")
+    config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Configs " --height=~50% --layout=reverse --border --exit-0)
     if [[ -z $config ]]; then
         echo "Nothing selected"
         return 0

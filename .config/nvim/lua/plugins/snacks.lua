@@ -48,6 +48,15 @@ return {
 			desc = "Terminal",
 			mode = "n",
 		},
+
+		-- {
+		-- 	"<leader>E",
+		-- 	function()
+		-- 		Snacks.explorer()
+		-- 	end,
+		-- 	desc = "Snacks explorer",
+		-- 	mode = "n",
+		-- },
 	},
 
 	-- HACK: Config
@@ -85,8 +94,65 @@ return {
 		-- INFO: Word highlight
 		words = { enabled = false },
 
+		explorer = {
+			-- layout = {
+			-- 	position = "right",
+			-- 	box = "vertical",
+			-- 	width = 40,
+			-- 	{
+			-- 		win = "input",
+			-- 		height = 1,
+			-- 		border = "rounded",
+			-- 		title = "Snacks Picker",
+			-- 		wo = {
+			-- 			winhighlight = "FloatBorder:SnacksExplorerBorder,NormalFloat:SnacksExplorerNormal,SnacksPickerPrompt:SnacksPickerPromptTransparent",
+			-- 		},
+			-- 	},
+			-- 	{
+			-- 		win = "list",
+			-- 		border = "none",
+			-- 		wo = {
+			-- 			winhighlight = "FloatBorder:SnacksExplorerBorder,NormalFloat:SnacksExplorerNormal",
+			-- 		},
+			-- 	},
+			-- },
+			-- hidden = true,
+			-- auto_close = true,
+		},
+
 		-- INFO: Picker (Buffers / Smart file picker)
-		picker = { enabled = true },
+		picker = {
+			enabled = true,
+			sources = {
+				explorer = {
+					layout = {
+						layout = {
+							position = "right",
+							box = "vertical",
+							width = 40,
+							{
+								win = "input",
+								height = 1,
+								border = "rounded",
+								title = "Snacks Picker",
+								wo = {
+									winhighlight = "FloatBorder:SnacksExplorerBorder,NormalFloat:SnacksExplorerNormal,SnacksPickerPrompt:SnacksPickerPromptTransparent,Title:SnacksPickerInputTitle",
+								},
+							},
+							{
+								win = "list",
+								border = "none",
+								wo = {
+									winhighlight = "FloatBorder:SnacksExplorerBorder,NormalFloat:SnacksExplorerNormal",
+								},
+							},
+						},
+					},
+					hidden = true,
+					auto_close = true,
+				},
+			},
+		},
 
 		-- INFO: Bigfile saver
 		bigfile = {

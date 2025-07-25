@@ -111,6 +111,15 @@ return {
 
 				-- Scrollbar
 				vim.api.nvim_set_hl(0, "FloatTitle", { fg = palette.base.red, bg = palette.base.dimmed3 })
+
+				vim.api.nvim_set_hl(0, "SnacksExplorerBorder", { fg = palette.base.blue, bg = palette.base.dark })
+				vim.api.nvim_set_hl(0, "SnacksExplorerNormal", { fg = palette.base.dimmed2, bg = palette.base.dark })
+				vim.api.nvim_set_hl(0, "SnacksPickerDirectory", { fg = palette.base.dimmed2, bg = "none" })
+
+				vim.api.nvim_set_hl(0, "SnacksPickerInputTitle", { fg = palette.base.red, bg = palette.base.blue })
+				-- vim.api.nvim_set_hl(0, "SnacksPickerTitle", { fg = palette.base.red, bg = palette.base.blue })
+				-- vim.api.nvim_set_hl(0, "SnacksPickerPreviewTitle", { fg = palette.base.red, bg = palette.base.blue })
+				-- vim.api.nvim_set_hl(0, "SnacksPickerBoxTitle", { fg = palette.base.red, bg = palette.base.blue })
 			else
 				-- Buffer line
 				vim.api.nvim_set_hl(0, "BufferLineIndicatorSelected", { bg = palette.orange, fg = palette.bg_dim })

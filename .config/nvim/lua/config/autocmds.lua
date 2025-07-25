@@ -30,3 +30,10 @@ vim.api.nvim_create_autocmd("RecordingLeave", {
 	end,
 	group = vim.api.nvim_create_augroup("NoiceMacroNotficationDismiss", { clear = true }),
 })
+
+vim.api.nvim_create_autocmd("BufWritePost", {
+	pattern = "*",
+	callback = function()
+		vim.api.nvim_echo({ { "File written successfully: " .. vim.fn.expand("%:p"), "Normal" } }, false, {})
+	end,
+})

@@ -77,7 +77,6 @@ o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
 o.foldmethod = "expr"
 o.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 o.foldtext = ""
-
 opt.fillchars:append({ fold = " " })
 opt.conceallevel = 1
 
@@ -85,3 +84,5 @@ opt.conceallevel = 1
 --  INFO: Save undo data
 -----------------------------------------------------------
 opt.undofile = true
+
+opt.scrolloff = 4 -- Lines of context
